@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block body_attributes %}data-home{% endblock body_attributes %}
+{% block head %}<link rel="alternate" type="application/rss+xml" title="Portfolio" href="{{ get_url(path='feed.xml') }}">{% endblock head %}
 {% block content %}
 {% set about = get_page(path="about.md") %}
 <section id="about" class="content-panel" aria-labelledby="about-me-heading">

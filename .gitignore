@@ -2,3 +2,5 @@
 /.cache/
 /.DS_Store
 **/.DS_Store
+/static/feed.xml
+**/__pycache__/

@@ -1,79 +1,192 @@
+[feed]
+title = "Jesse M. Porch's Occasional Pretensions of Coherence"
+description = "Assorted words on videogames, play, and whatever else I'm thinking about at the time."
+
 [[groups]]
 title = "Games Writing"
 [[groups.items]]
+id = "decks-to-dust"
 label = "Playing For Real: Decks to Dust | <cite>Haywire Magazine</cite>"
 url = "http://www.haywiremag.com/columns/playing-for-real-decks-to-dust/"
+feed_title = "Let There Be Play | Decks to Dust"
+guid = "http://www.haywiremag.com/columns/playing-for-real-decks-to-dust/"
+description = "A bonus issue of my column examining videogames as \"play.\" This one ponders how digital card game Nowhere Prophet embraces the \"mortality\" of its cards, unifying narrative, theme, and mechanics in a powerful way."
+feed_date = 2018-02-25T20:00:00Z
 [[groups.items]]
+id = "sweatin-pixels"
 label = "Playing For Real: Sweatin' Pixels | <cite>Haywire Magazine</cite>"
 url = "http://www.haywiremag.com/columns/playing-for-real-sweatin-pixels/"
+feed_title = "Let There Be Play | Sweatin' Pixels"
+guid = "http://www.haywiremag.com/columns/playing-for-real-sweatin-pixels/"
+description = "A bonus issue of my column examining videogames as \"play.\" This one reviews Jason Schreier’s book Blood, Sweat, and Pixels, and a look how a peek behind-the-scenes is good for the videogame industry."
+feed_date = 2017-10-15T20:00:00Z
 [[groups.items]]
+id = "hashtag-the-world"
 label = "Playing For Real: Hashtag the World | <cite>Haywire Magazine</cite>"
 url = "http://www.haywiremag.com/columns/playing-for-real-hashtag-the-world/"
+feed_title = "Hashtag the World | Haywire Magazine"
+guid = "http://www.haywiremag.com/columns/playing-for-real-hashtag-the-world/"
+description = "Monthly column examining videogames as \"play.\" This month's topic is the moral dissonance of Ubisoft's Watch Dogs 2, looking at how it goes to great lengths to reference pressing contemporary issues but ultimately misses an opportunity to say much of substance about them."
+feed_date = 2017-07-09T20:00:00Z
 [[groups.items]]
+id = "freedom-of-choice"
 label = "Playing For Real: Freedom of Choice | <cite>Haywire Magazine</cite>"
 url = "http://www.haywiremag.com/columns/playing-for-real-freedom-of-choice/"
+feed_title = "Freedom of Choice | Haywire Magazine"
+guid = "http://www.haywiremag.com/columns/playing-for-real-freedom-of-choice/"
+description = "Monthly column examining videogames as \"play.\" This month's topic is interactive narrative, looking at Telltale's various \"choose your own adventure\" style games and positing that controlling the narrative is not the highest expression of interactivity."
+feed_date = 2017-06-04T20:00:00Z
 [[groups.items]]
+id = "a-tale-of-two-calamities"
 label = "Playing For Real: A Tale of Two Calamities | <cite>Haywire Magazine</cite>"
 url = "http://www.haywiremag.com/columns/playing-for-real-a-tale-of-two-calamities/"
+feed_title = "A Tale of Two Calamities | Haywire Magazine"
+guid = "http://www.haywiremag.com/columns/playing-for-real-a-tale-of-two-calamities/"
+description = "Monthly column examining videogames as \"play.\" This month's topic is a parallel reading of Bastion and Transistor, unpacking the similar plot elements that are used to different effects by contrasting aesthetics and tones."
+feed_date = 2017-04-30T20:00:00Z
 [[groups.items]]
+id = "cheap-as-free"
 label = "Playing For Real: Cheap As Free | <cite>Haywire Magazine</cite>"
 url = "http://www.haywiremag.com/columns/playing-for-real-cheap-as-free/"
+feed_title = "Cheap As Free | Haywire Magazine"
+guid = "http://www.haywiremag.com/columns/playing-for-real-cheap-as-free/"
+description = "Monthly column examining videogames as \"play.\" This month's topic is the economics of \"free to play\" games and how design considerations around pricing models impacts the experience, with examples from games like Clash of Clans and Fire Emblem: Heroes."
+feed_date = 2017-03-26T20:00:00Z
 [[groups.items]]
+id = "not-with-a-bang-but-a-winter"
 label = "Playing For Real: Not With a Bang but a Winter | <cite>Haywire Magazine</cite>"
 url = "http://www.haywiremag.com/columns/playing-for-real-not-with-a-bang-but-a-winter/"
+feed_title = "Not With a Bang but a Winter | Haywire Magazine"
+guid = "http://www.haywiremag.com/columns/playing-for-real-not-with-a-bang-but-a-winter/"
+description = "Monthly column examining videogames as \"play.\" This month's topic is the destruction and rebirth in apocalyptic media, with examples from Fallout and The Long Dark."
+feed_date = 2017-02-19T20:00:00Z
 [[groups.items]]
+id = "slaying-dragons"
 label = "Playing For Real: Slaying Dragons | <cite>Haywire Magazine</cite>"
 url = "http://www.haywiremag.com/columns/slaying-dragons/"
+feed_title = "Slaying Dragons | Haywire Magazine"
+guid = "http://www.haywiremag.com/columns/slaying-dragons/"
+description = "Monthly column examining videogames as \"play.\" This month's topic is the power of vulnerability as demonstrated by Numinous Games' That Dragon, Cancer."
+feed_date = 2016-12-11T20:00:00Z
 [[groups.items]]
+id = "holding-out-for-a-hero"
 label = "Playing For Real: Holding Out for a Hero | <cite>Haywire Magazine</cite>"
 url = "http://www.haywiremag.com/columns/playing-for-real-holding-out-for-a-hero/"
+feed_title = "Holding Out for a Hero | Haywire Magazine"
+guid = "http://www.haywiremag.com/columns/playing-for-real-holding-out-for-a-hero/"
+description = "Monthly column examining videogames as \"play.\" This month's topic is the lack of meaningful weight to the \"simulated heroism\" of many modern games, especially World of Warcraft. A counter-example is examined in Metro: 2033."
+feed_date = 2016-11-06T20:00:00Z
 [[groups.items]]
+id = "play-as-you-like"
 label = "Playing For Real: Play As You Like | <cite>Haywire Magazine</cite>"
 url = "http://www.haywiremag.com/columns/playing-for-real-play-as-you-like/"
+feed_title = "Play As You Like | Haywire Magazine"
+guid = "http://www.haywiremag.com/columns/playing-for-real-play-as-you-like/"
+description = "Monthly column examining videogames as \"play.\" This month's topic is the use of theatrical motif in Final Fantasy IX as it relates to playfulness in the sense used by Ian Bogost in his book Play Anything."
+feed_date = 2016-10-02T20:00:00Z
 [[groups.items]]
+id = "gotta-glitch-em-all"
 label = "Playing For Real: Gotta Glitch 'Em All | <cite>Haywire Magazine</cite>"
 url = "http://www.haywiremag.com/columns/playing-for-real-gotta-glitch-em-all/"
+feed_title = "Gotta Glitch 'Em All | Haywire Magazine"
+guid = "http://www.haywiremag.com/columns/playing-for-real-gotta-glitch-em-all/"
+description = "Monthly column examining videogames as \"play.\" This month's topic is the speedrun, specifically glitch-based approaches, as an artful application of play to explore titles more fully."
+feed_date = 2016-07-24T20:00:00Z
 [[groups.items]]
+id = "reality-augmented"
 label = "Playing For Real: Reality, Augmented | <cite>Haywire Magazine</cite>"
 url = "http://www.haywiremag.com/columns/playing-for-real-reality-augmented/"
+feed_title = "Reality, Augmented | Haywire Magazine"
+guid = "http://www.haywiremag.com/columns/playing-for-real-reality-augmented/"
+description = "Monthly column examining videogames as \"play.\" This month's topic is Augmented and Alternate Reality gaming, examining how Niantic's Ingress aligns its many facets to enhance the experience."
+feed_date = 2016-06-19T20:00:00Z
 [[groups.items]]
+id = "free-to-be-useless"
 label = "Free to be Useless | <cite>First Person Scholar</cite>"
 url = "http://www.firstpersonscholar.com/free-to-be-useless/"
+feed_title = "Free to be Useless | FPS"
+guid = "http://www.firstpersonscholar.com/free-to-be-useless/"
+description = "Response to Luca Morini's \"Play as the Bulwark of Uselessness\", published at First Person Scholar."
+feed_date = 2016-05-16T20:00:00Z
 [[groups.items]]
+id = "content-factory"
 label = "Playing For Real: The Content Factory | <cite>Haywire Magazine</cite>"
 url = "http://www.haywiremag.com/columns/playing-for-real-the-content-factory/"
+feed_title = "The Content Factory | Haywire Magazine"
+guid = "http://www.haywiremag.com/columns/playing-for-real-the-content-factory/"
+description = "Monthly column examining videogames as \"play.\" This month's topic is relationship between the commodification of games and working conditions in the game industry."
+feed_date = 2016-05-15T20:00:00Z
 [[groups.items]]
+id = "let-there-be-play"
 label = "Playing For Real: Let There Be Play | <cite>Haywire Magazine</cite>"
 url = "http://www.haywiremag.com/columns/playing-for-real-let-there-be-play/"
+feed_title = "Let There Be Play | Haywire Magazine"
+guid = "http://www.haywiremag.com/columns/playing-for-real-let-there-be-play/"
+description = "Monthly column examining videogames as \"play.\" This month's topic is the connection between videogames, liturgy, and fairytale."
+feed_date = 2016-04-10T20:00:00Z
 [[groups.items]]
+id = "beyond-choices"
 label = "Book Review: <cite>Beyond Choices</cite> | <cite>First Person Scholar</cite>"
 url = "http://www.firstpersonscholar.com/a-review-of-miguel-sicarts-beyond-choices/"
+feed_title = "Book Review: Beyond Choices | FPS"
+guid = "http://www.firstpersonscholar.com/a-review-of-miguel-sicarts-beyond-choices/"
+description = "Review of Miguel Sicart's book Beyond Choices, published at First Person Scholar."
+feed_date = 2016-02-17T20:00:00Z
+
 [[groups]]
 title = "Other Writing"
 [[groups.items]]
+id = "sheathing-the-sword"
 label = "Sheathing the Sword: Akira Kurosawa and the Virtue of Meekness | <cite>Christ and Pop Culture</cite>"
 url = "https://christandpopculture.com/sheathing-sword-akira-kurosawa-virtue-meekness/"
+feed_title = "Christ and Pop Culture | Sheathing the Sword: Akira Kurosawa and the Virtue of Meekness"
+guid = "https://christandpopculture.com/sheathing-sword-akira-kurosawa-virtue-meekness/"
+description = "An in-depth meditation on the oft-misunderstood virtue of meekness, specifically as presented by the samurai films of Akira Kurosawa. Toshiro Mifune, playing the title role in Sanjuro, is called a \"sword without a sheath\" for his inclination toward violence, and the movie presents a vision of violence as a sword kept safely in its sheath. Christians, however, look forward to a deeper kind of peace where the swords themselves are beaten to plowshares, turning weapons of war into tools of nurturing. Featured article at Christ and Pop Culture, January 2018 issue."
+feed_date = 2018-02-05T20:00:00Z
 [[groups.items]]
+id = "filled-not-emptied"
 label = "Filled, Not Emptied | Trinity Fellows Academy Week 31"
 url = "http://trinityfellowsacademy.org/2016/03/28/filled-not-emptied-week-31/"
+feed_title = "Filled, not Emptied | TFA"
+guid = "http://trinityfellowsacademy.org/2016/03/28/filled-not-emptied-week-31/"
+description = "Weekly update blog post for Trinity Fellows Academy week 31."
+feed_date = 2016-03-28T20:00:00Z
 [[groups.items]]
+id = "light-in-darkness"
 label = "Light in the Darkness | Trinity Fellows Academy Weeks 16 and 17"
 url = "http://trinityfellowsacademy.org/2015/12/24/light-in-the-darkness-weeks-16-17/"
+feed_title = "Light in the Darkness | TFA"
+guid = "http://trinityfellowsacademy.org/2015/12/24/light-in-the-darkness-weeks-16-17/"
+description = "Weekly update blog post for Trinity Fellows Academy Weeks 16 and 17."
+feed_date = 2015-12-24T20:00:00Z
 [[groups.items]]
+id = "strengths-and-silence"
 label = "Strengths and Silence | Trinity Fellows Academy Week 3"
 url = "http://trinityfellowsacademy.org/2015/09/14/finding-peace-and-discovering-strengths-week-3/"
+feed_title = "Strengths and Silence | TFA"
+guid = "http://trinityfellowsacademy.org/2015/09/14/finding-peace-and-discovering-strengths-week-3/"
+description = "Weekly update blog post for Trinity Fellows Academy Week 3."
+feed_date = 2015-09-14T20:00:00Z
+
 [[groups]]
 title = "Research Publications"
 [[groups.items]]
+id = "integer-ray-tracing"
 label = "Integer Ray Tracing | <cite>Journal of Graphics, GPU, and Game Tools, vol. 14, no. 4</cite>, 2009"
 url = "https://www.cs.unc.edu/~jheinly/publications/jgt2009-heinly.pdf"
+legacy_undated = true
 [[groups.items]]
+id = "stream-filtered-ray-tracing"
 label = "Toward Stream Filtered Ray Tracing on a DSP | Poster, <cite>ACM SIGGRAPH/Eurographics High Performance Graphics</cite>, June 2010"
 url = "http://www.rtvtk.org/~cgribble/research/papers/bensema10toward_poster.pdf"
+legacy_undated = true
+
 [[groups]]
 title = "Software Projects"
 [[groups.items]]
+id = "tangere"
 label = "Tangere Integer Ray Tracer"
 url = "http://www.rtvtk.org/~cgribble/research/tangere/"
+legacy_undated = true
 [[groups.items]]
 note = "This site by Jesse M. Porch. Valid [HTML](https://validator.w3.org/nu/?doc=http%3A%2F%2Fwww.jmporch.com%2F) and [CSS](https://jigsaw.w3.org/css-validator/validator?uri=www.jmporch.com%2Fstyle.css&profile=css3&usermedium=all&warning=1&vextwarning=&lang=en)."

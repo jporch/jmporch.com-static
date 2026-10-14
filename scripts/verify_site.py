@@ -7,6 +7,7 @@ import re
 import shutil
 import subprocess
 import tempfile
+import tomllib
 from urllib.parse import unquote, urljoin, urlsplit
 import xml.etree.ElementTree as ET
 
@@ -65,6 +66,20 @@ def check_output(output, base_url):
                 assert (stylesheet.parent / value).is_file(), f'Missing CSS asset: {value}'
 
 
+def check_portfolio_feed(root, base_url):
+    data = tomllib.loads((root / 'data/portfolio.toml').read_text())
+    expected = [item['url'] for group in data['groups'] for item in group['items'] if 'url' in item]
+    feed = ET.parse(root / 'public/feed.xml')
+    entries = feed.findall('channel/item')
+    assert Counter(item.findtext('link') for item in entries) == Counter(expected), (
+        'RSS must contain every linked portfolio item exactly once, excluding page notes.')
+    identities = [item.findtext('guid') for item in entries]
+    assert len(set(identities)) == len(identities), 'RSS identifiers must be unique.'
+    assert feed.findtext('channel/link') == base_url.rstrip('/') + '/#portfolio'
+    assert feed.find('channel/{http://www.w3.org/2005/Atom}link').get('href') == base_url.rstrip('/') + '/feed.xml'
+    print(f'PASS: Portfolio RSS includes all {len(expected)} links with unique identities and correct deployment URLs.')
+
+
 def check_blog(root, zola, base_url):
     # Temporary posts exercise page discovery, date sorting, pagination, feeds,
     # navigation, and draft exclusion without publishing demonstration content.
@@ -106,6 +121,7 @@ if __name__ == '__main__':
     root = Path(__file__).resolve().parent.parent
     resolved = shutil.which(arguments.zola) or str(Path(arguments.zola).resolve())
     check_output(root / 'public', arguments.base_url)
+    check_portfolio_feed(root, arguments.base_url)
     expected_entries = sum(len(list((root / 'content' / folder).glob('*.md'))) - 1
                            for folder in ('work', 'education'))
     expected_groups = (root / 'data/portfolio.toml').read_text().count('[[groups]]')
