@@ -3,6 +3,16 @@ title = "Jesse M. Porch's Occasional Pretensions of Coherence"
 description = "Assorted words on videogames, play, and whatever else I'm thinking about at the time."
 
 [[groups]]
+title = "TTRPG Reviews"
+[[groups.items]]
+id = "back-again-review"
+label = "Review: Back Again from the Broken Land"
+url = "https://itch.io/blog/1683874/review-back-again-from-the-broken-land"
+feed_title = "Review: Back Again from the Broken Land"
+guid = "https://itch.io/blog/1683874/review-back-again-from-the-broken-land"
+description = "A bonus issue of my column examining videogames as \"play.\" This one ponders how digital card game Nowhere Prophet embraces the \"mortality\" of its cards, unifying narrative, theme, and mechanics in a powerful way."
+
+[[groups]]
 title = "Games Writing"
 [[groups.items]]
 id = "decks-to-dust"
