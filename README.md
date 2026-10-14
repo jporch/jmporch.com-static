@@ -38,7 +38,7 @@ copied to an ordinary static webserver.
 | Education | `content/education/*.md` |
 | Portfolio links and categories | `data/portfolio.toml` |
 | Navigation, contact links, résumé location | `data/navigation.toml` |
-| Site title, description, name, copyright year | `zola.toml` |
+| Site title, description, name | `zola.toml` |
 | Images, résumé, and other downloads | `static/content/` |
 
 Edit Markdown below the `+++` metadata delimiters. Content-only changes do not
@@ -113,13 +113,14 @@ the original section IDs, CSS classes, four-panel homepage, and content wrappers
 collapsible headings now contain keyboard-accessible native buttons.
 
 `static/main.js` handles hash navigation, browser back/forward, collapsible entries,
-and the mobile menu, including breakpoint changes and Escape. Content remains
+and the mobile menu, including eased opening/closing, breakpoint changes and Escape. Content remains
 readable if JavaScript is disabled. Reduced-motion preferences are respected.
 
 The menu no longer hides the content underneath it. Narrow-screen fixes address
 heading overflow, the image's doubled padding width, and menu button placement.
 The malformed email address was corrected to `porchjm@gmail.com`. The original
-wording, résumé, portfolio destinations, and copyright year are preserved.
+wording, résumé, and portfolio destinations are preserved. The footer copyright
+year is computed from the current UTC year each time Zola builds the site.
 
 The portrait retains its original attribution. Josefin Slab's license is included
 in `static/fonts/OFL.txt`; no new license is assigned to the owner's site content.

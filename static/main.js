@@ -8,18 +8,47 @@
   const home = document.body.hasAttribute("data-home");
   const panels = home ? [...document.querySelectorAll(".content-panel")] : [];
   let activePanel = panels[0];
+  let menuAnimation;
 
   document.body.classList.add("js");
 
+  function setMenu(open, animate = true) {
+    const wasOpen = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", String(open));
+    navigation.inert = mobile.matches && !open;
+
+    if (!mobile.matches || reducedMotion.matches || !animate) {
+      if (menuAnimation) menuAnimation.cancel();
+      menuAnimation = undefined;
+      navigation.classList.toggle("is-open", open);
+      navigation.style.overflow = "";
+      return;
+    }
+    if (open === wasOpen) return;
+
+    // Continue from the current height when a second click reverses a slide.
+    const startHeight = navigation.getBoundingClientRect().height;
+    if (menuAnimation) menuAnimation.cancel();
+    navigation.classList.add("is-open");
+    navigation.style.overflow = "hidden";
+    const endHeight = open ? navigation.scrollHeight : 0;
+    menuAnimation = navigation.animate(
+      [{ height: `${startHeight}px` }, { height: `${endHeight}px` }],
+      { duration: 400, easing: "ease" },
+    );
+    menuAnimation.onfinish = () => {
+      navigation.classList.toggle("is-open", open);
+      navigation.style.overflow = "";
+      menuAnimation = undefined;
+    };
+  }
+
   function closeMenu() {
-    toggle.setAttribute("aria-expanded", "false");
-    navigation.classList.remove("is-open");
+    setMenu(false);
   }
 
   toggle.addEventListener("click", () => {
-    const open = toggle.getAttribute("aria-expanded") !== "true";
-    toggle.setAttribute("aria-expanded", String(open));
-    navigation.classList.toggle("is-open", open);
+    setMenu(toggle.getAttribute("aria-expanded") !== "true");
   });
 
   document.addEventListener("keydown", (event) => {
@@ -29,7 +58,7 @@
     }
   });
 
-  mobile.addEventListener("change", closeMenu);
+  mobile.addEventListener("change", () => setMenu(false, false));
   navigation.addEventListener("click", (event) => {
     const link = event.target.closest("a");
     if (!link) return;

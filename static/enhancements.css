@@ -69,7 +69,7 @@ body:not(.js) .sidebar-nav { display: block; }
   html { box-sizing: border-box; }
   .sidebar-header { display: flex; align-items: center; justify-content: space-between; gap: .25em; }
   .nav-toggle { flex: 0 0 auto; margin: 0; min-width: 44px; min-height: 44px; }
-  .sidebar-nav.is-open { display: block; }
+  .sidebar-nav.is-open { display: flow-root; }
   .content { float: none; display: block; min-width: 0; }
   .content-panel { box-sizing: border-box; width: 100%; height: auto; }
   .major-heading { overflow-wrap: anywhere; }

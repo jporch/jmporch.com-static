@@ -18,7 +18,7 @@
       <div id="content" class="content" tabindex="-1">
         {% block content %}{% endblock content %}
       </div>
-      <div class="copyright-notice">Photo copyright <a href="https://www.karenadixon.com/" target="_blank" rel="noopener">Karena Dixon</a>. All other content copyright {{ config.extra.name }}, {{ config.extra.copyright_year }}.</div>
+      <div class="copyright-notice">Photo copyright <a href="https://www.karenadixon.com/" target="_blank" rel="noopener">Karena Dixon</a>. All other content copyright {{ config.extra.name }}, {{ now(utc=true) | date(format="%Y") }}.</div>
     </main>
   </body>
 </html>
