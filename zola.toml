@@ -1,0 +1,15 @@
+base_url = "https://jporch.github.io/jmporch.com-static"
+title = "Jesse M. Porch | Application Developer, Writer | Boston, MA"
+description = "The personal portfolio of Jesse M. Porch, an application developer and writer currently living in Boston, Massachusetts and working at Harvard Law School."
+default_language = "en"
+compile_sass = false
+build_search_index = false
+generate_feeds = false
+feed_filenames = ["atom.xml"]
+
+[markdown]
+external_links_target_blank = true
+
+[extra]
+name = "Jesse M. Porch"
+copyright_year = 2017

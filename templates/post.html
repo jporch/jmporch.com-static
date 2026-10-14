@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}{{ page.title }} | {{ config.extra.name }}{% endblock title %}
+{% block description %}{% if page.description %}{{ page.description }}{% else %}{{ config.description }}{% endif %}{% endblock description %}
+{% block body_attributes %}class="reading-page"{% endblock body_attributes %}
+{% block content %}
+<article class="content-panel" aria-labelledby="post-heading">
+  <h1 id="post-heading" class="major-heading">{{ page.title }}</h1>
+  <div class="viewport prose">
+    <time datetime="{{ page.date | date(format='%Y-%m-%d') }}">{{ page.date | date(format='%B %e, %Y') }}</time>
+    {{ page.content | safe }}
+    <nav class="post-navigation" aria-label="Post navigation">
+      {% if page.higher %}<a href="{{ page.higher.permalink }}">Older: {{ page.higher.title }}</a>{% endif %}
+      <a href="{{ get_url(path='blog/') }}">All posts</a>
+      {% if page.lower %}<a href="{{ page.lower.permalink }}">Newer: {{ page.lower.title }}</a>{% endif %}
+    </nav>
+  </div>
+</article>
+{% endblock content %}

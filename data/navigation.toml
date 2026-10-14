@@ -1,0 +1,35 @@
+[[sections]]
+id = "about"
+title = "About Me"
+
+[[sections]]
+id = "work"
+title = "Work Experience"
+
+[[sections]]
+id = "education"
+title = "Education"
+
+[[sections]]
+id = "portfolio"
+title = "Portfolio"
+
+[[contact]]
+title = "Email"
+url = "mailto:porchjm@gmail.com"
+
+[[contact]]
+title = "LinkedIn"
+url = "https://www.linkedin.com/in/jmporch"
+
+[[contact]]
+title = "Twitter"
+url = "https://twitter.com/TheJPo"
+
+[[resources]]
+title = "Resume"
+path = "content/Resume_3-22-16.pdf"
+
+[[resources]]
+title = "GitHub"
+url = "https://github.com/jporch"

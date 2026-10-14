@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Page not found | {{ config.extra.name }}{% endblock title %}
+{% block body_attributes %}class="reading-page"{% endblock body_attributes %}
+{% block content %}
+<section class="content-panel" aria-labelledby="missing-heading">
+  <h1 id="missing-heading" class="major-heading">Page not found</h1>
+  <div class="viewport prose"><p><a href="{{ get_url(path='/') }}">Return to the homepage</a>.</p></div>
+</section>
+{% endblock content %}

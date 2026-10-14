@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block body_attributes %}data-home{% endblock body_attributes %}
+{% block content %}
+{% set about = get_page(path="about.md") %}
+<section id="about" class="content-panel" aria-labelledby="about-me-heading">
+  <h1 id="about-me-heading" class="major-heading" tabindex="-1">{{ about.title }}</h1>
+  <div class="no-scroll"><div class="viewport" id="about-text">
+    <img src="{{ get_url(path='content/Jesse_Porch_240x240.jpg') }}" class="headshot" width="240" height="240" alt="Headshot of Jesse Porch">
+    {{ about.content | safe }}
+  </div></div>
+</section>
+<section id="work" class="content-panel" aria-labelledby="work-experience-heading">
+  <h1 id="work-experience-heading" class="major-heading" tabindex="-1">Work Experience</h1>
+  <div class="no-scroll"><div class="viewport" id="work-text">
+    {% set entries_path = "work/_index.md" %}
+    {% include "partials/entries.html" %}
+  </div></div>
+</section>
+<section id="education" class="content-panel" aria-labelledby="education-heading">
+  <h1 id="education-heading" class="major-heading" tabindex="-1">Education</h1>
+  <div class="no-scroll"><div class="viewport" id="education-text">
+    {% set entries_path = "education/_index.md" %}
+    {% include "partials/entries.html" %}
+  </div></div>
+</section>
+<section id="portfolio" class="content-panel" aria-labelledby="portfolio-heading">
+  <h1 id="portfolio-heading" class="major-heading" tabindex="-1">Portfolio (<a href="{{ get_url(path='feed.xml') }}" title="Link to RSS feed">RSS</a>)</h1>
+  <div class="no-scroll"><div class="viewport" id="portfolio-text">
+    {% set portfolio = load_data(path="data/portfolio.toml") %}
+    {% for group in portfolio.groups %}
+    <div class="collapse">
+      <h2 class="minor-heading collapse-heading"><button type="button" class="collapse-toggle" aria-expanded="true" aria-controls="portfolio-{{ loop.index }}-body"><span class="minus-icon" aria-hidden="true"></span>{{ group.title }}</button></h2>
+      <div class="collapse-body" id="portfolio-{{ loop.index }}-body">
+        {% for item in group.items %}
+        {% if item.url is defined %}
+        <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.label | markdown(inline=true) | safe }}</a>
+        {% else %}
+        <span>{{ item.note | markdown(inline=true) | safe }}</span>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div></div>
+</section>
+{% endblock content %}

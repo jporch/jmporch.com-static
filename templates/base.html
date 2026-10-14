@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+  <head>
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    <meta charset="utf-8">
+    <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{ get_url(path='style.css') }}" rel="stylesheet">
+    <link href="{{ get_url(path='enhancements.css') }}" rel="stylesheet">
+    <link rel="canonical" href="{{ current_url | default(value=get_url(path='/')) }}">
+    <script src="{{ get_url(path='main.js') }}" defer></script>
+    {% block head %}{% endblock head %}
+  </head>
+  <body {% block body_attributes %}{% endblock body_attributes %}>
+    <main>
+      <div id="skip-nav"><a href="#content">Skip to content</a></div>
+      {% include "partials/sidebar.html" %}
+      <div id="content" class="content" tabindex="-1">
+        {% block content %}{% endblock content %}
+      </div>
+      <div class="copyright-notice">Photo copyright <a href="https://www.karenadixon.com/" target="_blank" rel="noopener">Karena Dixon</a>. All other content copyright {{ config.extra.name }}, {{ config.extra.copyright_year }}.</div>
+    </main>
+  </body>
+</html>

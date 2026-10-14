@@ -1,0 +1,79 @@
+[[groups]]
+title = "Games Writing"
+[[groups.items]]
+label = "Playing For Real: Decks to Dust | <cite>Haywire Magazine</cite>"
+url = "http://www.haywiremag.com/columns/playing-for-real-decks-to-dust/"
+[[groups.items]]
+label = "Playing For Real: Sweatin' Pixels | <cite>Haywire Magazine</cite>"
+url = "http://www.haywiremag.com/columns/playing-for-real-sweatin-pixels/"
+[[groups.items]]
+label = "Playing For Real: Hashtag the World | <cite>Haywire Magazine</cite>"
+url = "http://www.haywiremag.com/columns/playing-for-real-hashtag-the-world/"
+[[groups.items]]
+label = "Playing For Real: Freedom of Choice | <cite>Haywire Magazine</cite>"
+url = "http://www.haywiremag.com/columns/playing-for-real-freedom-of-choice/"
+[[groups.items]]
+label = "Playing For Real: A Tale of Two Calamities | <cite>Haywire Magazine</cite>"
+url = "http://www.haywiremag.com/columns/playing-for-real-a-tale-of-two-calamities/"
+[[groups.items]]
+label = "Playing For Real: Cheap As Free | <cite>Haywire Magazine</cite>"
+url = "http://www.haywiremag.com/columns/playing-for-real-cheap-as-free/"
+[[groups.items]]
+label = "Playing For Real: Not With a Bang but a Winter | <cite>Haywire Magazine</cite>"
+url = "http://www.haywiremag.com/columns/playing-for-real-not-with-a-bang-but-a-winter/"
+[[groups.items]]
+label = "Playing For Real: Slaying Dragons | <cite>Haywire Magazine</cite>"
+url = "http://www.haywiremag.com/columns/slaying-dragons/"
+[[groups.items]]
+label = "Playing For Real: Holding Out for a Hero | <cite>Haywire Magazine</cite>"
+url = "http://www.haywiremag.com/columns/playing-for-real-holding-out-for-a-hero/"
+[[groups.items]]
+label = "Playing For Real: Play As You Like | <cite>Haywire Magazine</cite>"
+url = "http://www.haywiremag.com/columns/playing-for-real-play-as-you-like/"
+[[groups.items]]
+label = "Playing For Real: Gotta Glitch 'Em All | <cite>Haywire Magazine</cite>"
+url = "http://www.haywiremag.com/columns/playing-for-real-gotta-glitch-em-all/"
+[[groups.items]]
+label = "Playing For Real: Reality, Augmented | <cite>Haywire Magazine</cite>"
+url = "http://www.haywiremag.com/columns/playing-for-real-reality-augmented/"
+[[groups.items]]
+label = "Free to be Useless | <cite>First Person Scholar</cite>"
+url = "http://www.firstpersonscholar.com/free-to-be-useless/"
+[[groups.items]]
+label = "Playing For Real: The Content Factory | <cite>Haywire Magazine</cite>"
+url = "http://www.haywiremag.com/columns/playing-for-real-the-content-factory/"
+[[groups.items]]
+label = "Playing For Real: Let There Be Play | <cite>Haywire Magazine</cite>"
+url = "http://www.haywiremag.com/columns/playing-for-real-let-there-be-play/"
+[[groups.items]]
+label = "Book Review: <cite>Beyond Choices</cite> | <cite>First Person Scholar</cite>"
+url = "http://www.firstpersonscholar.com/a-review-of-miguel-sicarts-beyond-choices/"
+[[groups]]
+title = "Other Writing"
+[[groups.items]]
+label = "Sheathing the Sword: Akira Kurosawa and the Virtue of Meekness | <cite>Christ and Pop Culture</cite>"
+url = "https://christandpopculture.com/sheathing-sword-akira-kurosawa-virtue-meekness/"
+[[groups.items]]
+label = "Filled, Not Emptied | Trinity Fellows Academy Week 31"
+url = "http://trinityfellowsacademy.org/2016/03/28/filled-not-emptied-week-31/"
+[[groups.items]]
+label = "Light in the Darkness | Trinity Fellows Academy Weeks 16 and 17"
+url = "http://trinityfellowsacademy.org/2015/12/24/light-in-the-darkness-weeks-16-17/"
+[[groups.items]]
+label = "Strengths and Silence | Trinity Fellows Academy Week 3"
+url = "http://trinityfellowsacademy.org/2015/09/14/finding-peace-and-discovering-strengths-week-3/"
+[[groups]]
+title = "Research Publications"
+[[groups.items]]
+label = "Integer Ray Tracing | <cite>Journal of Graphics, GPU, and Game Tools, vol. 14, no. 4</cite>, 2009"
+url = "https://www.cs.unc.edu/~jheinly/publications/jgt2009-heinly.pdf"
+[[groups.items]]
+label = "Toward Stream Filtered Ray Tracing on a DSP | Poster, <cite>ACM SIGGRAPH/Eurographics High Performance Graphics</cite>, June 2010"
+url = "http://www.rtvtk.org/~cgribble/research/papers/bensema10toward_poster.pdf"
+[[groups]]
+title = "Software Projects"
+[[groups.items]]
+label = "Tangere Integer Ray Tracer"
+url = "http://www.rtvtk.org/~cgribble/research/tangere/"
+[[groups.items]]
+note = "This site by Jesse M. Porch. Valid [HTML](https://validator.w3.org/nu/?doc=http%3A%2F%2Fwww.jmporch.com%2F) and [CSS](https://jigsaw.w3.org/css-validator/validator?uri=www.jmporch.com%2Fstyle.css&profile=css3&usermedium=all&warning=1&vextwarning=&lang=en)."

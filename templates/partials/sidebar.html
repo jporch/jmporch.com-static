@@ -1,0 +1,33 @@
+{% set navigation = load_data(path="data/navigation.toml") %}
+{% set blog = get_section(path="blog/_index.md") %}
+<div class="sidebar" role="navigation" aria-label="Main navigation">
+  <div class="sidebar-header">{{ config.extra.name }}
+    <button type="button" class="nav-toggle" aria-label="Toggle Navigation" aria-controls="sidebar-nav" aria-expanded="false">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
+  <nav class="sidebar-nav" id="sidebar-nav">
+    <ul class="sidebar-element sidebar-buttons">
+      {% for item in navigation.sections %}
+      <li id="{{ item.id }}_button" class="#{{ item.id }}"><a href="{% if section is defined and section.relative_path == '_index.md' %}#{{ item.id }}{% else %}{{ get_url(path='/') }}#{{ item.id }}{% endif %}">{{ item.title }}</a></li>
+      {% endfor %}
+      {% if blog.pages | length > 0 %}
+      <li id="blog_button"><a href="{{ blog.permalink }}"{% if current_url is defined and current_url is starting_with(pat=blog.permalink) %} aria-current="page"{% endif %}>Blog</a></li>
+      {% endif %}
+    </ul>
+    <hr class="sidebar-hr">
+    <ul class="sidebar-element sidebar-contact">
+      {% for item in navigation.contact %}
+      <li><a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+    <hr class="sidebar-hr">
+    <ul class="sidebar-element sidebar-resume">
+      {% for item in navigation.resources %}
+      <li><a href="{% if item.path is defined %}{{ get_url(path=item.path) }}{% else %}{{ item.url }}{% endif %}" target="_blank" rel="noopener">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+</div>

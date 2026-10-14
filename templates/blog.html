@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}{{ section.title }} | {{ config.extra.name }}{% endblock title %}
+{% block body_attributes %}class="reading-page"{% endblock body_attributes %}
+{% block head %}<link rel="alternate" type="application/atom+xml" title="Blog" href="{{ get_url(path='blog/atom.xml') }}">{% endblock head %}
+{% block content %}
+<section class="content-panel" aria-labelledby="blog-heading">
+  <h1 id="blog-heading" class="major-heading">{{ section.title }}</h1>
+  <div class="viewport prose">
+    {{ section.content | safe }}
+    {% if paginator.pages | length == 0 %}<p>No posts yet.</p>{% endif %}
+    {% for post in paginator.pages %}
+    <article>
+      <h2 class="minor-heading"><a href="{{ post.permalink }}">{{ post.title }}</a></h2>
+      <time datetime="{{ post.date | date(format='%Y-%m-%d') }}">{{ post.date | date(format='%B %e, %Y') }}</time>
+      {% if post.description %}<p>{{ post.description }}</p>{% elif post.summary %}{{ post.summary | safe }}{% endif %}
+    </article>
+    {% endfor %}
+    {% if paginator.number_pagers > 1 %}
+    <nav class="post-navigation" aria-label="Blog pages">
+      {% if paginator.previous %}<a href="{{ paginator.previous }}">Newer posts</a>{% endif %}
+      <span>Page {{ paginator.current_index }} of {{ paginator.number_pagers }}</span>
+      {% if paginator.next %}<a href="{{ paginator.next }}">Older posts</a>{% endif %}
+    </nav>
+    {% endif %}
+  </div>
+</section>
+{% endblock content %}

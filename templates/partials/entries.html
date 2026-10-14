@@ -1,0 +1,11 @@
+{% set entries = get_section(path=entries_path) %}
+{% for entry_path in entries.extra.entries %}
+{% set entry = get_page(path=entry_path) %}
+<div class="collapse">
+  <h2 class="minor-heading collapse-heading"><button type="button" class="collapse-toggle" aria-expanded="true" aria-controls="{{ entry.slug }}-{{ loop.index }}-body"><span class="minus-icon" aria-hidden="true"></span>{{ entry.title }}</button></h2>
+  <div class="collapse-body" id="{{ entry.slug }}-{{ loop.index }}-body">
+    <span>{{ entry.extra.dates }}</span>
+    {{ entry.content | replace(from='<p><span class="list-item">', to='<span class="list-item">') | replace(from="</span></p>", to="</span>") | replace(from="<p>", to="<span>") | replace(from="</p>", to="</span>") | safe }}
+  </div>
+</div>
+{% endfor %}
