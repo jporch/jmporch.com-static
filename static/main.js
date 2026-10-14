@@ -5,6 +5,8 @@
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const toggle = document.querySelector(".nav-toggle");
   const navigation = document.querySelector(".sidebar-nav");
+  const header = document.querySelector(".sidebar-header");
+  const coveredContent = document.querySelectorAll("#content, .copyright-notice, #skip-nav");
   const home = document.body.hasAttribute("data-home");
   const panels = home ? [...document.querySelectorAll(".content-panel")] : [];
   let activePanel = panels[0];
@@ -16,6 +18,12 @@
     const wasOpen = toggle.getAttribute("aria-expanded") === "true";
     toggle.setAttribute("aria-expanded", String(open));
     navigation.inert = mobile.matches && !open;
+    const overlayOpen = mobile.matches && open;
+    document.documentElement.classList.toggle("menu-open", overlayOpen);
+    coveredContent.forEach((element) => { element.inert = overlayOpen; });
+    if (mobile.matches) {
+      navigation.style.setProperty("--menu-top", `${Math.max(0, header.getBoundingClientRect().bottom)}px`);
+    }
 
     if (!mobile.matches || reducedMotion.matches || !animate) {
       if (menuAnimation) menuAnimation.cancel();
@@ -31,7 +39,7 @@
     if (menuAnimation) menuAnimation.cancel();
     navigation.classList.add("is-open");
     navigation.style.overflow = "hidden";
-    const endHeight = open ? navigation.scrollHeight : 0;
+    const endHeight = open ? navigation.getBoundingClientRect().height : 0;
     menuAnimation = navigation.animate(
       [{ height: `${startHeight}px` }, { height: `${endHeight}px` }],
       { duration: 400, easing: "ease" },
@@ -59,6 +67,11 @@
   });
 
   mobile.addEventListener("change", () => setMenu(false, false));
+  window.addEventListener("resize", () => {
+    if (mobile.matches && toggle.getAttribute("aria-expanded") === "true") {
+      navigation.style.setProperty("--menu-top", `${Math.max(0, header.getBoundingClientRect().bottom)}px`);
+    }
+  });
   navigation.addEventListener("click", (event) => {
     const link = event.target.closest("a");
     if (!link) return;

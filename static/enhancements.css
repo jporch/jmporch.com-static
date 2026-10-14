@@ -67,14 +67,30 @@ body:not(.js) .sidebar-nav { display: block; }
 
 @media screen and (max-width: 640px) {
   html { box-sizing: border-box; }
-  .sidebar-header { display: flex; align-items: center; justify-content: space-between; gap: .25em; }
-  .nav-toggle { flex: 0 0 auto; margin: 0; min-width: 44px; min-height: 44px; }
+  /* Retain the original centered title, floated button, and link spacing. */
+  html.menu-open { overflow: hidden; overscroll-behavior: none; }
+  .js .sidebar-nav {
+    position: fixed;
+    z-index: 5;
+    top: var(--menu-top);
+    left: 6px;
+    right: 6px;
+    height: calc(100vh - var(--menu-top));
+    height: calc(100dvh - var(--menu-top));
+    box-sizing: border-box;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background: rgb(248, 248, 248);
+    border: 2px solid rgb(230,230,230);
+    border-top: 0;
+    border-radius: 0 0 4px 4px;
+  }
   .sidebar-nav.is-open { display: flow-root; }
   .content { float: none; display: block; min-width: 0; }
   .content-panel { box-sizing: border-box; width: 100%; height: auto; }
   .major-heading { overflow-wrap: anywhere; }
   .headshot { box-sizing: content-box; width: 240px; max-width: calc(100% - 8px); height: auto; }
-  .sidebar-element > li > a { display: block; padding: .25em 0; }
+  .sidebar-element > li > a { display: block; }
   .reading-page .content,
   .reading-page .content-panel { min-height: calc(100vh - 5.75em); }
 }

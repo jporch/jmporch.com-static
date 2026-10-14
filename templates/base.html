@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="{{ get_url(path='style.css') }}" rel="stylesheet">
-    <link href="{{ get_url(path='enhancements.css') }}" rel="stylesheet">
+    <link href="{{ get_url(path='style.css', cachebust=true) }}" rel="stylesheet">
+    <link href="{{ get_url(path='enhancements.css', cachebust=true) }}" rel="stylesheet">
     <link rel="canonical" href="{{ current_url | default(value=get_url(path='/')) }}">
-    <script src="{{ get_url(path='main.js') }}" defer></script>
+    <script src="{{ get_url(path='main.js', cachebust=true) }}" defer></script>
     {% block head %}{% endblock head %}
   </head>
   <body {% block body_attributes %}{% endblock body_attributes %}>

@@ -116,7 +116,10 @@ collapsible headings now contain keyboard-accessible native buttons.
 and the mobile menu, including eased opening/closing, breakpoint changes and Escape. Content remains
 readable if JavaScript is disabled. Reduced-motion preferences are respected.
 
-The menu no longer hides the content underneath it. Narrow-screen fixes address
+The mobile menu overlays the entire visible content area without moving the page,
+locks background scrolling, and prevents keyboard focus entering covered content.
+Its original header alignment and link spacing fit within a 320×568 viewport.
+Narrow-screen fixes address
 heading overflow, the image's doubled padding width, and menu button placement.
 The malformed email address was corrected to `porchjm@gmail.com`. The original
 wording, résumé, and portfolio destinations are preserved. The footer copyright
