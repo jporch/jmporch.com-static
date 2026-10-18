@@ -1,0 +1,75 @@
+name: Build and deploy production
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: production-${{ github.event_name == 'pull_request' && github.event.pull_request.number || 'main' }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source and complete feed history
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.13'
+      - name: Install pinned Zola
+        run: bash scripts/install-zola.sh
+      - name: Check content and internal links
+        run: python3 scripts/site.py check --zola .cache/bin/zola --skip-external-links
+      - name: Build for the canonical domain
+        run: python3 scripts/site.py build --zola .cache/bin/zola --base-url https://jmporch.com
+      - name: Verify portfolio feed history and identities
+        run: python3 -m unittest discover -s tests -v
+      - name: Verify production output and blog integration
+        run: python3 scripts/verify_site.py --zola .cache/bin/zola --base-url https://jmporch.com
+      - name: Record the source commit
+        env:
+          SOURCE_COMMIT: ${{ github.sha }}
+        run: printf '{"commit":"%s"}\n' "$SOURCE_COMMIT" > public/deployment.json
+      - name: Upload checked production files
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: production-site
+          path: public
+          retention-days: 1
+          if-no-files-found: error
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: production
+      url: https://jmporch.com
+    steps:
+      - name: Check out the deployment script
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Download checked production files
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: production-site
+          path: public
+      - name: Sync and verify production files
+        env:
+          SSH_HOST: ${{ vars.SSH_HOST }}
+          SSH_PORT: ${{ vars.SSH_PORT }}
+          SSH_USER: ${{ vars.SSH_USER }}
+          SSH_KNOWN_HOSTS: ${{ vars.SSH_KNOWN_HOSTS }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        run: bash scripts/deploy-production.sh public

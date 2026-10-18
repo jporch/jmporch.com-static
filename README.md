@@ -126,13 +126,19 @@ files beside it and relative Markdown image references.
 
 ## Deployment
 
-The default branch is **main**. `.github/workflows/pages.yml`:
+The default branch is **main**. Pushes and merged pull requests deploy automatically:
 
-1. Checks and builds pull requests targeting `main` without deploying them.
-2. Builds and deploys pushes to `main`, including merged pull requests.
-3. Also supports a manual run through the Actions tab.
+| Branch | Destination | Workflow |
+| --- | --- | --- |
+| `main` | Production at `https://jmporch.com` | `.github/workflows/production.yml` |
+| `staging` | [GitHub Pages](https://jporch.github.io/jmporch.com-static/) | `.github/workflows/pages.yml` |
 
-The workflow uses official GitHub Actions pinned to immutable commits, installs
+Merge experimental changes into `staging` to preview them, then merge the changes
+you want to publish into `main`. Pull requests run checks without deploying.
+Both workflows also accept manual runs; deployments are restricted to their
+respective branches.
+
+Each workflow uses official GitHub Actions pinned to immutable commits, installs
 the checksum-verified Zola version, validates generated local links and assets,
 and exercises a temporary 12-post blog to check navigation, pagination, feeds,
 and draft exclusion. Feed tests use temporary Git repositories to check addition
@@ -143,7 +149,55 @@ Only the deployment job receives Pages write and OIDC permissions.
 In GitHub **Settings → Pages**, select **GitHub Actions** as the publishing source.
 The workflow reads the configured Pages URL and passes it to Zola, so assets work
 under the `/jmporch.com-static/` project path and after a future domain change.
-No custom domain or DNS changes are part of this migration.
+Pages remains the staging site; production builds use `https://jmporch.com`.
+
+### Production server
+
+The `production` GitHub environment permits deployments from `main` only. It holds
+the `SSH_PRIVATE_KEY` secret and these variables:
+
+| Variable | Value |
+| --- | --- |
+| `SSH_HOST` | `jmporch.com` |
+| `SSH_PORT` | `22` |
+| `SSH_USER` | `jmporch-deploy` |
+| `SSH_KNOWN_HOSTS` | Server's verified ED25519 public host key in known_hosts format |
+
+The server host key was checked against the fingerprint supplied through a trusted
+server session. Update the pinned key deliberately if the server changes.
+The private deployment key must be unencrypted and match the public key installed
+for the unprivileged deployment account.
+
+Install `rsync` on Ubuntu (`sudo apt install rsync`). The deployment account must
+own `/srv/jmporch-deploy/releases/current`, or have permission to create it under
+`/srv/jmporch-deploy/releases`. These paths must be real directories. NGINX needs
+read/traverse access; uploaded directories and files use modes 755 and 644.
+
+Set the existing NGINX site's document root, preserving its domain and TLS settings:
+
+```nginx
+root /srv/jmporch-deploy/releases/current;
+index index.html;
+
+location / {
+    try_files $uri $uri/ =404;
+}
+error_page 404 /404.html;
+```
+
+After changing the configuration, run `sudo nginx -t` and
+`sudo systemctl reload nginx`. Deployments do not need sudo or an NGINX reload.
+
+The production job uploads the checked artifact over SSH and verifies its contents
+with a second checksum comparison. It synchronizes directly into
+`/srv/jmporch-deploy/releases/current`, removing files there that are absent from
+the new build. Keep server-only files outside that directory. There are no saved
+releases or automatic backups. Transfers use delayed updates, but the whole site
+does not switch atomically; a deployment can briefly serve mixed versions.
+To roll back, revert the relevant commit on `main` and redeploy.
+
+`https://jmporch.com/deployment.json` identifies the deployed source commit once
+NGINX serves this directory. A successful upload alone does not change NGINX's root.
 
 ## Design and behavior
 
