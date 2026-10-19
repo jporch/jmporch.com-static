@@ -29,8 +29,9 @@ def main():
     if args.command == 'build':
         command.extend(['--base-url', base_url])
     elif args.command == 'serve':
+        # base_url already includes the preview port; Zola otherwise appends it again.
         command.extend(['--base-url', base_url, '--port', str(args.port), '--interface', args.interface,
-                        '--extra-watch-path', 'data'])
+                        '--no-port-append', '--extra-watch-path', 'data'])
     command.extend(extra)
     if args.command != 'serve':
         return subprocess.call(command, cwd=root)

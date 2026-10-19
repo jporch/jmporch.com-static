@@ -1,0 +1,1 @@
+<span class="list-item">{% if project.url %}<a href="{{ project.url }}" target="_blank" rel="noopener"><strong>{{ project.name }}</strong></a>{% else %}<strong>{{ project.name }}</strong>{% endif %}: {{ project.description | markdown(inline=true) | safe }}{% if project.technologies %} <strong>({{ project.technologies }})</strong>{% endif %}</span>
