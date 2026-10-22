@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US" prefix="og: https://ogp.me/ns#">
+<head>
+	
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://www.firstpersonscholar.com/xmlrpc.php">
+	<link rel="shortcut icon" href="http://www.firstpersonscholar.com/wp-content/uploads/2016/08/Icon144.png" />
+
+	<link rel="apple-touch-icon" sizes="144x144" href="http://www.firstpersonscholar.com/wp-content/uploads/2016/08/Icon144.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="http://www.firstpersonscholar.com/wp-content/uploads/2016/08/Icon114.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="http://www.firstpersonscholar.com/wp-content/uploads/2016/08/Icon72.png" />
+	<link rel="apple-touch-icon" href="http://www.firstpersonscholar.com/wp-content/uploads/2016/08/Icon57.png" />
+
+	
+		<!-- All in One SEO 5.0.2.1 - aioseo.com -->
+		<title>Free to Be Useless - First Person Scholar</title>
+	<meta name="description" content="Jesse Porch is a software developer who enjoys dabbling in videogame scholarship whenever possible. He’s currently pursuing it a bit more in-depth as part of the interdisciplinary Trinity Fellows Academy, where his research focuses on the cultural role of play in ethics, empathy, and relationships. It was a huge encouragement to read Luca Morini’s wonderful" />
+	<meta name="robots" content="max-image-preview:large" />
+	<meta name="author" content="Alexandra Orlando"/>
+	<link rel="canonical" href="https://www.firstpersonscholar.com/free-to-be-useless/" />
+	<meta name="generator" content="All in One SEO (AIOSEO) 5.0.2.1" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:site_name" content="First Person Scholar - Weekly critical essays, commentaries, and book reviews on games" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="Free to Be Useless - First Person Scholar" />
+		<meta property="og:description" content="Jesse Porch is a software developer who enjoys dabbling in videogame scholarship whenever possible. He’s currently pursuing it a bit more in-depth as part of the interdisciplinary Trinity Fellows Academy, where his research focuses on the cultural role of play in ethics, empathy, and relationships. It was a huge encouragement to read Luca Morini’s wonderful" />
+		<meta property="og:url" content="https://www.firstpersonscholar.com/free-to-be-useless/" />
+		<meta property="article:published_time" content="2016-05-16T14:00:28+00:00" />
+		<meta property="article:modified_time" content="2020-09-18T19:05:14+00:00" />
+		<meta property="article:publisher" content="https://www.facebook.com/FirstPersonScholar/" />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@FPSWeekly" />
+		<meta name="twitter:title" content="Free to Be Useless - First Person Scholar" />
+		<meta name="twitter:description" content="Jesse Porch is a software developer who enjoys dabbling in videogame scholarship whenever possible. He’s currently pursuing it a bit more in-depth as part of the interdisciplinary Trinity Fellows Academy, where his research focuses on the cultural role of play in ethics, empathy, and relationships. It was a huge encouragement to read Luca Morini’s wonderful" />
+		<meta name="twitter:creator" content="@FPSWeekly" />
+		<script type="application/ld+json" class="aioseo-schema">
+			{"@context":"https:\/\/schema.org","@graph":[{"@type":"BlogPosting","@id":"https:\/\/www.firstpersonscholar.com\/free-to-be-useless\/#blogposting","name":"Free to Be Useless - First Person Scholar","headline":"Free to Be Useless","author":{"@id":"https:\/\/www.firstpersonscholar.com\/author\/aorlando\/#author"},"publisher":{"@id":"https:\/\/www.firstpersonscholar.com\/#organization"},"image":{"@type":"ImageObject","url":"https:\/\/www.firstpersonscholar.com\/wp-content\/uploads\/2016\/05\/Year-Two-Word-Cloud-250-words-700x250.jpg","width":700,"height":250},"datePublished":"2016-05-16T10:00:28-04:00","dateModified":"2020-09-18T15:05:14-04:00","inLanguage":"en-US","commentCount":1,"mainEntityOfPage":{"@id":"https:\/\/www.firstpersonscholar.com\/free-to-be-useless\/#webpage"},"isPartOf":{"@id":"https:\/\/www.firstpersonscholar.com\/free-to-be-useless\/#webpage"},"articleSection":"Essay, Brian Sutton-Smith, Jesse Porch, Johan Huizinga, Luca Morini, Miguel Sicart, play, response, aorlando"},{"@type":"BreadcrumbList","@id":"https:\/\/www.firstpersonscholar.com\/free-to-be-useless\/#breadcrumblist","itemListElement":[{"@type":"ListItem","@id":"https:\/\/www.firstpersonscholar.com\/#listItem","position":1,"name":"Home","item":"https:\/\/www.firstpersonscholar.com\/","nextItem":{"@type":"ListItem","@id":"https:\/\/www.firstpersonscholar.com\/category\/essay\/#listItem","name":"Essay"}},{"@type":"ListItem","@id":"https:\/\/www.firstpersonscholar.com\/category\/essay\/#listItem","position":2,"name":"Essay","item":"https:\/\/www.firstpersonscholar.com\/category\/essay\/","nextItem":{"@type":"ListItem","@id":"https:\/\/www.firstpersonscholar.com\/free-to-be-useless\/#listItem","name":"Free to Be Useless"},"previousItem":{"@type":"ListItem","@id":"https:\/\/www.firstpersonscholar.com\/#listItem","name":"Home"}},{"@type":"ListItem","@id":"https:\/\/www.firstpersonscholar.com\/free-to-be-useless\/#listItem","position":3,"name":"Free to Be Useless","previousItem":{"@type":"ListItem","@id":"https:\/\/www.firstpersonscholar.com\/category\/essay\/#listItem","name":"Essay"}}]},{"@type":"Organization","@id":"https:\/\/www.firstpersonscholar.com\/#organization","name":"First Person Scholar","description":"Weekly critical essays, commentaries, and book reviews on games","url":"https:\/\/www.firstpersonscholar.com\/","logo":{"@type":"ImageObject","url":"https:\/\/www.firstpersonscholar.com\/wp-content\/uploads\/2016\/08\/Icon144.png","@id":"https:\/\/www.firstpersonscholar.com\/free-to-be-useless\/#organizationLogo","width":144,"height":144},"image":{"@id":"https:\/\/www.firstpersonscholar.com\/free-to-be-useless\/#organizationLogo"},"sameAs":["https:\/\/www.facebook.com\/FirstPersonScholar\/","https:\/\/twitter.com\/FPSWeekly","https:\/\/www.instagram.com\/firstpersonscholar\/"]},{"@type":"Person","@id":"https:\/\/www.firstpersonscholar.com\/author\/aorlando\/#author","url":"https:\/\/www.firstpersonscholar.com\/author\/aorlando\/","name":"Alexandra Orlando","image":{"@type":"ImageObject","@id":"https:\/\/www.firstpersonscholar.com\/free-to-be-useless\/#authorImage","url":"https:\/\/secure.gravatar.com\/avatar\/355223ddbe4543239cd3026b3dda18b4?s=96&d=mm&r=g","width":96,"height":96,"caption":"Alexandra Orlando"}},{"@type":"WebPage","@id":"https:\/\/www.firstpersonscholar.com\/free-to-be-useless\/#webpage","url":"https:\/\/www.firstpersonscholar.com\/free-to-be-useless\/","name":"Free to Be Useless - First Person Scholar","description":"Jesse Porch is a software developer who enjoys dabbling in videogame scholarship whenever possible. He\u2019s currently pursuing it a bit more in-depth as part of the interdisciplinary Trinity Fellows Academy, where his research focuses on the cultural role of play in ethics, empathy, and relationships. It was a huge encouragement to read Luca Morini\u2019s wonderful","inLanguage":"en-US","isPartOf":{"@id":"https:\/\/www.firstpersonscholar.com\/#website"},"breadcrumb":{"@id":"https:\/\/www.firstpersonscholar.com\/free-to-be-useless\/#breadcrumblist"},"author":{"@id":"https:\/\/www.firstpersonscholar.com\/author\/aorlando\/#author"},"creator":{"@id":"https:\/\/www.firstpersonscholar.com\/author\/aorlando\/#author"},"image":{"@type":"ImageObject","url":"https:\/\/www.firstpersonscholar.com\/wp-content\/uploads\/2016\/05\/Year-Two-Word-Cloud-250-words-700x250.jpg","@id":"https:\/\/www.firstpersonscholar.com\/free-to-be-useless\/#mainImage","width":700,"height":250},"primaryImageOfPage":{"@id":"https:\/\/www.firstpersonscholar.com\/free-to-be-useless\/#mainImage"},"datePublished":"2016-05-16T10:00:28-04:00","dateModified":"2020-09-18T15:05:14-04:00"},{"@type":"WebSite","@id":"https:\/\/www.firstpersonscholar.com\/#website","url":"https:\/\/www.firstpersonscholar.com\/","name":"First Person Scholar","description":"Weekly critical essays, commentaries, and book reviews on games","inLanguage":"en-US","publisher":{"@id":"https:\/\/www.firstpersonscholar.com\/#organization"}}]}
+		</script>
+		<!-- All in One SEO -->
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="First Person Scholar &raquo; Feed" href="https://www.firstpersonscholar.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="First Person Scholar &raquo; Comments Feed" href="https://www.firstpersonscholar.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="First Person Scholar &raquo; Free to Be Useless Comments Feed" href="https://www.firstpersonscholar.com/free-to-be-useless/feed/" />
+		<!-- This site uses the Google Analytics by MonsterInsights plugin v11.1.3 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+		<!-- Note: MonsterInsights is not currently configured on this site. The site owner needs to authenticate with Google Analytics in the MonsterInsights settings panel. -->
+					<!-- No tracking code set -->
+				<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.firstpersonscholar.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=d9080fd0752119dcc73c06476582091e"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode,e=(p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0),i.toDataURL());return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([129777,127995,8205,129778,127999],[129777,127995,8203,129778,127999])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css' href='https://www.firstpersonscholar.com/wp-includes/css/dist/block-library/style.min.css?ver=d9080fd0752119dcc73c06476582091e' type='text/css' media='all' />
+<style id='co-authors-plus-coauthors-style-inline-css' type='text/css'>
+.wp-block-co-authors-plus-coauthors.is-layout-flow [class*=wp-block-co-authors-plus]{display:inline}
+
+</style>
+<style id='co-authors-plus-avatar-style-inline-css' type='text/css'>
+.wp-block-co-authors-plus-avatar :where(img){height:auto;max-width:100%;vertical-align:bottom}.wp-block-co-authors-plus-coauthors.is-layout-flow .wp-block-co-authors-plus-avatar :where(img){vertical-align:middle}.wp-block-co-authors-plus-avatar:is(.alignleft,.alignright){display:table}.wp-block-co-authors-plus-avatar.aligncenter{display:table;margin-inline:auto}
+
+</style>
+<style id='co-authors-plus-image-style-inline-css' type='text/css'>
+.wp-block-co-authors-plus-image{margin-bottom:0}.wp-block-co-authors-plus-image :where(img){height:auto;max-width:100%;vertical-align:bottom}.wp-block-co-authors-plus-coauthors.is-layout-flow .wp-block-co-authors-plus-image :where(img){vertical-align:middle}.wp-block-co-authors-plus-image:is(.alignfull,.alignwide) :where(img){width:100%}.wp-block-co-authors-plus-image:is(.alignleft,.alignright){display:table}.wp-block-co-authors-plus-image.aligncenter{display:table;margin-inline:auto}
+
+</style>
+<link rel='stylesheet' id='aioseo/css/src/vue/standalone/blocks/table-of-contents/global.scss-css' href='https://www.firstpersonscholar.com/wp-content/plugins/all-in-one-seo-pack/dist/Lite/assets/css/table-of-contents/global.e90f6d47.css?ver=5.0.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='classic-theme-styles-css' href='https://www.firstpersonscholar.com/wp-includes/css/classic-themes.min.css?ver=1' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='athemes-headings-fonts-css' href='//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&#038;ver=d9080fd0752119dcc73c06476582091e' type='text/css' media='all' />
+<link rel='stylesheet' id='athemes-symbols-css' href='https://www.firstpersonscholar.com/wp-content/themes/fashionistas/css/athemes-symbols.css?ver=d9080fd0752119dcc73c06476582091e' type='text/css' media='all' />
+<link rel='stylesheet' id='athemes-bootstrap-css' href='https://www.firstpersonscholar.com/wp-content/themes/fashionistas/css/bootstrap.min.css?ver=d9080fd0752119dcc73c06476582091e' type='text/css' media='all' />
+<link rel='stylesheet' id='athemes-style-css' href='https://www.firstpersonscholar.com/wp-content/themes/fashionistas/style.css?ver=d9080fd0752119dcc73c06476582091e' type='text/css' media='all' />
+<style id='athemes-style-inline-css' type='text/css'>
+button, input[type="button"], input[type="reset"], input[type="submit"], #top-navigation, #top-navigation li:hover ul, #top-navigation li.sfHover ul, #main-navigation li:hover ul, #main-navigation li.sfHover ul, #main-navigation > .sf-menu > ul, .site-content [class*="navigation"] a, .widget-tab-nav li.active a, .widget-social-icons li a [class^="ico-"]:before, .site-footer { background: ; }
+#main-navigation, .entry-footer, .page-header, .author-info, .site-content [class*="navigation"] a:hover, .site-content .post-navigation, .comments-title, .widget, .widget-title, ul.widget-tab-nav, .site-extra { border-color: ; }
+.site-title a { color: ; }
+.entry-title, .entry-title a { color: ; }
+body { color: ; }
+
+</style>
+<script type='text/javascript' src='https://www.firstpersonscholar.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.1' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://www.firstpersonscholar.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='https://www.firstpersonscholar.com/wp-content/themes/fashionistas/js/bootstrap.min.js?ver=d9080fd0752119dcc73c06476582091e' id='athemes-bootstrap-js-js'></script>
+<script type='text/javascript' src='https://www.firstpersonscholar.com/wp-content/themes/fashionistas/js/hoverIntent.js?ver=d9080fd0752119dcc73c06476582091e' id='athemes-superfish-hoverIntent-js'></script>
+<script type='text/javascript' src='https://www.firstpersonscholar.com/wp-content/themes/fashionistas/js/superfish.js?ver=d9080fd0752119dcc73c06476582091e' id='athemes-superfish-js'></script>
+<script type='text/javascript' src='https://www.firstpersonscholar.com/wp-content/themes/fashionistas/js/settings.js?ver=d9080fd0752119dcc73c06476582091e' id='athemes-settings-js'></script>
+<link rel="https://api.w.org/" href="https://www.firstpersonscholar.com/wp-json/" /><link rel="alternate" type="application/json" href="https://www.firstpersonscholar.com/wp-json/wp/v2/posts/3814" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.firstpersonscholar.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.firstpersonscholar.com/wp-includes/wlwmanifest.xml" />
+
+<link rel='shortlink' href='https://www.firstpersonscholar.com/?p=3814' />
+<link rel="alternate" type="application/json+oembed" href="https://www.firstpersonscholar.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.firstpersonscholar.com%2Ffree-to-be-useless%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.firstpersonscholar.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.firstpersonscholar.com%2Ffree-to-be-useless%2F&#038;format=xml" />
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//www.firstpersonscholar.com/?wordfence_lh=1&hid=5654C91D6D48A56B9B87C58F3A1536AA');
+</script><!--[if lt IE 9]>
+<script src="https://www.firstpersonscholar.com/wp-content/themes/fashionistas/js/html5shiv.js"></script>
+<![endif]-->
+<link rel="icon" href="https://www.firstpersonscholar.com/wp-content/uploads/2016/08/cropped-Icon512-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.firstpersonscholar.com/wp-content/uploads/2016/08/cropped-Icon512-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.firstpersonscholar.com/wp-content/uploads/2016/08/cropped-Icon512-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.firstpersonscholar.com/wp-content/uploads/2016/08/cropped-Icon512-270x270.png" />
+		<style type="text/css" id="wp-custom-css">
+			figure.wp-caption.featured
+{
+background:transparent;
+border:0;
+padding:0;
+}		</style>
+		</head>
+
+<body class="post-template-default single single-post postid-3814 single-format-standard group-blog">
+
+	<nav id="top-navigation" class="main-navigation" role="navigation">
+		<div class="clearfix container">
+			<div class="sf-menu"><ul id="menu-categories" class="menu"><li id="menu-item-2280" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-2280"><a href="https://www.firstpersonscholar.com/category/essay/">Essay</a></li>
+<li id="menu-item-2281" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2281"><a href="https://www.firstpersonscholar.com/category/commentary/">Commentary</a></li>
+<li id="menu-item-2282" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2282"><a href="https://www.firstpersonscholar.com/category/book-reviews/">Book Review</a></li>
+<li id="menu-item-2283" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2283"><a href="https://www.firstpersonscholar.com/category/interview/">Interview</a></li>
+<li id="menu-item-2285" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2285"><a href="https://www.firstpersonscholar.com/category/podcast/">Podcast</a></li>
+<li id="menu-item-2286" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2286"><a href="https://www.firstpersonscholar.com/category/editorial/">Editorial</a></li>
+</ul></div>		</div>
+	<!-- #top-navigation --></nav>
+
+	<header id="masthead" class="clearfix container site-header" role="banner">
+		<div class="site-branding">
+							<a href="https://www.firstpersonscholar.com/" title="First Person Scholar"><img src="http://www.firstpersonscholar.com/wp-content/uploads/2016/08/FPS_logo_header-e1484756719119.png" alt="First Person Scholar" /></a>
+					<!-- .site-branding --></div>
+
+					<!-- #masthead --></header>
+
+	<nav id="main-navigation" class="container main-navigation" role="navigation">
+		<a href="#main-navigation" class="nav-open">Menu</a>
+		<a href="#" class="nav-close">Close</a>
+		<div class="sf-menu"><ul>
+<li ><a href="https://www.firstpersonscholar.com/">Home</a></li><li class="page_item page-item-4061"><a href="https://www.firstpersonscholar.com/about/">About FPS</a></li>
+<li class="page_item page-item-4067"><a href="https://www.firstpersonscholar.com/contribute/">Contribute</a></li>
+<li class="page_item page-item-4620"><a href="https://www.firstpersonscholar.com/people/">People</a></li>
+</ul></div>
+	<!-- #main-navigation --></nav>
+
+	<div id="main" class="site-main">
+		<div class="clearfix container">
+	<div id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
+
+		
+			
+<article id="post-3814" class="clearfix post-3814 post type-post status-publish format-standard has-post-thumbnail hentry category-essay tag-brian-sutton-smith tag-jesse-porch tag-johan-huizinga tag-luca-morini tag-miguel-sicart tag-play tag-response">
+	<header class="entry-header">
+		<h1 class="entry-title">Free to Be Useless</h1>
+		<h1 class="entry-subtitle"></h1>
+		<div class="entry-meta">
+			<span class="posted-on"><a href="https://www.firstpersonscholar.com/free-to-be-useless/" rel="bookmark"><time class="entry-date published updated" datetime="2016-05-16T10:00:28-04:00">May 16, 2016</time></a></span><span class="byline"><span class="author vcard">Jesse Porch</span></span>
+						<span class="comments-link"> <a href="https://www.firstpersonscholar.com/free-to-be-useless/#comments">1 Comment</a></span>
+					<!-- .entry-meta --></div>
+	<!-- .entry-header --></header>
+
+			<div class="entry-thumbnail">
+			<figure class="wp-caption fsmcfi-fig featured"><img width="700" height="250" src="https://www.firstpersonscholar.com/wp-content/uploads/2016/05/Year-Two-Word-Cloud-250-words-700x250.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" srcset="https://www.firstpersonscholar.com/wp-content/uploads/2016/05/Year-Two-Word-Cloud-250-words-700x250.jpg 700w, https://www.firstpersonscholar.com/wp-content/uploads/2016/05/Year-Two-Word-Cloud-250-words-700x250-300x107.jpg 300w" sizes="(max-width: 700px) 100vw, 700px" /></figure>		</div>	
+		
+
+	<div class="clearfix entry-content">
+		<blockquote><p><span style="font-weight: 400;">Jesse Porch is a software developer who enjoys dabbling in videogame scholarship whenever possible. He’s currently pursuing it a bit more in-depth as part of the interdisciplinary Trinity Fellows Academy, where his research focuses on the cultural role of play in ethics, empathy, and relationships.</span><br />
+<a title="Twitter" href="https://twitter.com/TheJPo"><img decoding="async" loading="lazy" class="alignnone size-full wp-image-1372" src="http://www.firstpersonscholar.com/wp-content/uploads/2013/11/bio-twitter.png" alt="bio-twitter" width="24" height="23" /></a><a title="Blog" href="http://www.jmporch.com/"><img decoding="async" loading="lazy" class="alignnone size-full wp-image-1374" src="http://www.firstpersonscholar.com/wp-content/uploads/2013/11/bio-blog.png" alt="bio-blog" width="24" height="23" /></a></p></blockquote>
+<p><span style="font-weight: 400;">It was a huge encouragement to read </span><a href="http://www.firstpersonscholar.com/play-as-bulwark-of-uselessness/"><span style="font-weight: 400;">Luca Morini’s wonderful article</span></a><span style="font-weight: 400;"> on play as the “bulwark of uselessness” on May 4th. Having a deep understanding of and appreciation for play is a crucial part of human culture and society, and as Luca notes the freedom to be playful&#8211;to enjoy things for their own sake&#8211;is often sacrificed on the altar of “usefulness”, leading not to the enhancement of human culture but to its diminishment. To echo Luca’s use of Huizinga: “The very existence of play continually confirms the supra-logical nature of the human situation…</span><b>We play and know that we play, so we must be more than merely rational beings</b><span style="font-weight: 400;">, </span><b>because play is irrational</b><span style="font-weight: 400;">.” (emphasis added)</span></p>
+<p><span style="font-weight: 400;">This quality of play, a willingness to revel in the process rather than the accomplishment, is certainly worth preserving. I wholeheartedly agree with Luca’s attempt to reconcile the positive goals of “gamification” with this impulse to preserve play’s defining sense of freedom and spontaneity. The danger of what he calls “false playfulness” is all too real, and wrapping mundane but “useful” tasks in the guise of “useless” but enjoyable play walks a dangerous line that risks undermining both the utilitarian objective and poisoning the wellspring which playfulness alone can tap.</span></p>
+<p><span style="font-weight: 400;">However, in the interest of rounding out the conversation, I wish to offer a few observations and try to refine the language a bit. While I find the image of the “bulwark of uselessness” quite delightful, especially with a similar affinity to playing the tank, I wonder if embracing the term “useless” might be doing more harm than good. As Miguel Sicart specifically notes, at its core, “play is a manifestation of humanity, </span><b>used for expressing and being in the world</b><span style="font-weight: 400;">,”(emphasis added). While I’m fully on board with the notion that not everything need be subject to the tyranny of utility, I think that conflating “useful” and “utilitarian” actually cedes more ground than necessary.</span></p>
+<p><span style="font-weight: 400;">I find it more useful to avoid focusing on “useful” and instead speaking in terms of “meaning” and “purpose”. Play is distinguished by a certain aimlessness or lack of utilitarian intention(purpose), but this does not undermine its ability to be significant and valuable(meaningful). In this purposeless meaning&#8211;the “supra-logical nature” that Huizinga described&#8211;we are able to see play not as useless, but useful for something deeper to our being than mere utility. Renowned artist Makoto Fujimora </span><a href="http://fujimurainstitute.org/wp-content/uploads/2014/03/FI-CultureCareAbrev.pdf"><span style="font-weight: 400;">tells a poignant story</span></a><span style="font-weight: 400;"> from his “starving artist” phase when he once got angry at his wife for spending money on flowers while the refrigerator sat empty. The flowers were clearly “useless” in a strictly utilitarian sense, but as his wife corrected him “We need to feed our souls, too.” The artist admits to being humbled by the fact that even as someone who aspired to make his living providing meaningful but non-utilitarian works he was still susceptible to the same reductionism often used to denigrate the value of the arts.</span></p>
+<p><span style="font-weight: 400;">Although much of society’s progress is owed to science and reason, it is a mistake to think that such can fully quantify the depth and beauty of the human condition, and many significant epochs of human civilization preceded Bacon and the scientific method. Huizinga notes that play is irrational,  but he concludes that as </span><i><span style="font-weight: 400;">homo ludens</span></i><span style="font-weight: 400;"> we are “above logical” precisely because we can understand play’s purposelessness and still continue to pursue it intentionally. Play is deeply meaningful to us, not because of what it accomplishes, but for its own sake. And in that way, it is very useful, even when it does sometimes lack purpose.</span></p>
+<p><span style="font-weight: 400;">Brian Sutton-Smith reaches a similar conclusion in </span><i><span style="font-weight: 400;">The Ambiguity of Play</span></i><span style="font-weight: 400;">: “One can say of both religion and play that they make life worth living and make everyday activities meaningful, because of the transcendence that they propose, one eternal and one mundane.” Thus I’d like to augment Simon’s “bulwark of uselessness” with the idea of play as a source of “mundane transcendence” that is, in fact, quite useful to our species, though perhaps not in any ways that we’re used to considering. To stick with Sutton-Smith’s analysis: “Believers are willing to acknowledge that religion has made their lives meaningful, but players are hesitant to say the same of their games…</span><b>This confines play to a secondary epistemological status…this downgrading of play is a habit of Western self-conception rather than a necessary truth.</b><span style="font-weight: 400;">” (emphasis added)</span></p>
+<p><span style="font-weight: 400;">By focusing not on “usefulness” but on meaning we are free to consider new ways of being useful. And this is the essence of play: to value actions not for what they accomplish, but for how they are undertaken in the first place. The challenge this poses is to find a way to strike a balance between valuing things for their utility while still allowing room for significance apart from strict purpose. Sutton-Smith further notes that “Huizinga’s position is that there is morphological parallelism between playful contests and the actual contestive conduct of politics, the law, scholarship, and the arts.” Thus even playful activities divorced entirely from the productive endeavors “are the forms through which civilization rises and develops. As time passes, [Huizinga] says, they are unfortunately smothered and lost, becoming  not civilization’s foundation but merely secondary, as play.”</span></p>
+<p><span style="font-weight: 400;">None of this implies that acts of play are themselves somehow magical. Rather, quite the opposite: the freedom from being justified only&#8211;or at least primarily&#8211;through their utilitarian purpose allows us to take such actions as only seriously as we desire. The point is not that pure play is superior to utility, but that it provides a necessary counter-balance to a life based upon the pursuit of utility alone. Romano Guardini, a noted scholar, observed that “When life lacks the austere guidance of the sense of purpose it degenerates into pseudo-aestheticism. But when it is forced into the rigid framework that is the purely purposeful conception of the world, it droops and perishes.” More poetically, he described play as “life, pouring itself forth without aim, seizing upon riches from its own abundant store, significant through the fact of its existence.”</span></p>
+<p><span style="font-weight: 400;">Interestingly, Guardini was not speaking as a play theorist at all, but in his role as a Roman Catholic theologian. Despite his commitment to taking his faith seriously, he did not hesitate to identify play as a core element of its practices and rituals. Faithful adherence to the liturgy was “beautiful, too, if it is left to itself, and </span><b>if no futile advice and pedagogic attempts at enlightenment foist upon it a host of aims and purposes, thus denaturizing it.</b><span style="font-weight: 400;">”(emphasis added) Guardini was himself a critic of the “utilification” of the liturgy, seeking to commandeer an inherently meaningful action for the sake  of making it primarily about propose. Ironically, Guardini noted that liturgy did convey a message: “that of teaching the soul not to see purposes everywhere, not to be too conscious of the end it wishes to attain, nor to be desirous of being over-clever and grown-up, but to understand simplicity in life.”</span></p>
+<p><span style="font-weight: 400;">My point in this whole digression is simple: I absolutely agree that play is important to humanity despite the fact that it may also be “useless” in a utilitarian sense. But I want to make sure that we don’t confuse the fact that play may be pointless and remain meaningful with the claim that play is meaningful because it is useless. As Luca discusses, properly understood there is tremendous potential for gamification to affect positive change in our world. But it must be done while respecting play as inherently meaningful, not as the source of that meaning.</span></p>
+<p><span style="font-weight: 400;">But at a deeper level, by accepting that play is meaningful for its own sake rather than being justified through its purpose, we find that it frees play to be useful in ways we could never have imagined under a purely utilitarian paradigm. On this front, I could never hope to say it better than J.R.R Tolkien did, so I’ll end with his thoughts on fairy tales:</span></p>
+<p><span style="font-weight: 400;">“If adults are to read fairy-stories as a natural branch of literature&#8230;what are the values and functions of this kind?…First of all: if written with art, the prime value of fairy -stories will simply be that value which, as literature, they share with other literary forms. </span><b>But fairy-stories offer also, in a peculiar degree or mode, these things: Fantasy, Recovery, Escape, Consolation, all things of which children have, as a rule, less need than older people. Most of them are nowadays very commonly considered to be bad for anybody.</b><span style="font-weight: 400;">” (emphasis added)</span></p>
+<p><i><span style="font-weight: 400;">Author’s note: This article is based upon my earlier work originally published in </span></i><a href="http://www.haywiremag.com/columns/playing-for-real-let-there-be-play/"><i><span style="font-weight: 400;">Haywire Magazine</span></i></a><i><span style="font-weight: 400;">. Special thanks to Josh Trevett and Dakoda Barker for their assistance with it.</span></i></p>
+<p><b>Works Cited</b></p>
+<p><span style="font-weight: 400;">Guardini, Romano. </span><i><span style="font-weight: 400;">The Spirit of the Liturgy</span></i><span style="font-weight: 400;">. Veritatis Splendor Publications, 2012.</span></p>
+<p><span style="font-weight: 400;">Huizinga, Johan. </span><i><span style="font-weight: 400;">Homo Ludens: A Study of the Play-Element In Culture</span></i><span style="font-weight: 400;">. Martino Publishing, 2014.</span></p>
+<p><span style="font-weight: 400;">Sicart, Miguel. </span><i><span style="font-weight: 400;">Play Matters</span></i><span style="font-weight: 400;">. Cambridge, MA: MIT Press, 2014.</span></p>
+<p><span style="font-weight: 400;">Sutton-Smith, Brian. </span><i><span style="font-weight: 400;">The Ambiguity of Play</span></i><span style="font-weight: 400;">. Cambridge, MA: Harvard University Press, 1997.</span></p>
+<p><span style="font-weight: 400;">Tolkien, J.R.R. “On Fairy Story.” </span><i><span style="font-weight: 400;">The Monster and the Critics and Other Essays</span></i><span style="font-weight: 400;">. London: HarperCollinsPublishers, 2006.</span></p>
+			<!-- .entry-content --></div>
+
+	<footer class="entry-meta entry-footer">
+		<span class="cat-links"><i class="ico-folder"></i> <a href="https://www.firstpersonscholar.com/category/essay/" rel="category tag">Essay</a></span><span class="tags-links"><i class="ico-tags"></i> <a href="https://www.firstpersonscholar.com/tag/brian-sutton-smith/" rel="tag">Brian Sutton-Smith</a>, <a href="https://www.firstpersonscholar.com/tag/jesse-porch/" rel="tag">Jesse Porch</a>, <a href="https://www.firstpersonscholar.com/tag/johan-huizinga/" rel="tag">Johan Huizinga</a>, <a href="https://www.firstpersonscholar.com/tag/luca-morini/" rel="tag">Luca Morini</a>, <a href="https://www.firstpersonscholar.com/tag/miguel-sicart/" rel="tag">Miguel Sicart</a>, <a href="https://www.firstpersonscholar.com/tag/play/" rel="tag">play</a>, <a href="https://www.firstpersonscholar.com/tag/response/" rel="tag">response</a></span>	<!-- .entry-meta --></footer>
+<!-- #post-3814 --></article>
+
+			<!-- DON'T DISPLAY AUTHOR INFO AT BOTTOM OF PAGE
+							<div class="clearfix author-info">
+					<div class="author-photo"><img alt='' src='https://secure.gravatar.com/avatar/355223ddbe4543239cd3026b3dda18b4?s=75&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/355223ddbe4543239cd3026b3dda18b4?s=150&#038;d=mm&#038;r=g 2x' class='avatar avatar-75 photo' height='75' width='75' loading='lazy' decoding='async'/></div>
+					<div class="author-content">
+						<h3>Jesse Porch</h3>
+						<p></p>
+						<div class="author-links">
+							<a href="https://www.firstpersonscholar.com/author/aorlando/" rel="me">More Posts</a> 
+
+							
+							
+													</div>
+					</div>
+				</div>
+						-->
+				<nav role="navigation" id="nav-below" class="post-navigation">
+		<h1 class="screen-reader-text">Post navigation</h1>
+
+	
+		<div class="nav-previous"><span>Previous Article</span><a href="https://www.firstpersonscholar.com/america-is-sick/" rel="prev"><span class="meta-nav">&larr;</span> America is Sick</a></div>		<div class="nav-next"><span>Next Article</span><a href="https://www.firstpersonscholar.com/3820-2/" rel="next">Offworld Trading Company <span class="meta-nav">&rarr;</span></a></div>
+	
+	</nav><!-- #nav-below -->
+	
+			
+	<div id="comments" class="comments-area">
+
+	
+			<h3 class="comments-title">
+			One Comment		</h3>
+
+		<ol class="comment-list">
+			
+	<li id="comment-780" class="pingback even thread-even depth-1">
+		<div class="comment-body">
+			Pingback: <a href='http://www.haywiremag.com/columns/slaying-dragons/' rel='external nofollow ugc' class='url'>Slaying Dragons &#8211; Haywire Magazine</a> 		</div>
+
+	</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+		
+	
+			<p class="no-comments">Comments are closed.</p>
+	
+	
+</div><!-- #comments -->
+
+		
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+<div id="widget-area-2" class="site-sidebar widget-area" role="complementary">
+	<aside id="search-3" class="widget widget_search"><form role="search" method="get" class="search-form" action="https://www.firstpersonscholar.com/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:">
+	</label>
+	<input type="submit" class="search-submit" value="Search">
+</form>
+</aside>
+		<aside id="recent-posts-3" class="widget widget_recent_entries">
+		<h3 class="widget-title">Recent Posts</h3>
+		<ul>
+											<li>
+					<a href="https://www.firstpersonscholar.com/first-person-scholar-takes-a-break/">First Person Scholar Takes a Break</a>
+									</li>
+											<li>
+					<a href="https://www.firstpersonscholar.com/2025-the-close-readings-issue/">2025: The Close Readings Issue:</a>
+									</li>
+											<li>
+					<a href="https://www.firstpersonscholar.com/a-game-within-another-game/">A game within another game:</a>
+									</li>
+											<li>
+					<a href="https://www.firstpersonscholar.com/lara-croftss-colonialist-shadow/">Lara Crofts’s Colonialist Shadow:</a>
+									</li>
+											<li>
+					<a href="https://www.firstpersonscholar.com/interpretation-as-interaction-and-the-horror-of-limited-agency-in-until-dawn/">Interpretation as Interaction and the Horror of Limited Agency in Until Dawn</a>
+									</li>
+					</ul>
+
+		</aside><aside id="categories-3" class="widget widget_categories"><h3 class="widget-title">Categories</h3>
+			<ul>
+					<li class="cat-item cat-item-6"><a href="https://www.firstpersonscholar.com/category/about/">About</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://www.firstpersonscholar.com/category/book-reviews/">Book Review</a>
+</li>
+	<li class="cat-item cat-item-1151"><a href="https://www.firstpersonscholar.com/category/call-for-papers/">Call For Papers</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://www.firstpersonscholar.com/category/commentary/">Commentary</a>
+</li>
+	<li class="cat-item cat-item-154"><a href="https://www.firstpersonscholar.com/category/editorial/">Editorial</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="https://www.firstpersonscholar.com/category/essay/">Essay</a>
+</li>
+	<li class="cat-item cat-item-151"><a href="https://www.firstpersonscholar.com/category/interview/">Interview</a>
+</li>
+	<li class="cat-item cat-item-2039"><a href="https://www.firstpersonscholar.com/category/issue/">Issue</a>
+</li>
+	<li class="cat-item cat-item-115"><a href="https://www.firstpersonscholar.com/category/podcast/">Podcast</a>
+</li>
+	<li class="cat-item cat-item-425"><a href="https://www.firstpersonscholar.com/category/pseudo-game-jam/">Pseudo Game Jam</a>
+</li>
+	<li class="cat-item cat-item-242"><a href="https://www.firstpersonscholar.com/category/special-feature/">Special Feature</a>
+</li>
+	<li class="cat-item cat-item-576"><a href="https://www.firstpersonscholar.com/category/special-issue/">Special Issue</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://www.firstpersonscholar.com/category/uncategorized/">Uncategorized</a>
+</li>
+			</ul>
+
+			</aside><aside id="text-3" class="widget widget_text"><h3 class="widget-title">Powered by:</h3>			<div class="textwidget"><center>
+<a href="https://uwaterloo.ca/games-institute/"> <img boarder="0" alt="Games Institute" src="http://www.firstpersonscholar.com/wp-content/uploads/2016/08/GIlogo-e1472065569776.png" width="200" height="100"></a>
+<p><a href="http://immerse.network"> <img boarder="0" alt="Immerse" src="http://www.firstpersonscholar.com/wp-content/uploads/2016/08/immerse-e1472065648254.png" width="200" height="100"></a>
+<p>
+<a href="uwaterloo.ca"> <img boarder="0" alt="University of Waterloo, Canada" src="http://gi-wp-test.uwaterloo.ca/wp-content/uploads/2016/08/UniversityOfWaterloo_logo_horiz_rgb.png" width="200" height="100"></a>
+</div>
+		</aside><!-- #widget-area-2 --></div>		</div>
+	<!-- #main --></div>
+
+	
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="clearfix container">
+				<div class="site-info">
+		&copy; 2026 First Person Scholar. All rights reserved.	</div><!-- .site-info -->
+
+	<div class="site-credit">
+		<a href="http://athemes.com/theme/fashionista">Fashionista</a> by aThemes	</div><!-- .site-credit -->
+			</div>
+	<!-- #colophon --></footer>
+
+
+</body>
+</html>

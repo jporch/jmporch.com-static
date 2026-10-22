@@ -155,6 +155,7 @@ description = "An in-depth meditation on the oft-misunderstood virtue of meeknes
 feed_date = 2018-02-05T20:00:00Z
 [[groups.items]]
 id = "filled-not-emptied"
+mirror_text = "content/mirror/filled-not-emptied/source.txt"
 label = "Filled, Not Emptied | Trinity Fellows Academy Week 31"
 url = "http://trinityfellowsacademy.org/2016/03/28/filled-not-emptied-week-31/"
 feed_title = "Filled, not Emptied | TFA"
@@ -163,6 +164,7 @@ description = "Weekly update blog post for Trinity Fellows Academy week 31."
 feed_date = 2016-03-28T20:00:00Z
 [[groups.items]]
 id = "light-in-darkness"
+mirror_text = "content/mirror/light-in-darkness/source.txt"
 label = "Light in the Darkness | Trinity Fellows Academy Weeks 16 and 17"
 url = "http://trinityfellowsacademy.org/2015/12/24/light-in-the-darkness-weeks-16-17/"
 feed_title = "Light in the Darkness | TFA"
@@ -171,6 +173,7 @@ description = "Weekly update blog post for Trinity Fellows Academy Weeks 16 and 
 feed_date = 2015-12-24T20:00:00Z
 [[groups.items]]
 id = "strengths-and-silence"
+mirror_text = "content/mirror/strengths-and-silence/source.txt"
 label = "Strengths and Silence | Trinity Fellows Academy Week 3"
 url = "http://trinityfellowsacademy.org/2015/09/14/finding-peace-and-discovering-strengths-week-3/"
 feed_title = "Strengths and Silence | TFA"
@@ -183,7 +186,9 @@ title = "Research Publications"
 [[groups.items]]
 id = "integer-ray-tracing"
 label = "Integer Ray Tracing | <cite>Journal of Graphics, GPU, and Game Tools, vol. 14, no. 4</cite>, 2009"
-url = "https://www.cs.unc.edu/~jheinly/publications/jgt2009-heinly.pdf"
+url = "https://doi.org/10.1080/2151237X.2009.10129289"
+mirror_url = "https://www.rtvtk.org/~cgribble/research/papers/heinly09integer.pdf"
+mirror_note = "Preserved author technical report GCC-CS-001-2009, dated October 13, 2009 (8 pages). The DOI identifies the journal publication; the publisher requires access for its full text."
 legacy_undated = true
 [[groups.items]]
 id = "stream-filtered-ray-tracing"

@@ -1,0 +1,3 @@
+# Only needed to refresh the archive; normal site builds use no Python packages.
+beautifulsoup4==4.15.0
+markdownify==1.2.3

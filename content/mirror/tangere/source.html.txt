@@ -1,0 +1,29 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-type" content="text/html; charset=UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="stylesheet" href="/_autoindex/assets/css/autoindex.css" /><script src="/_autoindex/assets/js/tablesort.js"></script><script src="/_autoindex/assets/js/tablesort.number.js"></script><title>Index of /~cgribble/research/tangere/</title><style>@media (prefers-color-scheme:dark){body{background-color:#000!important}}</style></head><body><div class="content"><h1 style="color: #555;">Index of /~cgribble/research/tangere/</h1>
+<div id="table-filter"><input type="text" name="keyword" id="filter-keyword" placeholder="Filter Name"></div>
+<div id="table-list"><table id="table-content"><thead class="t-header"><tr><th class="colname" aria-sort="ascending"><a class="name" href="?ND"  onclick="return false"">Name</a></th><th class="colname" data-sort-method="number"><a href="?MA"  onclick="return false"">Last Modified</a></th><th class="colname" data-sort-method="number"><a href="?SA"  onclick="return false"">Size</a></th></tr></thead>
+<tr data-sort-method="none"><td><a href="/~cgribble/research/"><img class="icon" src="/_autoindex/assets/icons/corner-left-up.svg" alt="Up">Parent Directory</a></td><td></td><td></td></tr>
+<tr><td data-sort="images.tgz"><a href="/~cgribble/research/tangere/images.tgz"><img class="icon" src="/_autoindex/assets/icons/file.svg" alt="[CMP]">images.tgz</a></td><td data-sort="1375271028">2013-07-31 07:43</td><td data-sort="859661">    840k</td></tr>
+<tr><td data-sort="images2.tgz"><a href="/~cgribble/research/tangere/images2.tgz"><img class="icon" src="/_autoindex/assets/icons/file.svg" alt="[CMP]">images2.tgz</a></td><td data-sort="1375271028">2013-07-31 07:43</td><td data-sort="19665629">  19205k</td></tr>
+<tr><td data-sort="license.txt"><a href="/~cgribble/research/tangere/LICENSE.txt"><img class="icon" src="/_autoindex/assets/icons/file-text.svg" alt="[TXT]">LICENSE.txt</a></td><td data-sort="1375271028">2013-07-31 07:43</td><td data-sort="10174">     10k</td></tr>
+<tr><td data-sort="tangere-dist-10102009.tgz"><a href="/~cgribble/research/tangere/tangere-dist-10102009.tgz"><img class="icon" src="/_autoindex/assets/icons/file.svg" alt="[CMP]">tangere-dist-10102009.tgz</a></td><td data-sort="1375271028">2013-07-31 07:43</td><td data-sort="52259">     52k</td></tr>
+<tr><td data-sort="tangere-dist-18032010.tgz"><a href="/~cgribble/research/tangere/tangere-dist-18032010.tgz"><img class="icon" src="/_autoindex/assets/icons/file.svg" alt="[CMP]">tangere-dist-18032010.tgz</a></td><td data-sort="1375271028">2013-07-31 07:43</td><td data-sort="56659">     56k</td></tr>
+<tr><td data-sort="tangere-dist-20130729.tgz"><a href="/~cgribble/research/tangere/tangere-dist-20130729.tgz"><img class="icon" src="/_autoindex/assets/icons/file.svg" alt="[CMP]">tangere-dist-20130729.tgz</a></td><td data-sort="1375271028">2013-07-31 07:43</td><td data-sort="56721">     56k</td></tr>
+</table></div>
+<address>Proudly Served by LiteSpeed Web Server at www.rtvtk.org Port 80</address></div><script>
+	new Tablesort(document.getElementById("table-content"));
+	var keywordInput = document.getElementById('filter-keyword');
+	document.addEventListener('keyup', filterTable);
+
+	function filterTable(e) {
+		if (e.target.id != 'filter-keyword') return;
+
+		var cols = document.querySelectorAll('tbody td:first-child');
+		var keyword = keywordInput.value.toLowerCase();
+		for (i = 0; i < cols.length; i++) {
+			var text = cols[i].textContent.toLowerCase();
+			if (text != 'parent directory') {
+				cols[i].parentNode.style.display = text.indexOf(keyword) === -1 ? 'none' : 'table-row';
+			}
+		}
+	}
+</script></body></html>
