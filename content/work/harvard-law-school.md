@@ -3,31 +3,28 @@ title = "Application Developer (Full Stack), Harvard Law School, Cambridge, MA"
 weight = 1
 render = false
 [extra]
-dates = "2016-2021"
+dates = "August 2016–December 2020"
 
 [[extra.projects]]
-name = "hls.harvard.edu"
-url = "https://hls.harvard.edu"
-description = "Ongoing support and enhancement of the school's primary public website."
-technologies = "Wordpress/PHP"
+name = "Media Services archival tool"
+description = "Researched, designed, and implemented a configurable archival tool for the Media Services library. Its flexible design supported adoption for additional archival projects."
+technologies = "Amazon Glacier"
 
 [[extra.projects]]
 name = "Faculty Bibliography"
 url = "https://hls.harvard.edu/faculty/bibliography"
-description = "a new initiative to provide an indexed and searchable interface for accessing HLS Faculty scholarship."
-technologies = "PHP/JSON/Elasticsearch"
+description = "Implemented the frontend from architectural wireframes, working with the architect responsible for the Elasticsearch-backed publication search."
+technologies = "Elasticsearch"
 
 [[extra.projects]]
-name = "Agresso"
-description = "Internal Student Information System database administration as well as support of a custom API layer developed to expose the underlying database to numerous internal systems."
-technologies = "C#"
+name = "Website release process"
+description = "Helped establish business-hours website releases by reassessing deployment risks and presenting the proposed change to IT leadership and Communications stakeholders."
 
 [[extra.projects]]
-name = "HELIOS"
-description = "Internal portal that provides access to numerous campus resources for staff and faculty."
-technologies = "C#/ASP.NET"
+name = "Student information system upgrades"
+description = "Served as Scrum Master for coordinated upgrades to the student information system, database engine, and underlying virtual machine alongside frontend updates. I worked with Communications and Infrastructure stakeholders to plan go-live timing and validation procedures; the team delivered the updates in a single deployment."
 +++
 
-At Harvard Law School I served as part of the Business Solutions team within Internet Technology Services department. My role supports the planning, development, maintenance, and ongoing support of a stable of internal applications supporting major elements of the school's day-to-day operations. Here I work alongside other departments to ensure the systems provided support their business needs as a part of the greater HLS community.
+At Harvard Law School I worked on the Business Solutions team within the IT Department. My role combined application development with research, release planning, and coordination across the departments using and supporting those systems.
 
-Specific responsibilities include:
+Selected projects and contributions:
