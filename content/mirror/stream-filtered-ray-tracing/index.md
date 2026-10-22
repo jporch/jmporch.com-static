@@ -7,5 +7,5 @@ extra.captured = "2026-10-20"
 extra.kind = "pdf"
 +++
 
-[Read or download the preserved poster](document.pdf).
+[Read or download PDF](document.pdf).
 
