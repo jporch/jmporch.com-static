@@ -56,8 +56,6 @@ body:not(.js) .sidebar-nav { display: block; }
 .prose pre { max-width: 100%; overflow: auto; }
 .prose article { margin-bottom: 1.5em; }
 .prose time { font-size: .85em; }
-.mirror-page main { max-width: 55em; }
-.mirror-page .content { float: none; display: block; width: 100%; }
 .post-navigation { display: flex; flex-wrap: wrap; gap: .75em; margin-top: 1.5em; }
 
 @media screen and (min-width: 641px) {
