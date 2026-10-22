@@ -8,8 +8,6 @@ extra.kind = "software-directory"
 extra.raw_response = "source.html.txt"
 +++
 
-The original project URL serves a directory of Tangere source releases, licenses, and image archives. The files below are preserved locally.
-
 - [images.tgz](images.tgz)
 - [images2.tgz](images2.tgz)
 - [LICENSE.txt](LICENSE.txt)
