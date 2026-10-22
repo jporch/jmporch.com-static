@@ -98,12 +98,10 @@ def archive(item):
     if 'pdf' in (r['type'] or ''):
         assert raw.startswith(b'%PDF-'), 'Response is not a PDF'
         (folder/'document.pdf').write_bytes(raw)
-        body = '[Read or download the preserved PDF](document.pdf).\n'
+        body = '[Read or download PDF](document.pdf).\n'
         if item.get('mirror_note'):
-            body = item['mirror_note'] + '\n\n' + body
             record['version_note'] = item['mirror_note']
         if item.get('mirror_url'):
-            body += f"\n[Source of the preserved copy]({item['mirror_url']}).\n"
             record['mirror_source_url'] = item['mirror_url']
         record['kind'] = 'pdf'
     else:
@@ -111,7 +109,7 @@ def archive(item):
         soup = BeautifulSoup(raw, 'html.parser')
         record['page_title'] = soup.title.get_text(' ',strip=True) if soup.title else ''
         if item['id']=='tangere':
-            body = 'The original project URL serves a directory of Tangere source releases, licenses, and image archives. The files below are preserved locally.\n\n'
+            body = ''
             for a in soup.select('a[href]'):
                 href = a['href']
                 if href.endswith(('.tgz','.txt')):

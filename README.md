@@ -255,8 +255,8 @@ in `static/fonts/OFL.txt`; no new license is assigned to the owner's site conten
 ## Portfolio mirror
 
 `/mirror/` lists existing mirrors in Portfolio order and the regeneration date. The
-shared `templates/mirror.html` displays each work's readable copy, original URL,
-and capture date. `content/mirror/<portfolio-id>/` holds Markdown, local images,
+shared `templates/mirror.html` displays only each work's title and content, without
+site navigation, source notices, or footers. `content/mirror/<portfolio-id>/` holds Markdown, local images,
 original HTML responses saved as `.html.txt`, and original PDFs or software
 archives. `static/mirror/audit.json` records each request, redirect destination,
 HTTP result, source checksum, and downloaded asset checksum. Original Portfolio
