@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Portfolio Mirror | {{ config.extra.name }}{% endblock title %}
+{% block body_attributes %}class="reading-page"{% endblock body_attributes %}
+{% block content %}
+{% set portfolio = load_data(path="data/portfolio.toml") %}
+{% set audit = load_data(path="static/mirror/audit.json") %}
+<section class="content-panel" aria-labelledby="mirror-heading">
+  <h1 id="mirror-heading" class="major-heading">Portfolio Mirror</h1>
+  <div class="viewport prose">
+    <ul>
+      {% for group in portfolio.groups %}
+      {% for item in group.items %}
+      {% if item.url is defined %}
+      {% for work in section.pages %}
+      {% if work.slug == item.id %}
+      <li><a href="{{ work.permalink }}">{{ item.label | markdown(inline=true) | safe }}</a></li>
+      {% endif %}
+      {% endfor %}
+      {% endif %}
+      {% endfor %}
+      {% endfor %}
+    </ul>
+    <p>Archive last regenerated at <time datetime="{{ audit.generated }}">{{ audit.generated }}</time>.</p>
+  </div>
+</section>
+{% endblock content %}

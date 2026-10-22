@@ -1,19 +1,30 @@
 +++
-title = "Application Developer, Harvard Law School, Cambridge, MA"
+title = "Application Developer (Full Stack), Harvard Law School, Cambridge, MA"
 weight = 1
 render = false
 [extra]
-dates = "2016-Present"
+dates = "August 2016–December 2020"
+
+[[extra.projects]]
+name = "Media Services archival tool"
+description = "Researched, designed, and implemented a configurable archival tool for the Media Services library. Its flexible design supported adoption for additional archival projects."
+technologies = "Amazon Glacier"
+
+[[extra.projects]]
+name = "Faculty Bibliography"
+url = "https://hls.harvard.edu/faculty/bibliography"
+description = "Implemented the frontend from architectural wireframes, working with the architect responsible for the Elasticsearch-backed publication search."
+technologies = "Elasticsearch"
+
+[[extra.projects]]
+name = "Website release process"
+description = "Helped establish business-hours website releases by reassessing deployment risks and presenting the proposed change to IT leadership and Communications stakeholders."
+
+[[extra.projects]]
+name = "Student information system upgrades"
+description = "Served as Scrum Master for coordinated upgrades to the student information system, database engine, and underlying virtual machine alongside frontend updates. I worked with Communications and Infrastructure stakeholders to plan go-live timing and validation procedures; the team delivered the updates in a single deployment."
 +++
 
-At Harvard Law School I serve as part of the Business Solutions team within Internet Technology Services department. My role supports the planning, development, maintenance, and ongoing support of a stable of internal applications supporting major elements of the school's day-to-day operations. Here I work alongside other departments to ensure the systems provided support their business needs as a part of the greater HLS community.
+At Harvard Law School I worked on the Business Solutions team within the IT Department. My role combined application development with research, release planning, and coordination across the departments using and supporting those systems.
 
-Specific responsibilities include:
-
-<span class="list-item"><a href="https://hls.harvard.edu" target="_blank" rel="noopener"><strong>hls.harvard.edu</strong></a>: Ongoing support and enhancement of the school's primary public website.  <strong>(Wordpress/PHP)</strong></span>
-
-<span class="list-item"><a href="https://hls.harvard.edu/faculty/bibliography" target="_blank" rel="noopener"><strong>Faculty Bibliography</strong></a>: a new initiative to provide an indexed and searchable interface for accessing HLS Faculty scholarship. <strong>(PHP/JSON/Elasticsearch)</strong></span>
-
-<span class="list-item"><strong>Agresso</strong>: Internal Student Information System database administration as well as support of a custom API layer developed to expose the underlying database to numerous internal systems. <strong>(C#)</strong></span>
-
-<span class="list-item"><strong>HELIOS</strong>: Internal portal that provides access to numerous campus resources for staff and faculty. <strong>(C#/ASP.NET)</strong></span>
+Selected projects and contributions:

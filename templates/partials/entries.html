@@ -6,6 +6,9 @@
   <div class="collapse-body" id="{{ entry.slug }}-{{ loop.index }}-body">
     <span>{{ entry.extra.dates }}</span>
     {{ entry.content | replace(from='<p><span class="list-item">', to='<span class="list-item">') | replace(from="</span></p>", to="</span>") | replace(from="<p>", to="<span>") | replace(from="</p>", to="</span>") | safe }}
+    {% for project in entry.extra.projects | default(value=[]) %}
+    {% include "partials/project.html" %}
+    {% endfor %}
   </div>
 </div>
 {% endfor %}

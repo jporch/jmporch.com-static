@@ -1,6 +1,6 @@
 base_url = "https://jporch.github.io/jmporch.com-static"
-title = "Jesse M. Porch | Application Developer, Writer | Boston, MA"
-description = "The personal portfolio of Jesse M. Porch, an application developer and writer currently living in Boston, Massachusetts and working at Harvard Law School."
+title = "Jesse M. Porch | Application Developer, Writer | Matthews, NC"
+description = "The personal portfolio of Jesse M. Porch, an application developer and writer currently living in Matthews, North Carolina."
 default_language = "en"
 compile_sass = false
 build_search_index = false

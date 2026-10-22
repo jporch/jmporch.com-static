@@ -55,6 +55,23 @@ that directory's `_index.md`. The list controls display order. These entries hav
 `render = false` because they are embedded in the homepage; Zola excludes such
 pages from normal section page lists, so they are loaded explicitly by path.
 Selected raw HTML preserves the original custom list and citation markup.
+For project lists within an entry, use the shared Project template instead of
+writing HTML. Add one block per project to the metadata, before its closing `+++`:
+
+```toml
+[[extra.projects]]
+name = "Project name"
+url = "https://example.com/"
+description = "What you built or maintained. Supports **Markdown**."
+technologies = "Rust/PostgreSQL"
+```
+
+`name` and `description` are required; omit `url` for an internal project and omit
+`technologies` if unnecessary. Projects appear after the entry's Markdown body in
+the order listed, retaining the original list spacing and bold labels. The shared
+markup lives in `templates/partials/project.html`; Harvard Law's entry provides
+complete examples.
+
 Links to homepage panels in these embedded files use `<a href="#portfolio">`
 because the target exists in the final homepage template, not the Markdown file.
 
@@ -125,6 +142,19 @@ For images belonging to a post, use `content/blog/my-post/index.md` with image
 files beside it and relative Markdown image references.
 
 ## Deployment
+
+Changes stay local by default, with a running preview and a link for review.
+Explicit instructions control publishing:
+
+| Request | Action |
+| --- | --- |
+| Ordinary change request | Edit and check locally; provide the preview URL. |
+| "Commit" | Commit on a feature branch, merge and push to `staging`, verify Pages deployment, and stop any running project preview. Do not start one. |
+| "Deploy" | Commit on a feature branch, run automated checks, then merge and push directly to `main` and verify production deployment. No local or staging review is required. |
+
+Feature branches use `codex/<description>`. Promote the intended feature branch
+to production rather than merging experimental staging changes wholesale.
+Repository instructions for this process are in `AGENTS.md`.
 
 The default branch is **main**. Pushes and merged pull requests deploy automatically:
 
@@ -221,3 +251,36 @@ year is computed from the current UTC year each time Zola builds the site.
 
 The portrait retains its original attribution. Josefin Slab's license is included
 in `static/fonts/OFL.txt`; no new license is assigned to the owner's site content.
+
+## Portfolio mirror
+
+`/mirror/` lists existing mirrors in Portfolio order and the regeneration date. The
+shared `templates/mirror.html` displays each work's readable copy, original URL,
+and capture date. `content/mirror/<portfolio-id>/` holds Markdown, local images,
+original HTML responses saved as `.html.txt`, and original PDFs or software
+archives. `static/mirror/audit.json` records each request, redirect destination,
+HTTP result, source checksum, and downloaded asset checksum. Original Portfolio
+links are retained. Article citations still point to external sites; linked
+third-party pages and embedded videos are not recursively archived.
+
+To add missing mirrors and regenerate the archive index (network access is needed
+only for new remote sources):
+
+```sh
+python3 -m venv .venv
+.venv/bin/python -m pip install -r scripts/mirror-requirements.txt
+.venv/bin/python scripts/archive_portfolio.py
+```
+
+An existing `content/mirror/<portfolio-id>/index.md` is left untouched, including
+its assets and capture date; its remote source is never checked again. New items
+that cannot be archived are omitted from the index, with diagnostics retained
+only in the audit. Normal site builds do not run the crawler or need its Python packages.
+Raw source responses are preserved for reference; the readable pages omit scripts,
+site navigation, comments, and promotional widgets outside the article body.
+
+For an unavailable article recovered from saved text, keep the original file as
+`content/mirror/<portfolio-id>/source.txt`, with its publication URL on the first
+line and article text below it. Add `mirror_text` with that content-relative file
+path to the Portfolio item. The initial archive import preserves that text as literal
+paragraphs and identify its provenance separately from a successful web capture.

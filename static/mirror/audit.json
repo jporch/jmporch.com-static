@@ -1,0 +1,1160 @@
+{
+  "captured": "2026-10-20",
+  "items": [
+    {
+      "id": "back-again-review",
+      "title": "Review: Back Again from the Broken Land",
+      "source_url": "https://itch.io/blog/1683874/review-back-again-from-the-broken-land",
+      "attempts": [
+        {
+          "url": "https://itch.io/blog/1683874/review-back-again-from-the-broken-land",
+          "status": 200,
+          "final_url": "https://itch.io/blog/1683874/review-back-again-from-the-broken-land",
+          "type": "text/html",
+          "error": ""
+        }
+      ],
+      "captured": "2026-10-20",
+      "source_sha256": "78e3ea22ca68d456945eaf4199b057e31a1885357dadd059d67b34278854c007",
+      "page_title": "Review: Back Again from the Broken Land - itch.io",
+      "text_characters": 9728,
+      "kind": "article",
+      "raw_response": "source.html.txt",
+      "status": "mirrored",
+      "mirror_path": "/mirror/back-again-review/",
+      "assets": []
+    },
+    {
+      "id": "decks-to-dust",
+      "title": "Playing For Real: Decks to Dust | Haywire Magazine",
+      "source_url": "http://www.haywiremag.com/columns/playing-for-real-decks-to-dust/",
+      "attempts": [
+        {
+          "url": "http://www.haywiremag.com/columns/playing-for-real-decks-to-dust/",
+          "status": 200,
+          "final_url": "https://haywiremag.com/columns/playing-for-real-decks-to-dust/",
+          "type": "text/html; charset=UTF-8",
+          "error": ""
+        }
+      ],
+      "captured": "2026-10-20",
+      "source_sha256": "a2201622342303ba53df8af7ebc9546d35167f0e169a0c6792249b61b27e2797",
+      "page_title": "Playing for Real: Decks to Dust – Haywire Magazine",
+      "text_characters": 6096,
+      "kind": "article",
+      "raw_response": "source.html.txt",
+      "status": "mirrored",
+      "mirror_path": "/mirror/decks-to-dust/",
+      "assets": [
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2018/02/nowhereprophet1-636x310.png",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2018/02/nowhereprophet1-636x310.png",
+          "type": "image/png",
+          "error": "",
+          "file": "7e5a02f89d08.png",
+          "sha256": "a72633d7d76c084d27c2b25e3c52433814785d0e574aaccbf9769804c9b25bc4"
+        },
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2018/02/nowhereprophet2-600x338.jpg",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2018/02/nowhereprophet2-600x338.jpg",
+          "type": "image/jpeg",
+          "error": "",
+          "file": "0a70a42e62de.jpg",
+          "sha256": "9dbfb0ac992a6f45218a7ef9dcff89a13ee41dfb8515f732c6eba1c953e46d09"
+        }
+      ]
+    },
+    {
+      "id": "sweatin-pixels",
+      "title": "Playing For Real: Sweatin' Pixels | Haywire Magazine",
+      "source_url": "http://www.haywiremag.com/columns/playing-for-real-sweatin-pixels/",
+      "attempts": [
+        {
+          "url": "http://www.haywiremag.com/columns/playing-for-real-sweatin-pixels/",
+          "status": 200,
+          "final_url": "https://haywiremag.com/columns/playing-for-real-sweatin-pixels/",
+          "type": "text/html; charset=UTF-8",
+          "error": ""
+        }
+      ],
+      "captured": "2026-10-20",
+      "source_sha256": "e6797dbefdd8a52e22bf28cd31882aeb8ff98c2a125d1717d8a47141b4345033",
+      "page_title": "Playing for Real: Sweatin’ Pixels – Haywire Magazine",
+      "text_characters": 7405,
+      "kind": "article",
+      "raw_response": "source.html.txt",
+      "status": "mirrored",
+      "mirror_path": "/mirror/sweatin-pixels/",
+      "assets": [
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2017/10/uncharted1-636x310.jpg",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2017/10/uncharted1-636x310.jpg",
+          "type": "image/jpeg",
+          "error": "",
+          "file": "890f4586560d.jpg",
+          "sha256": "1735099fa2eaf167361bd6f358b472c3193b8e6f52299c1d1a60304b275d3945"
+        },
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2017/10/pillarsofeternity1-600x338.jpg",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2017/10/pillarsofeternity1-600x338.jpg",
+          "type": "image/jpeg",
+          "error": "",
+          "file": "9826a1b3c868.jpg",
+          "sha256": "f894f23bf59a40008b8389f6128213562c00de6587cabf2138809424c36bce6c"
+        }
+      ]
+    },
+    {
+      "id": "hashtag-the-world",
+      "title": "Playing For Real: Hashtag the World | Haywire Magazine",
+      "source_url": "http://www.haywiremag.com/columns/playing-for-real-hashtag-the-world/",
+      "attempts": [
+        {
+          "url": "http://www.haywiremag.com/columns/playing-for-real-hashtag-the-world/",
+          "status": 200,
+          "final_url": "https://haywiremag.com/columns/playing-for-real-hashtag-the-world/",
+          "type": "text/html; charset=UTF-8",
+          "error": ""
+        }
+      ],
+      "captured": "2026-10-20",
+      "source_sha256": "3cdc88cc40c3603da36be8fa16ca5db56aec520c9e19c05b797f1fd723e121b2",
+      "page_title": "Playing for Real: Hashtag the World – Haywire Magazine",
+      "text_characters": 8341,
+      "kind": "article",
+      "raw_response": "source.html.txt",
+      "status": "mirrored",
+      "mirror_path": "/mirror/hashtag-the-world/",
+      "assets": [
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2017/07/watchdogs2-1-636x310.png",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2017/07/watchdogs2-1-636x310.png",
+          "type": "image/png",
+          "error": "",
+          "file": "d3f3f5c67004.png",
+          "sha256": "3dc4e1eea5961c31205d74366a819574584397b09d15af08f393d05474848ea1"
+        },
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2017/07/watchdogs2-3-600x338.jpg",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2017/07/watchdogs2-3-600x338.jpg",
+          "type": "image/jpeg",
+          "error": "",
+          "file": "f235c43556a4.jpg",
+          "sha256": "5e027c18130020e4c5ba0c0c7df025094f56deb109df43b80049fc4cd98ed4d6"
+        },
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2017/07/watchdogs2-2-600x338.jpg",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2017/07/watchdogs2-2-600x338.jpg",
+          "type": "image/jpeg",
+          "error": "",
+          "file": "1bc8c7f6d5b8.jpg",
+          "sha256": "ecb6725992e13398018475e32c9d1fc6debc8f1624bc68f0acec12be2ac2aced"
+        }
+      ]
+    },
+    {
+      "id": "freedom-of-choice",
+      "title": "Playing For Real: Freedom of Choice | Haywire Magazine",
+      "source_url": "http://www.haywiremag.com/columns/playing-for-real-freedom-of-choice/",
+      "attempts": [
+        {
+          "url": "http://www.haywiremag.com/columns/playing-for-real-freedom-of-choice/",
+          "status": 200,
+          "final_url": "https://haywiremag.com/columns/playing-for-real-freedom-of-choice/",
+          "type": "text/html; charset=UTF-8",
+          "error": ""
+        }
+      ],
+      "captured": "2026-10-20",
+      "source_sha256": "90a461f8d57e2464b27f41a4888b69449a72e30a37642c1b24e319a3f5af0873",
+      "page_title": "Playing for Real: Freedom of Choice – Haywire Magazine",
+      "text_characters": 8182,
+      "kind": "article",
+      "raw_response": "source.html.txt",
+      "status": "mirrored",
+      "mirror_path": "/mirror/freedom-of-choice/",
+      "assets": [
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2017/06/walkingdead1-600x310.jpg",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2017/06/walkingdead1-600x310.jpg",
+          "type": "image/jpeg",
+          "error": "",
+          "file": "0670c84efc6d.jpg",
+          "sha256": "479a0658bceb1a4593fe28a66f760957abfe3a8ce1e83b3d622b24d375c82a0c"
+        },
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2017/06/talesfromtheborderlands1-600x338.jpg",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2017/06/talesfromtheborderlands1-600x338.jpg",
+          "type": "image/jpeg",
+          "error": "",
+          "file": "95d6056342f4.jpg",
+          "sha256": "17527f4e4cd96ef5d6ed02315da9cf3034d324c6a4c81d409369ef05382ad5b8"
+        },
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2017/06/wolfamongus1-600x338.jpg",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2017/06/wolfamongus1-600x338.jpg",
+          "type": "image/jpeg",
+          "error": "",
+          "file": "dd685469d4a2.jpg",
+          "sha256": "714d9856d9871309fab7a712b920ac7eaaab7e0410cb0754353745cc6856f247"
+        }
+      ]
+    },
+    {
+      "id": "a-tale-of-two-calamities",
+      "title": "Playing For Real: A Tale of Two Calamities | Haywire Magazine",
+      "source_url": "http://www.haywiremag.com/columns/playing-for-real-a-tale-of-two-calamities/",
+      "attempts": [
+        {
+          "url": "http://www.haywiremag.com/columns/playing-for-real-a-tale-of-two-calamities/",
+          "status": 200,
+          "final_url": "https://haywiremag.com/columns/playing-for-real-a-tale-of-two-calamities/",
+          "type": "text/html; charset=UTF-8",
+          "error": ""
+        }
+      ],
+      "captured": "2026-10-20",
+      "source_sha256": "9a4d8a49c413bbfb242ca9b284b38c237f80fbce7850b306429242023484ce89",
+      "page_title": "Playing for Real: A Tale of Two Calamities – Haywire Magazine",
+      "text_characters": 7702,
+      "kind": "article",
+      "raw_response": "source.html.txt",
+      "status": "mirrored",
+      "mirror_path": "/mirror/a-tale-of-two-calamities/",
+      "assets": [
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2017/04/bastion1-636x310.jpg",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2017/04/bastion1-636x310.jpg",
+          "type": "image/jpeg",
+          "error": "",
+          "file": "f6fb74f7e1d9.jpg",
+          "sha256": "6ff1a1a70dc9a2dbd90f5b5f2a9b2aa653c55a2a5aac51c9f2d1616099b63de0"
+        },
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2017/04/transistor1-600x338.jpg",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2017/04/transistor1-600x338.jpg",
+          "type": "image/jpeg",
+          "error": "",
+          "file": "6ec362ea1298.jpg",
+          "sha256": "83b8de7899892a7fb04aa7cce876483c58e44e5400da5da68fe45d58367537cd"
+        },
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2017/04/bastion2-600x338.jpg",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2017/04/bastion2-600x338.jpg",
+          "type": "image/jpeg",
+          "error": "",
+          "file": "25b2bb31c932.jpg",
+          "sha256": "180c29eaf4dbd361f6d641643765a1422e87f1b0cd52b9277ebec7d4e70a2a51"
+        }
+      ]
+    },
+    {
+      "id": "cheap-as-free",
+      "title": "Playing For Real: Cheap As Free | Haywire Magazine",
+      "source_url": "http://www.haywiremag.com/columns/playing-for-real-cheap-as-free/",
+      "attempts": [
+        {
+          "url": "http://www.haywiremag.com/columns/playing-for-real-cheap-as-free/",
+          "status": 200,
+          "final_url": "https://haywiremag.com/columns/playing-for-real-cheap-as-free/",
+          "type": "text/html; charset=UTF-8",
+          "error": ""
+        }
+      ],
+      "captured": "2026-10-20",
+      "source_sha256": "242fcdc34b9e95679f2e5adcb96ada66ee4240f01e6de863214bf40851481ca9",
+      "page_title": "Playing for Real: Cheap as Free – Haywire Magazine",
+      "text_characters": 9928,
+      "kind": "article",
+      "raw_response": "source.html.txt",
+      "status": "mirrored",
+      "mirror_path": "/mirror/cheap-as-free/",
+      "assets": [
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2017/03/fireemblemheroes1-600x310.png",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2017/03/fireemblemheroes1-600x310.png",
+          "type": "image/png",
+          "error": "",
+          "file": "22bfaf50280b.png",
+          "sha256": "c68a0461abe5e621d379ee9db18fb158fb83b75dab54816a3898d3b45a945e4c"
+        },
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2017/03/fireemblemheroes2-600x338.png",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2017/03/fireemblemheroes2-600x338.png",
+          "type": "image/png",
+          "error": "",
+          "file": "3fe2af9d248c.png",
+          "sha256": "9d455b5dd74f4a14f9731291451f8fae38007452bb3a272b93be189cb40a7daf"
+        },
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2017/03/fireemblemheroes3-600x338.png",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2017/03/fireemblemheroes3-600x338.png",
+          "type": "image/png",
+          "error": "",
+          "file": "391bceb5dbd0.png",
+          "sha256": "cb4e6aeb6a407295cd2299dbee304eb5522d763858eb9080b58baec0a78f544d"
+        },
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2017/03/fireemblemheroes4-600x338.png",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2017/03/fireemblemheroes4-600x338.png",
+          "type": "image/png",
+          "error": "",
+          "file": "ff95f3d32a9e.png",
+          "sha256": "3490f0286f6f6d11b11909e9d869638d6a03c90304d1d4d5374d95cf17c67c9b"
+        }
+      ]
+    },
+    {
+      "id": "not-with-a-bang-but-a-winter",
+      "title": "Playing For Real: Not With a Bang but a Winter | Haywire Magazine",
+      "source_url": "http://www.haywiremag.com/columns/playing-for-real-not-with-a-bang-but-a-winter/",
+      "attempts": [
+        {
+          "url": "http://www.haywiremag.com/columns/playing-for-real-not-with-a-bang-but-a-winter/",
+          "status": 200,
+          "final_url": "https://haywiremag.com/columns/playing-for-real-not-with-a-bang-but-a-winter/",
+          "type": "text/html; charset=UTF-8",
+          "error": ""
+        }
+      ],
+      "captured": "2026-10-20",
+      "source_sha256": "225addbe5bb8950eeb5a38de1723bf41ec6b9bac298d19f37a35e83f6fae3dc8",
+      "page_title": "Playing for Real: Not With a Bang but a Winter – Haywire Magazine",
+      "text_characters": 8367,
+      "kind": "article",
+      "raw_response": "source.html.txt",
+      "status": "mirrored",
+      "mirror_path": "/mirror/not-with-a-bang-but-a-winter/",
+      "assets": [
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2015/06/fallout4-636x310.jpg",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2015/06/fallout4-636x310.jpg",
+          "type": "image/jpeg",
+          "error": "",
+          "file": "a8ac79d6ad7b.jpg",
+          "sha256": "cebc00c106b8d4e312d02fbc3c9fccedd9b97b33370bbb766326dc08faa202fd"
+        },
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2017/02/missilecommand1-600x402.png",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2017/02/missilecommand1-600x402.png",
+          "type": "image/png",
+          "error": "",
+          "file": "d18c4839296e.png",
+          "sha256": "5d6514026ba218fd6ea9087a4897e690041628dd9c3a9c6311be7bdd532417af"
+        },
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2017/02/thelongdark1-600x338.jpg",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2017/02/thelongdark1-600x338.jpg",
+          "type": "image/jpeg",
+          "error": "",
+          "file": "446ec0fefb57.jpg",
+          "sha256": "d6474f8893cdad74d160b85f7f648d42ec75f0785ef38cb77344d68786614f2f"
+        }
+      ]
+    },
+    {
+      "id": "slaying-dragons",
+      "title": "Playing For Real: Slaying Dragons | Haywire Magazine",
+      "source_url": "http://www.haywiremag.com/columns/slaying-dragons/",
+      "attempts": [
+        {
+          "url": "http://www.haywiremag.com/columns/slaying-dragons/",
+          "status": 200,
+          "final_url": "https://haywiremag.com/columns/slaying-dragons/",
+          "type": "text/html; charset=UTF-8",
+          "error": ""
+        }
+      ],
+      "captured": "2026-10-20",
+      "source_sha256": "a0aadabf20e77b2e1d2f68b901c1f51cd8ff48f26780cebdb1bc352ecfd0e028",
+      "page_title": "Playing for Real: Slaying Dragons – Haywire Magazine",
+      "text_characters": 7683,
+      "kind": "article",
+      "raw_response": "source.html.txt",
+      "status": "mirrored",
+      "mirror_path": "/mirror/slaying-dragons/",
+      "assets": [
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2016/12/thatdragoncancer1-636x310.jpg",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2016/12/thatdragoncancer1-636x310.jpg",
+          "type": "image/jpeg",
+          "error": "",
+          "file": "a75badd02408.jpg",
+          "sha256": "ea32d70b7556a7ea18af7db8a69f8404944068ea31fae8a80c51a4094d693a3a"
+        },
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2016/12/thatdragoncancer3-600x338.jpg",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2016/12/thatdragoncancer3-600x338.jpg",
+          "type": "image/jpeg",
+          "error": "",
+          "file": "be2abb8eb6b8.jpg",
+          "sha256": "2e2cd82c22cf3818dbfd73dcabfa075c1f7798a6c0a3959eb8268a7574af61c6"
+        },
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2016/12/thatdragoncancer2-600x374.jpg",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2016/12/thatdragoncancer2-600x374.jpg",
+          "type": "image/jpeg",
+          "error": "",
+          "file": "b11b4b1fed56.jpg",
+          "sha256": "4d9814c79084434ed55887a6e514cbe63a7c2bdd65d556b32f0888c1b0ba438d"
+        },
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2016/12/thatdragoncancer4-600x338.jpg",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2016/12/thatdragoncancer4-600x338.jpg",
+          "type": "image/jpeg",
+          "error": "",
+          "file": "83729f4f42c8.jpg",
+          "sha256": "0e5a17439484791e27be564c5067211b254ae6fed0209efa801c9409db1aac3a"
+        }
+      ]
+    },
+    {
+      "id": "holding-out-for-a-hero",
+      "title": "Playing For Real: Holding Out for a Hero | Haywire Magazine",
+      "source_url": "http://www.haywiremag.com/columns/playing-for-real-holding-out-for-a-hero/",
+      "attempts": [
+        {
+          "url": "http://www.haywiremag.com/columns/playing-for-real-holding-out-for-a-hero/",
+          "status": 200,
+          "final_url": "https://haywiremag.com/columns/playing-for-real-holding-out-for-a-hero/",
+          "type": "text/html; charset=UTF-8",
+          "error": ""
+        }
+      ],
+      "captured": "2026-10-20",
+      "source_sha256": "9373abdde96dc8071d636afbfbd4c6b3088b05a243e10f38e7d2f562616dbc32",
+      "page_title": "Playing for Real: Holding Out for a Hero – Haywire Magazine",
+      "text_characters": 10073,
+      "kind": "article",
+      "raw_response": "source.html.txt",
+      "status": "mirrored",
+      "mirror_path": "/mirror/holding-out-for-a-hero/",
+      "assets": [
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2016/11/worldofwarcraft1-636x310.png",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2016/11/worldofwarcraft1-636x310.png",
+          "type": "image/png",
+          "error": "",
+          "file": "b22a8f0e4835.png",
+          "sha256": "85cbbfd2f66839db87f07086c80b3a1d164d964b48fe40d02f6b30070462c0f4"
+        },
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2016/11/worldofwarcraft2-600x334.png",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2016/11/worldofwarcraft2-600x334.png",
+          "type": "image/png",
+          "error": "",
+          "file": "949ab13cb679.png",
+          "sha256": "40198ec2cdb5ef2c12b2c2128af5e2370f96aa861a07aeff3a3e667bf7e91c8b"
+        },
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2016/11/metroredux1-600x338.jpg",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2016/11/metroredux1-600x338.jpg",
+          "type": "image/jpeg",
+          "error": "",
+          "file": "820515e025c3.jpg",
+          "sha256": "65ebc3ffd558c1cdbff2d63a7db568ead814b94669d2268d41c792589ce0dff7"
+        },
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2016/11/worldofwarcraft3-1-600x334.png",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2016/11/worldofwarcraft3-1-600x334.png",
+          "type": "image/png",
+          "error": "",
+          "file": "1d48e29b3503.png",
+          "sha256": "880949bb882d99f5818616976db8955399002ebb390858a77050e4b696e9e694"
+        }
+      ]
+    },
+    {
+      "id": "play-as-you-like",
+      "title": "Playing For Real: Play As You Like | Haywire Magazine",
+      "source_url": "http://www.haywiremag.com/columns/playing-for-real-play-as-you-like/",
+      "attempts": [
+        {
+          "url": "http://www.haywiremag.com/columns/playing-for-real-play-as-you-like/",
+          "status": 200,
+          "final_url": "https://haywiremag.com/columns/playing-for-real-play-as-you-like/",
+          "type": "text/html; charset=UTF-8",
+          "error": ""
+        }
+      ],
+      "captured": "2026-10-20",
+      "source_sha256": "adf0f240f720ad4fdde1fa414f4ef5610f3aecefd93e51ce257997717d6b6da9",
+      "page_title": "Playing For Real: Play As You Like – Haywire Magazine",
+      "text_characters": 8861,
+      "kind": "article",
+      "raw_response": "source.html.txt",
+      "status": "mirrored",
+      "mirror_path": "/mirror/play-as-you-like/",
+      "assets": [
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2016/10/FFIX2-636x310.png",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2016/10/FFIX2-636x310.png",
+          "type": "image/png",
+          "error": "",
+          "file": "f2ab9a4ec738.png",
+          "sha256": "3af0dcb7f02081c73313775340a3719d1996dd01bcc66cf63c8e950ef8d3ce89"
+        },
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2016/10/FFIX4-600x337.jpg",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2016/10/FFIX4-600x337.jpg",
+          "type": "image/jpeg",
+          "error": "",
+          "file": "825d7ad78e59.jpg",
+          "sha256": "9153d53c1ced30f94f521c83e9891c6bf79233ff28dd118c6ddaa23a28a057b8"
+        },
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2016/10/FFIX1-600x337.jpg",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2016/10/FFIX1-600x337.jpg",
+          "type": "image/jpeg",
+          "error": "",
+          "file": "20832b235d68.jpg",
+          "sha256": "ef1f7f2574db82f2bb5ae7ba43b84e0a894a8e4caff0017c65ac7758c0312e96"
+        }
+      ]
+    },
+    {
+      "id": "gotta-glitch-em-all",
+      "title": "Playing For Real: Gotta Glitch 'Em All | Haywire Magazine",
+      "source_url": "http://www.haywiremag.com/columns/playing-for-real-gotta-glitch-em-all/",
+      "attempts": [
+        {
+          "url": "http://www.haywiremag.com/columns/playing-for-real-gotta-glitch-em-all/",
+          "status": 200,
+          "final_url": "https://haywiremag.com/columns/playing-for-real-gotta-glitch-em-all/",
+          "type": "text/html; charset=UTF-8",
+          "error": ""
+        }
+      ],
+      "captured": "2026-10-20",
+      "source_sha256": "429a3c3fa1f2e7660246692e8391fa159d207f0fbb056f8e442370f9799e8d4c",
+      "page_title": "Playing For Real: Gotta Glitch ’em All – Haywire Magazine",
+      "text_characters": 10785,
+      "kind": "article",
+      "raw_response": "source.html.txt",
+      "status": "mirrored",
+      "mirror_path": "/mirror/gotta-glitch-em-all/",
+      "assets": [
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2016/07/pokemon2-636x310.png",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2016/07/pokemon2-636x310.png",
+          "type": "image/png",
+          "error": "",
+          "file": "b1d411a10d50.png",
+          "sha256": "22366802015cff318c4a0aaaa6b7e46ee826f9b550ff3c332f6adb38e103c2a6"
+        },
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2016/07/pokemon5-600x328.png",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2016/07/pokemon5-600x328.png",
+          "type": "image/png",
+          "error": "",
+          "file": "9a4d734d2764.png",
+          "sha256": "6334cc9d685db9dffb936a9d8d0320ce1e145b1653dc96b6e698792e585f4144"
+        },
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2016/07/pokemon3-600x328.png",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2016/07/pokemon3-600x328.png",
+          "type": "image/png",
+          "error": "",
+          "file": "2444f04c11aa.png",
+          "sha256": "e5a49f017e198fcb4aa81a70744ba80093b718e02166426e342976ef54b05837"
+        }
+      ]
+    },
+    {
+      "id": "reality-augmented",
+      "title": "Playing For Real: Reality, Augmented | Haywire Magazine",
+      "source_url": "http://www.haywiremag.com/columns/playing-for-real-reality-augmented/",
+      "attempts": [
+        {
+          "url": "http://www.haywiremag.com/columns/playing-for-real-reality-augmented/",
+          "status": 200,
+          "final_url": "https://haywiremag.com/columns/playing-for-real-reality-augmented/",
+          "type": "text/html; charset=UTF-8",
+          "error": ""
+        }
+      ],
+      "captured": "2026-10-20",
+      "source_sha256": "57afecb21d65491a4323ade5e9443e489dafdc14e569f293791640c1a67cd1b5",
+      "page_title": "Playing For Real: Reality, Augmented – Haywire Magazine",
+      "text_characters": 9384,
+      "kind": "article",
+      "raw_response": "source.html.txt",
+      "status": "mirrored",
+      "mirror_path": "/mirror/reality-augmented/",
+      "assets": [
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2016/06/ingress6-636x310.png",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2016/06/ingress6-636x310.png",
+          "type": "image/png",
+          "error": "",
+          "file": "001ab9279965.png",
+          "sha256": "5439f291ca756dc0c5d3168c5de335de676e09ef3b0e1a61fd10e98929ce89d4"
+        },
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2016/06/ingress2-600x337.png",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2016/06/ingress2-600x337.png",
+          "type": "image/png",
+          "error": "",
+          "file": "2289bcf91a95.png",
+          "sha256": "cd7dfeddae72b54cbeaafb0191639dd1727777531f4a71dcfa5057806e9fe1ce"
+        },
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2016/06/ingress5-600x337.png",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2016/06/ingress5-600x337.png",
+          "type": "image/png",
+          "error": "",
+          "file": "b687bf843cb4.png",
+          "sha256": "59423f51a9553531f36016b687df365b1d0204c2159cf077b91326dd20d88212"
+        },
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2016/06/ingress4-600x337.png",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2016/06/ingress4-600x337.png",
+          "type": "image/png",
+          "error": "",
+          "file": "bc0bd331f7c2.png",
+          "sha256": "6005411c9734f0ea33f50e698d838d3576b63dfa115e6989b23b3ec4e61ea571"
+        }
+      ]
+    },
+    {
+      "id": "free-to-be-useless",
+      "title": "Free to be Useless | First Person Scholar",
+      "source_url": "http://www.firstpersonscholar.com/free-to-be-useless/",
+      "attempts": [
+        {
+          "url": "http://www.firstpersonscholar.com/free-to-be-useless/",
+          "status": 200,
+          "final_url": "https://www.firstpersonscholar.com/free-to-be-useless/",
+          "type": "text/html; charset=UTF-8",
+          "error": ""
+        }
+      ],
+      "captured": "2026-10-20",
+      "source_sha256": "fb2edafd745c4b20c382490f2006278f8d596fc09f28d804827aa1a5e2dad68c",
+      "page_title": "Free to Be Useless - First Person Scholar",
+      "text_characters": 9573,
+      "kind": "article",
+      "raw_response": "source.html.txt",
+      "status": "mirrored",
+      "mirror_path": "/mirror/free-to-be-useless/",
+      "assets": [
+        {
+          "url": "https://www.firstpersonscholar.com/wp-content/uploads/2016/05/Year-Two-Word-Cloud-250-words-700x250.jpg",
+          "status": 200,
+          "final_url": "https://www.firstpersonscholar.com/wp-content/uploads/2016/05/Year-Two-Word-Cloud-250-words-700x250.jpg",
+          "type": "image/jpeg",
+          "error": "",
+          "file": "7b312b45a62c.jpg",
+          "sha256": "89f250be3b48d053502425625e567de26e891984ff2e2582fb5f5d286103846d"
+        },
+        {
+          "url": "http://www.firstpersonscholar.com/wp-content/uploads/2013/11/bio-twitter.png",
+          "status": 200,
+          "final_url": "https://www.firstpersonscholar.com/wp-content/uploads/2013/11/bio-twitter.png",
+          "type": "image/png",
+          "error": "",
+          "file": "c02cb1f46b01.png",
+          "sha256": "417496dc1ccdc2daf43b28e7075a563acf2f3bff2a0427b7b98d1aeaec4e7948"
+        },
+        {
+          "url": "http://www.firstpersonscholar.com/wp-content/uploads/2013/11/bio-blog.png",
+          "status": 200,
+          "final_url": "https://www.firstpersonscholar.com/wp-content/uploads/2013/11/bio-blog.png",
+          "type": "image/png",
+          "error": "",
+          "file": "6233cc632b58.png",
+          "sha256": "8ce5cf46744ff8f9f566b7876a64d5d27ab970565e6e76f68f94edf37989d0a1"
+        }
+      ]
+    },
+    {
+      "id": "content-factory",
+      "title": "Playing For Real: The Content Factory | Haywire Magazine",
+      "source_url": "http://www.haywiremag.com/columns/playing-for-real-the-content-factory/",
+      "attempts": [
+        {
+          "url": "http://www.haywiremag.com/columns/playing-for-real-the-content-factory/",
+          "status": 200,
+          "final_url": "https://haywiremag.com/columns/playing-for-real-the-content-factory/",
+          "type": "text/html; charset=UTF-8",
+          "error": ""
+        }
+      ],
+      "captured": "2026-10-20",
+      "source_sha256": "3f9cc59a9c396bb300ad705607e4e828e3062c91d863992c6726293458a265af",
+      "page_title": "Playing For Real: The Content Factory – Haywire Magazine",
+      "text_characters": 11249,
+      "kind": "article",
+      "raw_response": "source.html.txt",
+      "status": "mirrored",
+      "mirror_path": "/mirror/content-factory/",
+      "assets": [
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2016/05/gamedevtycoon2-600x310.jpg",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2016/05/gamedevtycoon2-600x310.jpg",
+          "type": "image/jpeg",
+          "error": "",
+          "file": "2df27827e1e4.jpg",
+          "sha256": "f90e53de2e288979be1b4c87fb49ddede95c055f1cd197b12d0d73991fafa419"
+        },
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2016/05/gamedevtycoon3-600x337.jpg",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2016/05/gamedevtycoon3-600x337.jpg",
+          "type": "image/jpeg",
+          "error": "",
+          "file": "99149399a85a.jpg",
+          "sha256": "986cab3feddcd92bbe016d37036051f4edaa9c8895180aa95106b887e1b6ff82"
+        },
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2016/05/gamedevtycoon1-600x337.jpg",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2016/05/gamedevtycoon1-600x337.jpg",
+          "type": "image/jpeg",
+          "error": "",
+          "file": "a2f0ec23b4cd.jpg",
+          "sha256": "74a75aa089ef2887ae31d3abbd1f853b5d6af9e49fce70d75a60d81d10066ad0"
+        },
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2016/05/gamedevtycoon4-600x337.jpg",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2016/05/gamedevtycoon4-600x337.jpg",
+          "type": "image/jpeg",
+          "error": "",
+          "file": "8798c68a8ddb.jpg",
+          "sha256": "04f9d109853d58b92912026ae0bafcf4222a8009d8d2d0c52b2129480ff9373d"
+        }
+      ]
+    },
+    {
+      "id": "let-there-be-play",
+      "title": "Playing For Real: Let There Be Play | Haywire Magazine",
+      "source_url": "http://www.haywiremag.com/columns/playing-for-real-let-there-be-play/",
+      "attempts": [
+        {
+          "url": "http://www.haywiremag.com/columns/playing-for-real-let-there-be-play/",
+          "status": 200,
+          "final_url": "https://haywiremag.com/columns/playing-for-real-let-there-be-play/",
+          "type": "text/html; charset=UTF-8",
+          "error": ""
+        }
+      ],
+      "captured": "2026-10-20",
+      "source_sha256": "d31121c98f8009d0e726acdab162b05cb3969c9946f95e2ad930bc467196de33",
+      "page_title": "Playing for Real: Let There Be Play – Haywire Magazine",
+      "text_characters": 8457,
+      "kind": "article",
+      "raw_response": "source.html.txt",
+      "status": "mirrored",
+      "mirror_path": "/mirror/let-there-be-play/",
+      "assets": [
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2016/04/tabletopsimulator1s-636x310.png",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2016/04/tabletopsimulator1s-636x310.png",
+          "type": "image/png",
+          "error": "",
+          "file": "1dd72246b049.png",
+          "sha256": "95afb8d576c06b315c08d59d1cb2064b8fb67ea8ea5569000c479048d3959466"
+        },
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2016/04/tabletopsimulator2s-600x338.png",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2016/04/tabletopsimulator2s-600x338.png",
+          "type": "image/png",
+          "error": "",
+          "file": "96cd054f6a5d.png",
+          "sha256": "ad03d82524708045b89977ccbe1339ecac25a3bad85a8a2c77b34136879c3883"
+        },
+        {
+          "url": "https://haywiremag.com/wp-content/uploads/2016/04/tabletopsimulator3s-600x338.png",
+          "status": 200,
+          "final_url": "https://haywiremag.com/wp-content/uploads/2016/04/tabletopsimulator3s-600x338.png",
+          "type": "image/png",
+          "error": "",
+          "file": "d0e52b497796.png",
+          "sha256": "d88843acfdf92892c4137da6a1336063d37a2d3d489f38a9bb18a22c91880add"
+        }
+      ]
+    },
+    {
+      "id": "beyond-choices",
+      "title": "Book Review: Beyond Choices | First Person Scholar",
+      "source_url": "http://www.firstpersonscholar.com/a-review-of-miguel-sicarts-beyond-choices/",
+      "attempts": [
+        {
+          "url": "http://www.firstpersonscholar.com/a-review-of-miguel-sicarts-beyond-choices/",
+          "status": 200,
+          "final_url": "https://www.firstpersonscholar.com/a-review-of-miguel-sicarts-beyond-choices/",
+          "type": "text/html; charset=UTF-8",
+          "error": ""
+        }
+      ],
+      "captured": "2026-10-20",
+      "source_sha256": "c0bc542a60df850081c1c8e3681222345bb8a6e3a023ead02b6e1ee84029abae",
+      "page_title": "Miguel Sicart’s “Beyond Choices” - First Person Scholar",
+      "text_characters": 11681,
+      "kind": "article",
+      "raw_response": "source.html.txt",
+      "status": "mirrored",
+      "mirror_path": "/mirror/beyond-choices/",
+      "assets": [
+        {
+          "url": "https://www.firstpersonscholar.com/wp-content/uploads/2015/01/Essay-Procedural-Ethics.jpg",
+          "status": 200,
+          "final_url": "https://www.firstpersonscholar.com/wp-content/uploads/2015/01/Essay-Procedural-Ethics.jpg",
+          "type": "image/jpeg",
+          "error": "",
+          "file": "75f66948f7e7.jpg",
+          "sha256": "cbb19ca5082d822f8546edef175117180805b0e5c766734ccdb45bcb43aa50ac"
+        },
+        {
+          "url": "http://www.firstpersonscholar.com/wp-content/uploads/2013/11/bio-twitter.png",
+          "status": 200,
+          "final_url": "https://www.firstpersonscholar.com/wp-content/uploads/2013/11/bio-twitter.png",
+          "type": "image/png",
+          "error": "",
+          "file": "c02cb1f46b01.png",
+          "sha256": "417496dc1ccdc2daf43b28e7075a563acf2f3bff2a0427b7b98d1aeaec4e7948"
+        },
+        {
+          "url": "http://www.firstpersonscholar.com/wp-content/uploads/2013/11/bio-blog.png",
+          "status": 200,
+          "final_url": "https://www.firstpersonscholar.com/wp-content/uploads/2013/11/bio-blog.png",
+          "type": "image/png",
+          "error": "",
+          "file": "6233cc632b58.png",
+          "sha256": "8ce5cf46744ff8f9f566b7876a64d5d27ab970565e6e76f68f94edf37989d0a1"
+        }
+      ]
+    },
+    {
+      "id": "sheathing-the-sword",
+      "title": "Sheathing the Sword: Akira Kurosawa and the Virtue of Meekness | Christ and Pop Culture",
+      "source_url": "https://christandpopculture.com/sheathing-sword-akira-kurosawa-virtue-meekness/",
+      "attempts": [
+        {
+          "url": "https://christandpopculture.com/sheathing-sword-akira-kurosawa-virtue-meekness/",
+          "status": 200,
+          "final_url": "https://christandpopculture.com/sheathing-sword-akira-kurosawa-virtue-meekness/",
+          "type": "text/html; charset=UTF-8",
+          "error": ""
+        }
+      ],
+      "captured": "2026-10-20",
+      "source_sha256": "032cd26cce1d1026044ae0fed2a7b3788ece729f82fa30d19ec737a486e3d11c",
+      "page_title": "Sheathing the Sword: Akira Kurosawa and the Virtue of Meekness - Christ and Pop Culture",
+      "text_characters": 12241,
+      "kind": "article",
+      "raw_response": "source.html.txt",
+      "status": "mirrored",
+      "mirror_path": "/mirror/sheathing-the-sword/",
+      "assets": [
+        {
+          "url": "https://christandpopculture.com/wp-content/uploads/2018/01/20180125.sanjuro-1024x719.jpg",
+          "status": 200,
+          "final_url": "https://christandpopculture.com/wp-content/uploads/2018/01/20180125.sanjuro-1024x719.jpg",
+          "type": "image/jpeg",
+          "error": "",
+          "file": "e03c55c482a8.jpg",
+          "sha256": "2f042e92924d84ba5fb3126976f20d6fcf04a7d74e28f7109807c5d2fee59645"
+        }
+      ]
+    },
+    {
+      "id": "filled-not-emptied",
+      "title": "Filled, Not Emptied | Trinity Fellows Academy Week 31",
+      "source_url": "http://trinityfellowsacademy.org/2016/03/28/filled-not-emptied-week-31/",
+      "attempts": [
+        {
+          "url": "http://trinityfellowsacademy.org/2016/03/28/filled-not-emptied-week-31/",
+          "status": 403,
+          "final_url": "https://trinityfellowsacademy.org/2016/03/28/filled-not-emptied-week-31/",
+          "type": "text/html; charset=utf-8",
+          "error": ""
+        },
+        {
+          "url": "https://trinityfellowsacademy.org/2016/03/28/filled-not-emptied-week-31/",
+          "status": 403,
+          "final_url": "https://trinityfellowsacademy.org/2016/03/28/filled-not-emptied-week-31/",
+          "type": "text/html; charset=utf-8",
+          "error": ""
+        }
+      ],
+      "captured": "2026-10-22",
+      "status": "mirrored",
+      "kind": "article",
+      "source_type": "supplied-text",
+      "source_file": "source.txt",
+      "source_sha256": "bde4bf629d511d32aea23e859e32074ef63d94ce8417a81b373c1caeb959fb7d",
+      "text_characters": 5119,
+      "mirror_path": "/mirror/filled-not-emptied/",
+      "assets": [],
+      "original_unavailable": true,
+      "reason": "Original last checked: HTTP 403. Recovered from owner-supplied text."
+    },
+    {
+      "id": "light-in-darkness",
+      "title": "Light in the Darkness | Trinity Fellows Academy Weeks 16 and 17",
+      "source_url": "http://trinityfellowsacademy.org/2015/12/24/light-in-the-darkness-weeks-16-17/",
+      "attempts": [
+        {
+          "url": "http://trinityfellowsacademy.org/2015/12/24/light-in-the-darkness-weeks-16-17/",
+          "status": 403,
+          "final_url": "https://trinityfellowsacademy.org/2015/12/24/light-in-the-darkness-weeks-16-17/",
+          "type": "text/html; charset=utf-8",
+          "error": ""
+        },
+        {
+          "url": "https://trinityfellowsacademy.org/2015/12/24/light-in-the-darkness-weeks-16-17/",
+          "status": 403,
+          "final_url": "https://trinityfellowsacademy.org/2015/12/24/light-in-the-darkness-weeks-16-17/",
+          "type": "text/html; charset=utf-8",
+          "error": ""
+        }
+      ],
+      "captured": "2026-10-22",
+      "status": "mirrored",
+      "kind": "article",
+      "source_type": "supplied-text",
+      "source_file": "source.txt",
+      "source_sha256": "aeb7867702417d345d8493ce1d82bbee87f1ede0317ea03d8df6359da4e691e2",
+      "text_characters": 6841,
+      "mirror_path": "/mirror/light-in-darkness/",
+      "assets": [],
+      "original_unavailable": true,
+      "reason": "Original last checked: HTTP 403. Recovered from owner-supplied text."
+    },
+    {
+      "id": "strengths-and-silence",
+      "title": "Strengths and Silence | Trinity Fellows Academy Week 3",
+      "source_url": "http://trinityfellowsacademy.org/2015/09/14/finding-peace-and-discovering-strengths-week-3/",
+      "attempts": [
+        {
+          "url": "http://trinityfellowsacademy.org/2015/09/14/finding-peace-and-discovering-strengths-week-3/",
+          "status": 403,
+          "final_url": "https://trinityfellowsacademy.org/2015/09/14/finding-peace-and-discovering-strengths-week-3/",
+          "type": "text/html; charset=utf-8",
+          "error": ""
+        },
+        {
+          "url": "https://trinityfellowsacademy.org/2015/09/14/finding-peace-and-discovering-strengths-week-3/",
+          "status": 403,
+          "final_url": "https://trinityfellowsacademy.org/2015/09/14/finding-peace-and-discovering-strengths-week-3/",
+          "type": "text/html; charset=utf-8",
+          "error": ""
+        }
+      ],
+      "captured": "2026-10-22",
+      "status": "mirrored",
+      "kind": "article",
+      "source_type": "supplied-text",
+      "source_file": "source.txt",
+      "source_sha256": "751d0f383660fe3c6062f913c76240149028c7c0431bf6b0aa95e842b99d2d94",
+      "text_characters": 6091,
+      "mirror_path": "/mirror/strengths-and-silence/",
+      "assets": [],
+      "original_unavailable": true,
+      "reason": "Original last checked: HTTP 403. Recovered from owner-supplied text."
+    },
+    {
+      "id": "integer-ray-tracing",
+      "title": "Integer Ray Tracing | Journal of Graphics, GPU, and Game Tools, vol. 14, no. 4, 2009",
+      "source_url": "https://doi.org/10.1080/2151237X.2009.10129289",
+      "attempts": [
+        {
+          "url": "https://doi.org/10.1080/2151237X.2009.10129289",
+          "status": 403,
+          "final_url": "https://www.tandfonline.com/doi/abs/10.1080/2151237X.2009.10129289",
+          "type": "text/html",
+          "error": "Command-line request blocked; intended publisher page verified in browser. Full text requires access."
+        },
+        {
+          "url": "https://www.rtvtk.org/~cgribble/research/papers/heinly09integer.pdf",
+          "status": 200,
+          "final_url": "https://www.rtvtk.org/~cgribble/research/papers/heinly09integer.pdf",
+          "type": "application/pdf",
+          "error": ""
+        }
+      ],
+      "captured": "2026-10-20",
+      "source_sha256": "ff5821abc79a8f46175262863e11da71fa289b02a834bdbabba93d92ba729617",
+      "version_note": "Preserved author technical report GCC-CS-001-2009, dated October 13, 2009 (8 pages). The DOI identifies the journal publication; the publisher requires access for its full text.",
+      "mirror_source_url": "https://www.rtvtk.org/~cgribble/research/papers/heinly09integer.pdf",
+      "kind": "pdf",
+      "status": "mirrored",
+      "mirror_path": "/mirror/integer-ray-tracing/",
+      "assets": [],
+      "previous_source_url": "https://www.cs.unc.edu/~jheinly/publications/jgt2009-heinly.pdf",
+      "publisher_verified_in_browser": true
+    },
+    {
+      "id": "stream-filtered-ray-tracing",
+      "title": "Toward Stream Filtered Ray Tracing on a DSP | Poster, ACM SIGGRAPH/Eurographics High Performance Graphics, June 2010",
+      "source_url": "http://www.rtvtk.org/~cgribble/research/papers/bensema10toward_poster.pdf",
+      "attempts": [
+        {
+          "url": "http://www.rtvtk.org/~cgribble/research/papers/bensema10toward_poster.pdf",
+          "status": 200,
+          "final_url": "http://www.rtvtk.org/~cgribble/research/papers/bensema10toward_poster.pdf",
+          "type": "application/pdf",
+          "error": ""
+        }
+      ],
+      "captured": "2026-10-20",
+      "source_sha256": "dff86c05f76ceaf54b3db2a8c4251cbc8486f43542ae47e79e291730e94e6223",
+      "kind": "pdf",
+      "status": "mirrored",
+      "mirror_path": "/mirror/stream-filtered-ray-tracing/",
+      "assets": []
+    },
+    {
+      "id": "tangere",
+      "title": "Tangere Integer Ray Tracer",
+      "source_url": "http://www.rtvtk.org/~cgribble/research/tangere/",
+      "attempts": [
+        {
+          "url": "http://www.rtvtk.org/~cgribble/research/tangere/",
+          "status": 200,
+          "final_url": "http://www.rtvtk.org/~cgribble/research/tangere/",
+          "type": "text/html; charset=UTF-8",
+          "error": ""
+        }
+      ],
+      "captured": "2026-10-20",
+      "source_sha256": "3422d77cc34e68ed9dfcec2706fb29c1f4aeb15d235977971ff1eab0700d9bbf",
+      "page_title": "Index of /~cgribble/research/tangere/",
+      "kind": "software-directory",
+      "raw_response": "source.html.txt",
+      "status": "mirrored",
+      "mirror_path": "/mirror/tangere/",
+      "assets": [
+        {
+          "url": "http://www.rtvtk.org/~cgribble/research/tangere/images.tgz",
+          "status": 200,
+          "final_url": "http://www.rtvtk.org/~cgribble/research/tangere/images.tgz",
+          "type": "application/x-tar",
+          "error": "",
+          "file": "images.tgz",
+          "sha256": "67bda33e8908db0ea4c3e779b253472375ca4dd9f1a2468e8601900473b9e9d3"
+        },
+        {
+          "url": "http://www.rtvtk.org/~cgribble/research/tangere/images2.tgz",
+          "status": 200,
+          "final_url": "http://www.rtvtk.org/~cgribble/research/tangere/images2.tgz",
+          "type": "application/x-tar",
+          "error": "",
+          "file": "images2.tgz",
+          "sha256": "cb26742b6e4d4dff1a8e5eca3ad5351a48e60d6034a6ffdc938f5872a06f7a27"
+        },
+        {
+          "url": "http://www.rtvtk.org/~cgribble/research/tangere/LICENSE.txt",
+          "status": 200,
+          "final_url": "http://www.rtvtk.org/~cgribble/research/tangere/LICENSE.txt",
+          "type": "text/plain",
+          "error": "",
+          "file": "LICENSE.txt",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "url": "http://www.rtvtk.org/~cgribble/research/tangere/tangere-dist-10102009.tgz",
+          "status": 200,
+          "final_url": "http://www.rtvtk.org/~cgribble/research/tangere/tangere-dist-10102009.tgz",
+          "type": "application/x-tar",
+          "error": "",
+          "file": "tangere-dist-10102009.tgz",
+          "sha256": "2cf5f653a5cdb2e78da5309759cd43d880c5676b60fc6dcd83ce2a06c8eedada"
+        },
+        {
+          "url": "http://www.rtvtk.org/~cgribble/research/tangere/tangere-dist-18032010.tgz",
+          "status": 200,
+          "final_url": "http://www.rtvtk.org/~cgribble/research/tangere/tangere-dist-18032010.tgz",
+          "type": "application/x-tar",
+          "error": "",
+          "file": "tangere-dist-18032010.tgz",
+          "sha256": "54e31424b9932fbee202afc796e52efc97cf06f5ea73c7dee2949ba171b15ef5"
+        },
+        {
+          "url": "http://www.rtvtk.org/~cgribble/research/tangere/tangere-dist-20130729.tgz",
+          "status": 200,
+          "final_url": "http://www.rtvtk.org/~cgribble/research/tangere/tangere-dist-20130729.tgz",
+          "type": "application/x-tar",
+          "error": "",
+          "file": "tangere-dist-20130729.tgz",
+          "sha256": "7ceaf12ba6801744706488edab90ee3493ea466613cdeb9bb538e868c875a12d"
+        }
+      ]
+    }
+  ],
+  "supporting_links": [
+    {
+      "title": "Portfolio RSS",
+      "url": "https://jmporch.com/feed.xml",
+      "status": 200,
+      "result": "Valid portfolio RSS XML"
+    },
+    {
+      "title": "HTML validator",
+      "url": "https://validator.w3.org/nu/?doc=http%3A%2F%2Fwww.jmporch.com%2F",
+      "status": 200,
+      "result": "W3C HTML checking service"
+    },
+    {
+      "title": "CSS validator",
+      "url": "https://jigsaw.w3.org/css-validator/validator?uri=www.jmporch.com%2Fstyle.css&profile=css3&usermedium=all&warning=1&vextwarning=&lang=en",
+      "status": 200,
+      "result": "W3C CSS checking service"
+    }
+  ],
+  "updated": "2026-10-22",
+  "verified": "2026-10-22",
+  "verification": {
+    "portfolio_works": 24,
+    "mirrored_works": 24,
+    "downloaded_assets": 58,
+    "source_checksums": "passed",
+    "asset_checksums": "passed",
+    "articles": 21,
+    "research_pdfs": 2
+  },
+  "generated": "2026-10-22"
+}
