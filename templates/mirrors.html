@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% block title %}Portfolio Mirror | {{ config.extra.name }}{% endblock title %}
-{% block body_attributes %}class="reading-page"{% endblock body_attributes %}
+{% block body_attributes %}class="mirror-page"{% endblock body_attributes %}
 {% block content %}
 {% set portfolio = load_data(path="data/portfolio.toml") %}
 {% set audit = load_data(path="static/mirror/audit.json") %}
 <section class="content-panel" aria-labelledby="mirror-heading">
   <h1 id="mirror-heading" class="major-heading">Portfolio Mirror</h1>
-  <div class="viewport prose">
+  <div class="no-scroll"><div class="viewport prose" tabindex="0" role="region" aria-labelledby="mirror-heading">
     <ul>
       {% for group in portfolio.groups %}
       {% for item in group.items %}
@@ -21,6 +21,6 @@
       {% endfor %}
     </ul>
     <p>Archive last regenerated at <time datetime="{{ audit.generated }}">{{ audit.generated }}</time>.</p>
-  </div>
+  </div></div>
 </section>
 {% endblock content %}

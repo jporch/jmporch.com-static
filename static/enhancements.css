@@ -60,9 +60,12 @@ body:not(.js) .sidebar-nav { display: block; }
 
 @media screen and (min-width: 641px) {
   /* Fit long, wrapped titles inside the fixed desktop panels. */
-  .js[data-home] .content-panel { display: flex; flex-direction: column; }
-  .js[data-home] .no-scroll { flex: 1; min-height: 0; display: flex; }
-  .js[data-home] .viewport { flex: 1; min-width: 0; }
+  .js[data-home] .content-panel,
+  .js.mirror-page .content-panel { display: flex; flex-direction: column; }
+  .js[data-home] .no-scroll,
+  .js.mirror-page .no-scroll { flex: 1; min-height: 0; display: flex; }
+  .js[data-home] .viewport,
+  .js.mirror-page .viewport { flex: 1; min-width: 0; }
 }
 
 @media screen and (max-width: 640px) {
