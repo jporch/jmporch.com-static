@@ -251,3 +251,36 @@ year is computed from the current UTC year each time Zola builds the site.
 
 The portrait retains its original attribution. Josefin Slab's license is included
 in `static/fonts/OFL.txt`; no new license is assigned to the owner's site content.
+
+## Portfolio mirror
+
+`/mirror/` lists existing mirrors in Portfolio order and the regeneration date. The
+shared `templates/mirror.html` displays each work's title and content alongside
+the site navigation, without source notices or footers. `content/mirror/<portfolio-id>/` holds Markdown, local images,
+original HTML responses saved as `.html.txt`, and original PDFs or software
+archives. `static/mirror/audit.json` records each request, redirect destination,
+HTTP result, source checksum, and downloaded asset checksum. Original Portfolio
+links are retained. Article citations still point to external sites; linked
+third-party pages and embedded videos are not recursively archived.
+
+To add missing mirrors and regenerate the archive index (network access is needed
+only for new remote sources):
+
+```sh
+python3 -m venv .venv
+.venv/bin/python -m pip install -r scripts/mirror-requirements.txt
+.venv/bin/python scripts/archive_portfolio.py
+```
+
+An existing `content/mirror/<portfolio-id>/index.md` is left untouched, including
+its assets and capture date; its remote source is never checked again. New items
+that cannot be archived are omitted from the index, with diagnostics retained
+only in the audit. Normal site builds do not run the crawler or need its Python packages.
+Raw source responses are preserved for reference; the readable pages omit scripts,
+site navigation, comments, and promotional widgets outside the article body.
+
+For an unavailable article recovered from saved text, keep the original file as
+`content/mirror/<portfolio-id>/source.txt`, with its publication URL on the first
+line and article text below it. Add `mirror_text` with that content-relative file
+path to the Portfolio item. The initial archive import preserves that text as literal
+paragraphs and identify its provenance separately from a successful web capture.

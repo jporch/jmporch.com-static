@@ -8,17 +8,17 @@
     <link href="{{ get_url(path='style.css', cachebust=true) }}" rel="stylesheet">
     <link href="{{ get_url(path='enhancements.css', cachebust=true) }}" rel="stylesheet">
     <link rel="canonical" href="{{ current_url | default(value=get_url(path='/')) }}">
-    <script src="{{ get_url(path='main.js', cachebust=true) }}" defer></script>
+    {% block scripts %}<script src="{{ get_url(path='main.js', cachebust=true) }}" defer></script>{% endblock scripts %}
     {% block head %}{% endblock head %}
   </head>
   <body {% block body_attributes %}{% endblock body_attributes %}>
     <main>
       <div id="skip-nav"><a href="#content">Skip to content</a></div>
-      {% include "partials/sidebar.html" %}
+      {% block sidebar %}{% include "partials/sidebar.html" %}{% endblock sidebar %}
       <div id="content" class="content" tabindex="-1">
         {% block content %}{% endblock content %}
       </div>
-      <div class="copyright-notice">Photo copyright <a href="https://www.karenadixon.com/" target="_blank" rel="noopener">Karena Dixon</a>. All other content copyright {{ config.extra.name }}, {{ now(utc=true) | date(format="%Y") }}.</div>
+      {% block footer %}<div class="copyright-notice">Photo copyright <a href="https://www.karenadixon.com/" target="_blank" rel="noopener">Karena Dixon</a>. All other content copyright {{ config.extra.name }}, {{ now(utc=true) | date(format="%Y") }}.</div>{% endblock footer %}
     </main>
   </body>
 </html>

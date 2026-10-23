@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}{{ page.title }} | Portfolio mirror{% endblock title %}
+{% block body_attributes %}class="mirror-page"{% endblock body_attributes %}
+{% block footer %}{% endblock footer %}
+{% block content %}
+<article class="content-panel" aria-labelledby="mirror-heading">
+  <h1 id="mirror-heading" class="major-heading">{{ page.title }}</h1>
+  <div class="no-scroll"><div class="viewport prose" tabindex="0" role="region" aria-labelledby="mirror-heading">
+    {{ page.content | safe }}
+  </div></div>
+</article>
+{% endblock content %}
