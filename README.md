@@ -160,7 +160,7 @@ The default branch is **main**. Pushes and merged pull requests deploy automatic
 
 | Branch | Destination | Workflow |
 | --- | --- | --- |
-| `main` | Production at `https://jmporch.com` | `.github/workflows/production.yml` |
+| `main` | Both migration servers: `https://jmporch.com` and `https://test.jmporch.com` | `.github/workflows/production.yml` |
 | `staging` | [GitHub Pages](https://jporch.github.io/jmporch.com-static/) | `.github/workflows/pages.yml` |
 
 Merge experimental changes into `staging` to preview them, then merge the changes
@@ -183,15 +183,31 @@ Pages remains the staging site; production builds use `https://jmporch.com`.
 
 ### Production server
 
+For the new Ubuntu server at `test.jmporch.com`, see
+[parallel production deployment during migration](docs/new-server-testing.md).
+One production workflow run builds a single artifact for `https://jmporch.com`
+and deploys it to both servers using the existing `production` environment.
+Both deployment jobs must pass. The new server uses versioned releases under
+`/srv/www/main`; the legacy server retains the direct-sync setup below.
+Staging continues to publish to GitHub Pages.
+
 The `production` GitHub environment permits deployments from `main` only. It holds
 the `SSH_PRIVATE_KEY` secret and these variables:
 
 | Variable | Value |
 | --- | --- |
-| `SSH_HOST` | `jmporch.com` |
+| `SSH_HOST` | `172.104.215.71` (old server, independent of DNS cutover) |
 | `SSH_PORT` | `22` |
 | `SSH_USER` | `jmporch-deploy` |
 | `SSH_KNOWN_HOSTS` | Server's verified ED25519 public host key in known_hosts format |
+
+In the same `production` environment, the new server uses `NEW_SSH_HOST`,
+`NEW_SSH_PORT`, `NEW_SSH_USER`, `NEW_SSH_KNOWN_HOSTS`, and the
+`SSH_PRIVATE_KEY_NEW` secret. See the migration guide for their values and setup.
+Each server receives the same artifact and release marker. Public checks connect
+directly to each server's fixed IP while preserving its HTTPS hostname, and compare
+served pages, feeds, and assets with the build. A failure on either target fails
+the overall workflow without cancelling the other target's deployment.
 
 The server host key was checked against the fingerprint supplied through a trusted
 server session. Update the pinned key deliberately if the server changes.
