@@ -60,31 +60,11 @@ jobs:
           if-no-files-found: error
 
   deploy:
-    name: Deploy and verify (${{ matrix.target }})
+    name: Deploy and verify production
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - target: old
-            script: scripts/deploy-production.sh
-            host_var: SSH_HOST
-            port_var: SSH_PORT
-            user_var: SSH_USER
-            known_hosts_var: SSH_KNOWN_HOSTS
-            key_secret: SSH_PRIVATE_KEY
-            url: https://jmporch.com
-          - target: new
-            script: scripts/deploy-release.sh
-            host_var: NEW_SSH_HOST
-            port_var: NEW_SSH_PORT
-            user_var: NEW_SSH_USER
-            known_hosts_var: NEW_SSH_KNOWN_HOSTS
-            key_secret: SSH_PRIVATE_KEY_NEW
-            url: https://test.jmporch.com
     environment:
       name: production
       url: https://jmporch.com
@@ -95,18 +75,14 @@ jobs:
         uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: '3.13'
-      - name: Validate fixed migration targets
+      - name: Validate production server address
         env:
-          OLD_SERVER_IP: ${{ vars.SSH_HOST }}
           NEW_SERVER_IP: ${{ vars.NEW_SSH_HOST }}
         run: |
           python3 - <<'PY'
           import ipaddress
           import os
-          old = ipaddress.IPv4Address(os.environ['OLD_SERVER_IP'])
-          new = ipaddress.IPv4Address(os.environ['NEW_SERVER_IP'])
-          if old == new:
-              raise SystemExit('Old and new deployment targets must be different fixed IPs.')
+          ipaddress.IPv4Address(os.environ['NEW_SERVER_IP'])
           PY
       - name: Download checked production files
         uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
@@ -115,29 +91,23 @@ jobs:
           path: public
       - name: Sync and verify production files
         env:
-          SSH_HOST: ${{ vars[matrix.host_var] }}
-          SSH_PORT: ${{ vars[matrix.port_var] }}
-          SSH_USER: ${{ vars[matrix.user_var] }}
-          SSH_KNOWN_HOSTS: ${{ vars[matrix.known_hosts_var] }}
-          SSH_PRIVATE_KEY: ${{ secrets[matrix.key_secret] }}
+          SSH_HOST: ${{ vars.NEW_SSH_HOST }}
+          SSH_PORT: ${{ vars.NEW_SSH_PORT }}
+          SSH_USER: ${{ vars.NEW_SSH_USER }}
+          SSH_KNOWN_HOSTS: ${{ vars.NEW_SSH_KNOWN_HOSTS }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY_NEW }}
           DEPLOY_RELEASE: ${{ github.sha }}-${{ github.run_id }}-${{ github.run_attempt }}
-          DEPLOY_SCRIPT: ${{ matrix.script }}
-        run: bash "$DEPLOY_SCRIPT" public
+        run: bash scripts/deploy-release.sh public
       - name: Verify this server over HTTPS
         env:
           SOURCE_COMMIT: ${{ github.sha }}
           DEPLOY_RELEASE: ${{ github.sha }}-${{ github.run_id }}-${{ github.run_attempt }}
-          DEPLOY_TARGET: ${{ matrix.target }}
-          CHECK_BASE_URL: ${{ matrix.url }}
-          CHECK_IP: ${{ vars[matrix.host_var] }}
+          CHECK_IP: ${{ vars.NEW_SSH_HOST }}
         run: |
-          args=()
-          if [[ "$DEPLOY_TARGET" == new ]]; then
-            args+=(--require-noindex --check-haywire)
-          fi
           python3 scripts/check_deployment.py \
-            --base-url "$CHECK_BASE_URL" \
+            --base-url https://jmporch.com \
             --connect-ip "$CHECK_IP" \
             --commit "$SOURCE_COMMIT" \
             --release "$DEPLOY_RELEASE" \
-            --artifact public "${args[@]}"
+            --artifact public \
+            --require-indexable --check-haywire

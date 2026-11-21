@@ -95,6 +95,27 @@ class TestPublicDeployment(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'noindex'):
             self.check_with(indexable)
 
+    def test_production_rejects_noindex_response_header(self):
+        with self.assertRaisesRegex(ValueError, 'X-Robots-Tag blocks indexing'):
+            self.check_with(require_noindex=False, require_indexable=True)
+
+    def test_production_rejects_noindex_meta_tag_on_blog(self):
+        def blocked_blog(url, response):
+            status, headers, body, final_url = response
+            headers.pop('X-Robots-Tag', None)
+            if url.endswith('/blog/'):
+                body = b'<html><meta name="robots" content="NOINDEX, follow"></html>'
+            return status, headers, body, final_url
+        with self.assertRaisesRegex(ValueError, 'HTML meta tag blocks indexing'):
+            self.check_with(blocked_blog, require_noindex=False, require_indexable=True)
+
+    def test_production_accepts_normal_indexing_policy(self):
+        def public_site(url, response):
+            status, headers, body, final_url = response
+            headers['X-Robots-Tag'] = 'index, follow'
+            return status, headers, body, final_url
+        self.check_with(public_site, require_noindex=False, require_indexable=True)
+
     def test_html_returned_instead_of_stylesheet_is_rejected(self):
         def wrong_mime(url, response):
             status, headers, body, final_url = response

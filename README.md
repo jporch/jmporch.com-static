@@ -160,7 +160,7 @@ The default branch is **main**. Pushes and merged pull requests deploy automatic
 
 | Branch | Destination | Workflow |
 | --- | --- | --- |
-| `main` | Both migration servers: `https://jmporch.com` and `https://test.jmporch.com` | `.github/workflows/production.yml` |
+| `main` | Production at `https://jmporch.com` on `23.92.22.231` | `.github/workflows/production.yml` |
 | `staging` | [GitHub Pages](https://jporch.github.io/jmporch.com-static/) | `.github/workflows/pages.yml` |
 
 Merge experimental changes into `staging` to preview them, then merge the changes
@@ -183,67 +183,42 @@ Pages remains the staging site; production builds use `https://jmporch.com`.
 
 ### Production server
 
-For the new Ubuntu server at `test.jmporch.com`, see
-[parallel production deployment during migration](docs/new-server-testing.md).
-One production workflow run builds a single artifact for `https://jmporch.com`
-and deploys it to both servers using the existing `production` environment.
-Both deployment jobs must pass. The new server uses versioned releases under
-`/srv/www/main`; the legacy server retains the direct-sync setup below.
-Staging continues to publish to GitHub Pages.
+Production runs on **23.92.22.231**. The workflow deploys only to this server;
+GitHub Pages remains staging. The server also hosts the independently uploaded
+Haywire archive at `https://haywiremag.com` and `https://jmporch.com/haywire/`.
+See the [production server runbook](docs/new-server-testing.md) for host setup,
+certificate renewal, and rollback.
 
-The `production` GitHub environment permits deployments from `main` only. It holds
-the `SSH_PRIVATE_KEY` secret and these variables:
+The existing `production` GitHub environment permits deployments from `main`
+only. It uses the following settings, retaining their migration-era names:
 
-| Variable | Value |
+| Setting | Value |
 | --- | --- |
-| `SSH_HOST` | `172.104.215.71` (old server, independent of DNS cutover) |
-| `SSH_PORT` | `22` |
-| `SSH_USER` | `jmporch-deploy` |
-| `SSH_KNOWN_HOSTS` | Server's verified ED25519 public host key in known_hosts format |
+| `NEW_SSH_HOST` | `23.92.22.231` |
+| `NEW_SSH_PORT` | `22` |
+| `NEW_SSH_USER` | `jmporch-deploy` |
+| `NEW_SSH_KNOWN_HOSTS` | Verified ED25519 host-key entry for `23.92.22.231` |
+| `SSH_PRIVATE_KEY_NEW` (secret) | Dedicated deployment private key |
 
-In the same `production` environment, the new server uses `NEW_SSH_HOST`,
-`NEW_SSH_PORT`, `NEW_SSH_USER`, `NEW_SSH_KNOWN_HOSTS`, and the
-`SSH_PRIVATE_KEY_NEW` secret. See the migration guide for their values and setup.
-Each server receives the same artifact and release marker. Public checks connect
-directly to each server's fixed IP while preserving its HTTPS hostname, and compare
-served pages, feeds, and assets with the build. A failure on either target fails
-the overall workflow without cancelling the other target's deployment.
+The deployment account owns `/srv/www/main` and its releases, with read access
+for NGINX. Uploads set directories to 755 and files to 644. Each deployment creates
+`/srv/www/main/releases/<commit>-<run ID>-<attempt>`, verifies it against the checked
+artifact with rsync checksums, and atomically switches the `current` symlink.
+An activation lock serializes symlink changes. Deployments need neither sudo nor
+an NGINX reload. Failed uploads leave the previous release active.
 
-The server host key was checked against the fingerprint supplied through a trusted
-server session. Update the pinned key deliberately if the server changes.
-The private deployment key must be unencrypted and match the public key installed
-for the unprivileged deployment account.
+Public checks connect directly to `23.92.22.231` with normal TLS hostname
+verification for `https://jmporch.com`. They verify the exact commit and release,
+compare served main-site files with the artifact, check pages, feeds, assets,
+redirects and 404s, reject noindex response headers or HTML meta tags, and confirm
+the independent Haywire route still works. A public-check failure marks deployment
+failed but does not automatically roll back. Previous releases are retained for
+manual rollback; no automatic release deletion is configured.
 
-Install `rsync` on Ubuntu (`sudo apt install rsync`). The deployment account must
-own `/srv/jmporch-deploy/releases/current`, or have permission to create it under
-`/srv/jmporch-deploy/releases`. These paths must be real directories. NGINX needs
-read/traverse access; uploaded directories and files use modes 755 and 644.
-
-Set the existing NGINX site's document root, preserving its domain and TLS settings:
-
-```nginx
-root /srv/jmporch-deploy/releases/current;
-index index.html;
-
-location / {
-    try_files $uri $uri/ =404;
-}
-error_page 404 /404.html;
-```
-
-After changing the configuration, run `sudo nginx -t` and
-`sudo systemctl reload nginx`. Deployments do not need sudo or an NGINX reload.
-
-The production job uploads the checked artifact over SSH and verifies its contents
-with a second checksum comparison. It synchronizes directly into
-`/srv/jmporch-deploy/releases/current`, removing files there that are absent from
-the new build. Keep server-only files outside that directory. There are no saved
-releases or automatic backups. Transfers use delayed updates, but the whole site
-does not switch atomically; a deployment can briefly serve mixed versions.
-To roll back, revert the relevant commit on `main` and redeploy.
-
-`https://jmporch.com/deployment.json` identifies the deployed source commit once
-NGINX serves this directory. A successful upload alone does not change NGINX's root.
+`https://jmporch.com/deployment.json` identifies the active commit and release.
+The temporary `test.jmporch.com` hostname remains noindex and is not used by
+production deployment checks. Legacy `SSH_*` settings and `SSH_PRIVATE_KEY`, if
+still present in GitHub, are unused by this workflow.
 
 ## Design and behavior
 

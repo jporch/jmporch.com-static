@@ -49,4 +49,7 @@
 - See README.md for the pinned Zola installer and validation commands.
 - Staging: https://jporch.github.io/jmporch.com-static/
 - Production: https://jmporch.com/
-- Production synchronizes directly into `/srv/jmporch-deploy/releases/current`.
+- Production deploys versioned releases under `/srv/www/main/releases` on
+  `23.92.22.231`, activated through `/srv/www/main/current`.
+- The old server is no longer a deployment target. Haywire is served independently
+  from `/srv/www/haywire/current`.
