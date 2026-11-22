@@ -222,6 +222,9 @@ still present in GitHub, are unused by this workflow.
 
 ## Design and behavior
 
+The optional Minecraft Java service has a separate [CLI manager runbook](docs/minecraft.md).
+Its worlds and builds live outside the website deployment directories.
+
 `static/style.css` is the original stylesheet. `static/enhancements.css` contains
 the local font, accessible button styles, and responsive fixes. Templates retain
 the original section IDs, CSS classes, four-panel homepage, and content wrappers;
