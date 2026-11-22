@@ -48,24 +48,25 @@ sudo apt-get update
 sudo apt-get install python3 openjdk-25-jre-headless
 sudo bash ./install-minecraft-manager.sh
 java -version
-sudo minecraftctl create friends --version 26.3
+sudo -iu minecraft
+minecraftctl create friends --version 26.3
 ```
 
-The installer creates an unprivileged `minecraft` account and installs the CLI
+The installer creates an unprivileged `minecraft` login account and installs the CLI
 and systemd unit. It does not download Minecraft, accept the EULA, start the
 game, open ports, or enable boot startup. Python 3.12+ is required for restore.
 For an alternative Java installation, set its absolute executable path in
-`/minecraft/config.json`. The manager checks Mojang's Java requirement.
+`/minecraft/state/config.json`. The manager checks Mojang's Java requirement.
 
 Read the [Minecraft EULA](https://www.minecraft.net/en-us/eula). After accepting
 it yourself, record that decision, start the game, and add actual Java usernames:
 
 ```sh
-sudo minecraftctl accept-eula friends
-sudo minecraftctl start
-sudo minecraftctl command 'whitelist add YourMinecraftJavaUsername'
-sudo minecraftctl command 'op YourMinecraftJavaUsername'
-sudo minecraftctl logs
+minecraftctl accept-eula friends
+minecraftctl start
+minecraftctl command 'whitelist add YourMinecraftJavaUsername'
+minecraftctl command 'op YourMinecraftJavaUsername'
+minecraftctl logs
 ```
 
 No players or operators are prepopulated. Whitelists belong to each profile;
@@ -83,26 +84,81 @@ public firewall. To start the selected world after a host reboot:
 sudo systemctl enable minecraft.service
 ```
 
+## Minecraft login and permissions
+
+Run the CLI while logged in as `minecraft`; no `sudo` prefix or password prompt
+is needed for daily management. The administrator can enter that account with:
+
+```sh
+sudo -iu minecraft
+minecraftctl worlds
+```
+
+For direct SSH login, install **your public SSH key** once as administrator.
+After copying the public `.pub` file to `/tmp/minecraft-login.pub` on the host:
+
+```sh
+sudo -u minecraft mkdir -p /home/minecraft/.ssh
+sudo -u minecraft chmod 700 /home/minecraft/.ssh
+cat /tmp/minecraft-login.pub | sudo -u minecraft tee -a /home/minecraft/.ssh/authorized_keys >/dev/null
+sudo -u minecraft chmod 600 /home/minecraft/.ssh/authorized_keys
+```
+
+Then connect from your computer with `ssh minecraft@minecraft.jmporch.com`.
+The installer enables a Bash login and creates `/home/minecraft`, but never
+copies an administrator's credentials or enables password authentication.
+Choose and install the public key explicitly; do not upload a private key.
+
+The Minecraft account manages files without root privileges. For service
+start/stop/restart and reading the last 100 Minecraft journal entries, the CLI
+internally uses `sudo -n` with four exact commands permitted by
+`/etc/sudoers.d/minecraft-manager`. That rule does not permit a root shell,
+running the Python manager as root, or controlling other services. It is checked
+with `visudo` before installation. Read-only service status needs no elevation.
+Administrator invocations such as `sudo minecraftctl status` remain supported:
+the manager drops to the `minecraft` account before reading any configuration
+or processing game files.
+
+Installing/upgrading the manager, changing its service definition, opening
+firewall ports and editing SSH access still require an administrator. To upgrade
+an existing installation, use the reviewed bundle's upgrade script:
+
+```sh
+sha256sum --check SHA256SUMS
+sudo bash ./upgrade-minecraft-manager.sh --login-key ./operator-login.pub
+```
+
+Omit `--login-key` when SSH access is already configured. The script saves a
+complete world/build backup, retains the previous manager and unit under
+`/minecraft/manager/history/`, applies the new ownership and service rules, and
+resumes a previously running game. It does not generate, select or delete worlds.
+The optional public-key entry is appended without replacing existing keys.
+For a manual upgrade, stop Minecraft as administrator, rerun the installer,
+and restart it. The installer migrates the old `/minecraft/config.json`
+to `/minecraft/state/config.json` and updates file ownership while preserving
+worlds and backups. If both configuration paths exist, it stops for inspection
+rather than choosing which active-world setting to discard.
+
 ## Daily management
 
 ```sh
-sudo minecraftctl list
-sudo minecraftctl status
-sudo minecraftctl start
-sudo minecraftctl stop
-sudo minecraftctl restart
-sudo minecraftctl logs
-sudo minecraftctl command 'list'
-sudo minecraftctl command 'whitelist add AnotherUsername'
-sudo minecraftctl command 'whitelist remove AnotherUsername'
+minecraftctl worlds
+minecraftctl status
+minecraftctl start
+minecraftctl stop
+minecraftctl restart
+minecraftctl logs
+minecraftctl command 'list'
+minecraftctl command 'whitelist add AnotherUsername'
+minecraftctl command 'whitelist remove AnotherUsername'
 ```
 
 The player cap and Java memory limit are independent. Change either without
 editing the launch script:
 
 ```sh
-sudo minecraftctl settings friends
-sudo minecraftctl settings friends --max-players 6 --memory 1536M
+minecraftctl settings friends
+minecraftctl settings friends --max-players 6 --memory 1536M
 ```
 
 Changes back up the profile and briefly stop/restart a running service. Monitor
@@ -115,16 +171,70 @@ Each profile has independent world data, properties, whitelist, operators,
 server version and memory settings. Only one profile runs at a time:
 
 ```sh
-sudo minecraftctl create family --version 26.3
-sudo minecraftctl accept-eula family
-sudo minecraftctl use family
-sudo minecraftctl command 'whitelist add FamilyUsername'
-sudo minecraftctl use friends
+minecraftctl create family --version 26.3
+minecraftctl accept-eula family
+minecraftctl use family
+minecraftctl command 'whitelist add FamilyUsername'
+minecraftctl use friends
 ```
 
 `use` saves and backs up the outgoing profile and starts the selected profile
 if the game was running. If it was stopped, `use` only selects the profile;
 run `start` afterward. The family whitelist controls access to that world.
+
+### Generate, list and delete worlds
+
+Generate a fresh vanilla world from the active profile and switch to it with one
+command. Omit the name for a unique timestamped name, or supply a name and an
+optional signed 64-bit numeric seed:
+
+```sh
+minecraftctl generate
+minecraftctl generate mountain-world
+minecraftctl generate family-start --seed -123456789
+minecraftctl worlds
+```
+
+`generate` gracefully stops a running game, backs up the outgoing profile, and
+creates a fresh profile with the same server build, player limit, memory,
+world-generation settings, datapacks, whitelist, operators and bans. A new random
+numeric seed is chosen and recorded when `--seed` is omitted. The new profile
+records its seed, creation time and source profile. Existing world terrain,
+inventories, advancements and other player progress stay in the original profile.
+Players reconnect into the new world with fresh progress. Nothing is downloaded
+or deleted during generation. An existing profile name is always rejected.
+
+The new world starts if the game was running; otherwise it is selected for the
+next `start`. The outgoing profile is retained, so you can switch back:
+
+```sh
+minecraftctl use friends
+minecraftctl settings mountain-world
+```
+
+`worlds` lists all retained profiles, labels each active/inactive, and marks the
+active one with `*`. Generated worlds also show their recorded seed. `list`
+remains an alias. The active marker identifies the selected world even while the
+game is stopped. `settings NAME` includes that world's generation metadata.
+
+Delete an unwanted inactive profile with:
+
+```sh
+minecraftctl delete mountain-world
+```
+
+`delete` first creates a complete recovery backup, then removes the inactive
+profile. The backup and shared server releases remain. It never interrupts the
+active world, and refuses to delete the active profile even when the game is
+stopped. Select another profile first. A failed backup prevents deletion; a
+deleted world can be recovered with `restore BACKUP NEW_NAME`.
+
+If generation fails before selecting the new world, the original profile stays
+selected and a previously running game is resumed. If startup fails after the
+new profile is selected, both profiles and the recovery backup remain available
+for inspection; use the old profile to return. This feature currently supports
+vanilla profiles with a simple world folder name, as emitted by the manager.
+Custom engines and escaped/nested world paths require separate preparation.
 
 ## Updates, backup and recovery
 
@@ -132,10 +242,10 @@ Updates are explicit. Mojang's manifest supplies the official stable JAR, size,
 checksum and Java requirement. Snapshots are rejected.
 
 ```sh
-sudo minecraftctl update latest
-sudo minecraftctl update 26.3 --profile friends
+minecraftctl update latest
+minecraftctl update 26.3 --profile friends
 # Or install a trusted uploaded runnable JAR:
-sudo minecraftctl install-jar /tmp/server.jar --version 26.3 --java-major 25 --kind vanilla
+minecraftctl install-jar /tmp/server.jar --version 26.3 --java-major 25 --kind vanilla
 ```
 
 Downloads are verified before downtime. The manager stops the service, creates
@@ -146,16 +256,16 @@ after activation is reported for inspection; worlds are never automatically
 downgraded.
 
 ```sh
-sudo minecraftctl backup
-sudo minecraftctl backup family
-sudo minecraftctl restore /minecraft/backups/friends/BACKUP.tar.gz friends-recovered
-sudo minecraftctl use friends-recovered
+minecraftctl backup
+minecraftctl backup family
+minecraftctl restore /minecraft/backups/friends/BACKUP.tar.gz friends-recovered
+minecraftctl use friends-recovered
 ```
 
 Backups contain the entire profile **and its exact server JAR**. Restore creates
 a new profile and never overwrites an existing world. After an upgrade, restore
 the old world and matching build together. Backups briefly stop/restart the game
-to save data consistently. Archives are root-readable; do not publish them.
+to save data consistently. Archives are readable by the minecraft account and administrators; do not publish them.
 
 No automatic schedule, deletion or off-host copying is configured. Copy important
 backups off the host, periodically test a restore, monitor disk space, and remove
@@ -165,15 +275,16 @@ All historical server releases are retained locally.
 ## Layout and future mods
 
 ```text
-/minecraft/config.json                 selected profile and Java path
+/minecraft/state/config.json                 selected profile and Java path
 /minecraft/releases/<version>-<hash>/  JAR and release metadata
 /minecraft/profiles/friends/           profile.json and data/
 /minecraft/profiles/family/            profile.json and data/
 /minecraft/backups/<profile>/          version-matched recovery archives
 ```
 
-Manager code and metadata are root-owned; game data is writable by the dedicated
-`minecraft` user. The systemd service restricts filesystem writes. All files are
+The manager code, CLI launcher and systemd unit are root-owned. Worlds, profiles,
+release JARs, state and backups are owned by `minecraft`. The backend root stays
+root-owned so the login cannot replace the installed manager. The systemd service restricts filesystem writes. All files are
 outside `/srv/www/main`, so website deployments cannot replace worlds or builds.
 
 Vanilla is the initial engine. `install-jar` supports trusted engines sharing

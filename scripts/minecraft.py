@@ -29,6 +29,26 @@ MANIFEST = 'https://piston-meta.mojang.com/mc/game/version_manifest_v2.json'
 SERVICE = 'minecraft.service'
 CONSOLE = Path('/run/minecraft/console')
 DEFAULT_VERSION = '26.3'
+SYSTEMCTL = '/usr/bin/systemctl'
+JOURNALCTL = '/usr/bin/journalctl'
+SUDO = '/usr/bin/sudo'
+
+
+def authorize_operator():
+    account = pwd.getpwnam('minecraft')
+    if os.geteuid() == 0:
+        # Never interpret operator-writable paths or launch Java as root.
+        os.initgroups(account.pw_name, account.pw_gid)
+        os.setgid(account.pw_gid)
+        os.setuid(account.pw_uid)
+    if os.geteuid() != account.pw_uid:
+        raise ValueError('Log in as minecraft, or use sudo -iu minecraft.')
+
+
+def service_control(action):
+    if action not in ('start', 'stop', 'restart'):
+        raise ValueError('Unsupported privileged service action.')
+    return [SUDO, '-n', '--', SYSTEMCTL, action, SERVICE]
 
 
 def identifier(value):
@@ -47,6 +67,13 @@ def memory(value):
 
 def memory_mb(value):
     return int(value[:-1]) * (1024 if value.endswith('G') else 1)
+
+
+def seed_number(value):
+    seed = int(value)
+    if not -(2 ** 63) <= seed < 2 ** 63:
+        raise ValueError('Seed must be a signed 64-bit integer.')
+    return seed
 
 
 def read_json(path):
@@ -94,8 +121,18 @@ class Manager:
         self.root = Path(root).resolve()
 
     @property
+    def config_path(self):
+        return self.root / 'state/config.json'
+
+    @property
     def config(self):
-        return read_json(self.root / 'config.json')
+        return read_json(self.config_path)
+
+    @property
+    def work_path(self):
+        path = self.root / 'state/tmp'
+        path.mkdir(parents=True, mode=0o700, exist_ok=True)
+        return path
 
     def profile_path(self, name):
         return self.root / 'profiles' / identifier(name)
@@ -105,21 +142,26 @@ class Manager:
 
     @contextmanager
     def lock(self):
-        # One root-owned lock covers all CLI mutations, including start/stop.
-        self.root.mkdir(parents=True, exist_ok=True)
-        with (self.root / '.manager.lock').open('a') as stream:
+        # One operator-owned lock covers all CLI mutations, including start/stop.
+        with (self.root / 'state/.manager.lock').open('a') as stream:
             fcntl.flock(stream, fcntl.LOCK_EX | fcntl.LOCK_NB)
             yield
 
     def service(self, action):
-        return subprocess.run(['systemctl', action, SERVICE], check=True)
+        command = ([SYSTEMCTL, '--no-pager', 'status', SERVICE] if action == 'status'
+                   else service_control(action))
+        return subprocess.run(command, check=True)
+
+    def logs(self):
+        subprocess.run([SUDO, '-n', '--', JOURNALCTL, '-u', SERVICE,
+                        '-n', '100', '--no-pager'], check=True)
 
     def active(self):
-        return subprocess.run(['systemctl', 'is-active', '--quiet', SERVICE],
+        return subprocess.run([SYSTEMCTL, 'is-active', '--quiet', SERVICE],
                               check=False).returncode == 0
 
     def stopped(self):
-        output = subprocess.check_output(['systemctl', 'show', '-p', 'ActiveState',
+        output = subprocess.check_output([SYSTEMCTL, 'show', '-p', 'ActiveState',
                                           '-p', 'MainPID', '-p', 'ControlPID', SERVICE], text=True)
         state = dict(line.split('=', 1) for line in output.splitlines() if '=' in line)
         if (state.get('ActiveState') not in ('inactive', 'failed')
@@ -131,7 +173,8 @@ class Manager:
         for item in [path, *path.rglob('*')]:
             if item.is_symlink():
                 raise ValueError(f'Symlinks are not supported in world profiles: {item}')
-            os.chown(item, account.pw_uid, account.pw_gid)
+            if item.stat().st_uid != account.pw_uid:
+                raise ValueError(f'World data must be owned by minecraft: {item}. Rerun the administrator installer to migrate permissions.')
 
     def store_jar(self, source, version, major=25, kind='vanilla'):
         identifier(version)
@@ -166,7 +209,7 @@ class Manager:
         if not server['url'].startswith('https://'):
             raise ValueError('Downloads require HTTPS.')
         self.root.mkdir(parents=True, exist_ok=True)
-        with tempfile.TemporaryDirectory(dir=self.root) as temporary:
+        with tempfile.TemporaryDirectory(dir=self.work_path) as temporary:
             jar = Path(temporary) / 'server.jar'
             with urllib.request.urlopen(server['url'], timeout=60) as response, jar.open('wb') as output:
                 shutil.copyfileobj(response, output)
@@ -211,7 +254,7 @@ class Manager:
         config = self.config
         if config['active'] is None:
             config['active'] = name
-            write_json(self.root / 'config.json', config)
+            write_json(self.config_path, config)
 
     def start(self):
         name = self.config['active']
@@ -256,7 +299,10 @@ class Manager:
         raise ValueError('Startup not confirmed after 180 seconds; inspect logs/status. Service may still be running.')
 
     def archive(self, name):
-        self.stopped()
+        # Only the selected profile can be written by the single game process.
+        # An inactive world can be backed up/deleted without interrupting play.
+        if name == self.config['active']:
+            self.stopped()
         profile = self.profile(name)
         release_dir = self.root / 'releases' / profile['release']
         source = self.profile_path(name)
@@ -317,12 +363,114 @@ class Manager:
         def select():
             config = self.config
             config['active'] = name
-            write_json(self.root / 'config.json', config)
+            write_json(self.config_path, config)
         current = self.config['active']
         if current:
             self.change(current, select)
         else:
             select()
+
+    def worlds(self):
+        active = self.config['active']
+        for path in sorted((self.root / 'profiles').iterdir()):
+            if path.is_dir():
+                profile = self.profile(path.name)
+                version = self.release(profile['release'])['version']
+                selected = path.name == active
+                seed = f", seed {profile['seed']}" if 'seed' in profile else ''
+                print(f"{'*' if selected else ' '} {path.name} "
+                      f"({'active' if selected else 'inactive'}): {version}, "
+                      f"{profile['max_players']} players, {profile['memory']} heap{seed}")
+
+    def generate(self, name=None, seed=None):
+        source = self.config['active']
+        if source is None:
+            raise ValueError('Create or select a world profile first.')
+        profile = self.profile(source)
+        if self.release(profile['release'])['kind'] != 'vanilla':
+            raise ValueError('Generation currently supports vanilla profiles only; custom engines need their own world preparation.')
+        created = datetime.now(timezone.utc)
+        if name is None:
+            name = f"{source[:80]}-{created.strftime('%Y%m%dT%H%M%SZ')}-{uuid.uuid4().hex[:8]}"
+        target = self.profile_path(name)
+        if target.exists():
+            raise ValueError(f'World already exists: {name}. Choose a new name.')
+        seed = seed_number(seed) if seed is not None else int.from_bytes(os.urandom(8), 'big', signed=True)
+        data = self.profile_path(source) / 'data'
+        # These are the simple folder names emitted by this manager and Java.
+        # Reject escaped/nested world paths before downtime rather than guessing
+        # where their datapacks live or reading outside the profile.
+        properties = (data / 'server.properties').read_text().splitlines()
+        world_name = 'world'
+        for line in properties:
+            match = re.match(r'^\s*level-name\s*[=:]\s*(.*)$', line)
+            if match:
+                world_name = match[1]
+        identifier(world_name)
+        running = self.active()
+        if running:
+            self.validate_start(source)
+
+        def activate():
+            with tempfile.TemporaryDirectory(prefix='.generate-', dir=self.work_path) as temporary:
+                staged = Path(temporary) / 'profile'
+                fresh = staged / 'data'
+                fresh.mkdir(parents=True)
+                # Copy configuration and access policy, never an old world's
+                # chunks, player inventories, achievements, or runtime cache.
+                for filename in ('server.properties', 'whitelist.json', 'ops.json',
+                                 'banned-players.json', 'banned-ips.json', 'server-icon.png'):
+                    if (data / filename).is_file():
+                        shutil.copyfile(data / filename, fresh / filename)
+                if (data / 'codeofconduct').is_dir():
+                    shutil.copytree(data / 'codeofconduct', fresh / 'codeofconduct')
+                packs = data / world_name / 'datapacks'
+                if packs.is_dir():
+                    shutil.copytree(packs, fresh / 'world/datapacks')
+                # Read after shutdown so the game's latest properties are kept.
+                lines = (fresh / 'server.properties').read_text().splitlines()
+                values = {'level-name': 'world', 'level-seed': str(seed),
+                          'motd': f'jmporch.com - {name}'}
+                lines = [line for line in lines if not any(
+                    re.match(r'^\s*' + re.escape(key) + r'\s*[=:]', line) for key in values)]
+                (fresh / 'server.properties').write_text('\n'.join(
+                    lines + [f'{key}={value}' for key, value in values.items()]) + '\n')
+                (fresh / 'eula.txt').write_text(f"eula={str(profile['eula']).lower()}\n")
+                details = dict(profile, seed=seed, source_profile=source,
+                               created_at=created.isoformat())
+                write_json(staged / 'profile.json', details)
+                self.own_data(fresh)
+                staged.rename(target)
+            config = self.config
+            config['active'] = name
+            write_json(self.config_path, config)
+
+        try:
+            self.change(source, activate)
+        except Exception:
+            # Preparation can fail before the new profile is selected. The old
+            # world is unchanged, so resume it; never undo a selected new world.
+            if running and self.config['active'] == source and not self.active():
+                self.stopped()
+                self.start()
+            raise
+        print(f'Generated world: {name}; seed: {seed}')
+        print(f'Previous world retained. Switch back with: minecraftctl use {source}')
+        if not running:
+            print('World selected. Run minecraftctl start to generate its terrain.')
+        return name
+
+    def delete(self, name):
+        target = self.profile_path(name)
+        if name == self.config['active']:
+            raise ValueError('Cannot delete the active world, even while stopped. Select another world first.')
+        if target.is_symlink():
+            raise ValueError('World profiles must not be symbolic links.')
+        self.profile(name)
+        backup = self.archive(name)
+        shutil.rmtree(target)
+        print(f'Deleted inactive world: {name}')
+        print(f'Recovery backup retained: {backup}')
 
     def update(self, name, release):
         profile = self.profile(name)
@@ -343,7 +491,7 @@ class Manager:
         target = self.profile_path(name)
         if target.exists():
             raise ValueError('Restore requires a new profile name; existing worlds are never overwritten.')
-        with tempfile.TemporaryDirectory(dir=self.root) as temporary:
+        with tempfile.TemporaryDirectory(dir=self.work_path) as temporary:
             temporary = Path(temporary)
             with tarfile.open(backup) as archive:
                 for entry in archive.getmembers():
@@ -439,7 +587,11 @@ def main():
     new.add_argument('--version', default=DEFAULT_VERSION)
     for command in ('use', 'accept-eula'):
         commands.add_parser(command).add_argument('name', type=identifier)
-    commands.add_parser('list')
+    commands.add_parser('worlds', aliases=['list'], help='List world profiles and mark the active world.')
+    generate = commands.add_parser('generate', help='Back up the current world and select a fresh vanilla world.')
+    generate.add_argument('name', nargs='?', type=identifier, help='New world name; defaults to a unique timestamped name.')
+    generate.add_argument('--seed', type=seed_number, help='Signed 64-bit seed; defaults to a new random seed.')
+    commands.add_parser('delete', help='Back up and remove an inactive world.').add_argument('name', type=identifier)
     for command in ('start', 'stop', 'restart', 'status', 'logs'):
         commands.add_parser(command)
     commands.add_parser('backup').add_argument('name', nargs='?', type=identifier)
@@ -462,25 +614,21 @@ def main():
     settings.add_argument('--max-players', type=int)
     commands.add_parser('command').add_argument('text')
     args = parser.parse_args()
+    authorize_operator()
     manager = Manager(args.root)
     if args.command == 'run':
-        if os.geteuid() != pwd.getpwnam('minecraft').pw_uid:
-            parser.error('The game runner must run as the dedicated minecraft account.')
         manager.run()
         return
-    if os.geteuid() != 0:
-        parser.error('Run management commands with sudo. The game itself runs as minecraft.')
     with manager.lock():
         name = manager.config['active']
         if args.command == 'create':
             manager.create(args.name, args.version)
-        elif args.command == 'list':
-            for path in sorted((manager.root / 'profiles').iterdir()):
-                if path.is_dir():
-                    profile = manager.profile(path.name)
-                    version = manager.release(profile['release'])['version']
-                    print(f"{'*' if path.name == name else ' '} {path.name}: {version}, "
-                          f"{profile['max_players']} players, {profile['memory']} heap")
+        elif args.command in ('worlds', 'list'):
+            manager.worlds()
+        elif args.command == 'generate':
+            manager.generate(args.name, args.seed)
+        elif args.command == 'delete':
+            manager.delete(args.name)
         elif args.command == 'use':
             manager.use(args.name)
         elif args.command == 'accept-eula':
@@ -514,7 +662,7 @@ def main():
         elif args.command in ('stop', 'status'):
             manager.service(args.command)
         elif args.command == 'logs':
-            subprocess.run(['journalctl', '-u', SERVICE, '-n', '100', '--no-pager'], check=True)
+            manager.logs()
 
 
 if __name__ == '__main__':
