@@ -141,6 +141,10 @@ rather than choosing which active-world setting to discard.
 
 ## Daily management
 
+Both game services remain disabled at boot and can run together. Start and
+stop Minecraft using its own commands. See [the paired-game runbook](valheim.md)
+for Valheim setup and operation.
+
 ```sh
 minecraftctl worlds
 minecraftctl status

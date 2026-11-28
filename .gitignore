@@ -6,3 +6,7 @@
 **/__pycache__/
 
 /.venv/
+
+# Local historical artifacts; keep only their inventory in the website repo.
+/archive/*
+!/archive/README.md

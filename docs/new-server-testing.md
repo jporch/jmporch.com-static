@@ -121,6 +121,46 @@ SH
 Alternatively, revert the relevant source change on `main` and deploy it through
 the normal project process.
 
+## Automatic security maintenance
+
+The host uses Ubuntu's `unattended-upgrades` with the distribution's default
+security-only origins. APT refreshes package lists and applies eligible security
+patches daily through `apt-daily.timer` and `apt-daily-upgrade.timer`. Ubuntu's
+`needrestart` APT hook automatically restarts affected services. Non-security
+updates, third-party repositories and major Ubuntu release upgrades need separate
+maintenance. The Certbot snap has its own automatic refresh schedule.
+
+To apply the local reboot policy, copy `scripts/configure-unattended-upgrades.sh`
+to the administrative account and run it with sudo. It requires the host timezone
+to remain `Etc/UTC`, backs up any previous local policy, refreshes package lists,
+checks an unattended-upgrade dry run and applies currently eligible security
+updates. It does not immediately reboot the server.
+
+The policy is `/etc/apt/apt.conf.d/99zz-jmporch-unattended-upgrades`; distribution
+configuration files are left intact. Required reboots are scheduled for **09:00
+UTC** (04:00 Eastern standard time / 05:00 Eastern daylight time), including when
+an SSH session is logged in. NGINX starts at boot and brings the websites back
+automatically. If Minecraft or Valheim is running, systemd stops it during the
+reboot. Minecraft uses its graceful shutdown policy to save the selected world.
+Both games are disabled at boot and must be started manually afterward.
+
+Check operation with:
+
+```sh
+systemctl list-timers --no-pager --all apt-daily.timer apt-daily-upgrade.timer
+sudo tail -n 60 /var/log/unattended-upgrades/unattended-upgrades.log
+sudo unattended-upgrade --dry-run --debug
+sudo shutdown --show
+systemctl --failed
+```
+
+Previous policy backups and installation dry-run logs are kept under
+`/var/backups/jmporch-unattended-upgrades.*`. A pending reboot is reported in
+`/run/reboot-required`. Ubuntu's built-in timer retries subsequent daily runs;
+logs alone do not notify the owner. External uptime monitoring and alerts for
+failed or stale update runs should be configured separately with an agreed
+notification destination.
+
 ## HTTPS and renewal
 
 Certbot manages separate certificates for `jmporch.com` and `haywiremag.com`, each

@@ -91,6 +91,8 @@ ExecStart=/usr/bin/python3 -I /minecraft/manager/minecraft.py run
 RuntimeDirectory=minecraft
 RuntimeDirectoryMode=0750
 KillSignal=SIGINT
+# OpenJDK handles SIGINT and exits with 128 + 2.
+SuccessExitStatus=130
 TimeoutStopSec=180
 # Never forcibly kill a world during saving; a hung shutdown needs admin review.
 SendSIGKILL=no
