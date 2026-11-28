@@ -1,3 +1,25 @@
+# Workspace scope and archives
+
+- `archive/` contains local historical deployment bundles and retained release
+  artifacts. Ignore it during routine searches, reviews, builds, and tests unless
+  the user's task specifically needs historical files, recovery, or comparison.
+  Read `archive/README.md` first when that context is needed. Do not recursively
+  inventory, validate, or clean the archive as part of ordinary work.
+- `backporch-monitor/` is a separate active Git repository. Keep it in place and
+  preserve its uncommitted changes. Only inspect or run its checks when the task
+  concerns BackPorch; website work does not require its Rust or Node toolchains.
+- Start searches in the relevant source directories. Respect `.gitignore` and
+  `.rgignore`; avoid workspace-wide `find`, recursive `ls`, `du`, or searches with
+  `--no-ignore` unless required. Exclude `archive/`, `.git/`, `.cache/`, `.venv/`,
+  `public/`, `target/`, `dist/`, `node_modules/`, and `__pycache__/` from routine
+  source inspection. Do not read signing material for unrelated tasks.
+- `content/mirror/` and `static/mirror/` are published website content, not
+  disposable project leftovers. Keep them in the normal website build.
+- `.cache/bin/zola` is the pinned website build tool. Keep installed tools,
+  signing material, active worktrees, and running app bundles in place. Generated
+  build intermediates may be regenerated; do not rebuild them just to verify
+  housekeeping changes.
+
 # Change and deployment process
 
 ## Default: local review
@@ -49,4 +71,7 @@
 - See README.md for the pinned Zola installer and validation commands.
 - Staging: https://jporch.github.io/jmporch.com-static/
 - Production: https://jmporch.com/
-- Production synchronizes directly into `/srv/jmporch-deploy/releases/current`.
+- Production deploys versioned releases under `/srv/www/main/releases` on
+  `23.92.22.231`, activated through `/srv/www/main/current`.
+- The old server is no longer a deployment target. Haywire is served independently
+  from `/srv/www/haywire/current`.

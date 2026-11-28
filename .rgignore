@@ -1,0 +1,11 @@
+# Skip generated files and historical artifacts even with --no-ignore-vcs.
+/archive/
+**/.git/
+**/.cache/
+**/.venv/
+/public/
+**/target/
+**/dist/
+**/node_modules/
+**/__pycache__/
+**/client/src-tauri/gen/
